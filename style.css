@@ -1038,3 +1038,4 @@ header.fade-element.visible { transition-delay: 0.1s; }
         justify-content: center;
     }
 }
+\n\n/* OVERRIDE TO FIX HTML2CANVAS BUG */\n.qr-placeholder { background: #fff !important; }\n
