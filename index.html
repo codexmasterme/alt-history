@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>青史另说 - 汉朝历史分叉树</title>
+    <!-- 使用原生系统宋体/明体，避免微信跨域字体下载导致截图引擎卡死 -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <!-- 装饰背景效果 -->
+        <div class="bg-gradient"></div>
+        <div class="bg-noise"></div>
+        <div class="bg-texture"></div>
+
+        <!-- 主内容区 -->
+        <div id="game-container">
+            <!-- 顶部进度条 -->
+            <div class="progress-bar fade-element">
+                <span id="step-label"></span>
+                <div class="dots-container" id="dots-container"></div>
+            </div>
+
+            <header class="title-section fade-element">
+                <div class="title-decorator left"></div>
+                <div class="title-content">
+                    <div id="year" class="year-stamp"></div>
+                    <h1 id="title"></h1>
+                </div>
+                <div class="title-decorator right"></div>
+            </header>
+            
+            <main>
+                <div id="setup-text" class="fade-element">
+                    <!-- 情境文字将渲染在这里 -->
+                </div>
+            </main>
+            
+            <footer id="options-container" class="fade-element">
+                <!-- 选项按钮将渲染在这里 -->
+            </footer>
+            
+            <!-- 底部图鉴留白 -->
+            <div class="footer-section fade-element">
+                <span id="collection-progress">大结局图鉴收集进度：0 / 12</span>
+            </div>
+        </div>
+
+        <!-- 结局覆盖层 -->
+        <div id="ending-screen" class="hidden fade-element">
+            <!-- 分享卡本体 (将被截图) -->
+            <div id="share-card" class="share-card">
+                <!-- 顶部：身份标签 -->
+                <div class="card-header">
+                    <div class="stamp-bg"></div>
+                    <div class="personality-title" id="personality-title"></div>
+                    <div class="personality-tags" id="personality-tags"></div>
+                    <div class="personality-desc" id="personality-desc"></div>
+                </div>
+                
+                <div class="card-divider"></div>
+                
+                <!-- 中部：改写的历史结局 -->
+                <div class="card-body">
+                    <div class="character-bg" id="character-bg"></div>
+                    <div class="card-body-content">
+                        <div class="history-relation">你的选择，将汉朝带向了——</div>
+                        <div class="ending-title" id="ending-title"></div>
+                        <div class="ending-desc" id="ending-desc"></div>
+                    </div>
+                </div>
+                
+                <!-- 数据感：稀有度 -->
+                <div class="card-stats">
+                    你走了 <span id="stat-steps" class="highlight"></span> 步，达成的【<span id="stat-ending-name" class="highlight"></span>】只有 <span id="stat-rarity" class="highlight"></span>% 的玩家解锁
+                </div>
+                
+                <!-- 底部：拉新钩子 -->
+                <div class="card-footer">
+                    <div class="hook-text">
+                        <p class="hook-main">换个选择，你能改写出更好的结局吗？</p>
+                        <p class="hook-sub">长按扫码，测算你的专属历史人格</p>
+                    </div>
+                    <div class="qr-code">
+                        <div class="qr-placeholder">
+                            <span class="qr-dot"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 外部操作区 (不被截图) -->
+            <div class="action-buttons">
+                <button id="save-btn" class="glass-btn secondary">保存图片</button>
+                <button id="restart-btn" class="glass-btn">重置时间线</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 依次引入数据和主逻辑，不再使用外部 CDN，全部本地化以防止微信拦截 -->
+    <script src="html2canvas.min.js"></script>
+    <script src="qrcode.min.js"></script>
+    <script src="data.js"></script>
+    <script src="image_data.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
