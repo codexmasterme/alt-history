@@ -245,66 +245,75 @@ class GameApp {
         
         this.saveBtn.textContent = '生成中...';
         
-        // Use a lower scale (1.5) to prevent iOS memory limit crashes in WeChat
-        html2canvas(shareCard, {
-            backgroundColor: '#0d0d0f',
-            scale: 1.5,
-            useCORS: false, // Turn OFF CORS since all assets are Base64 local
-            allowTaint: true,
-            scrollY: 0
-        }).then(canvas => {
-            let dataUrl;
-            try {
-                dataUrl = canvas.toDataURL('image/png');
-            } catch(e) {
-                alert("生成图片失败: " + e.message + " (这通常是因为微信限制了图片导出)");
-                throw e;
-            }
-            
-            // Create WeChat compatible overlay
-            let overlay = document.getElementById('screenshot-overlay');
-            if (!overlay) {
-                overlay = document.createElement('div');
-                overlay.id = 'screenshot-overlay';
-                document.body.appendChild(overlay);
+        try {
+            // Use a lower scale (1.5) to prevent iOS memory limit crashes in WeChat
+            html2canvas(shareCard, {
+                backgroundColor: '#0d0d0f',
+                scale: 1.5,
+                useCORS: false, // Turn OFF CORS since all assets are Base64 local
+                allowTaint: true,
+                scrollY: 0
+            }).then(canvas => {
+                let dataUrl;
+                try {
+                    dataUrl = canvas.toDataURL('image/png');
+                } catch(e) {
+                    alert("生成图片失败: " + e.message + " (这通常是因为微信限制了图片导出)");
+                    throw e;
+                }
                 
-                overlay.addEventListener('click', () => {
-                    overlay.classList.remove('show');
-                });
-            }
-            
-            overlay.innerHTML = `
-                <div class="overlay-hint" style="color:white; font-size:1.1rem; margin-bottom:20px; text-shadow:0 2px 4px rgba(0,0,0,0.8); font-weight:bold;">生成成功！请长按下方图片保存或发给朋友</div>
-                <img src="${dataUrl}" class="generated-image" alt="历史命运签" style="max-width:90%; max-height:80vh; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.8); pointer-events:auto;"/>
-                <div class="overlay-close" style="color:rgba(255,255,255,0.6); font-size:0.9rem; margin-top:20px;">点击任意处关闭</div>
-            `;
-            
-            // Force CSS inline styles just in case style.css is blocked or cached out
-            overlay.style.position = 'fixed';
-            overlay.style.top = '0';
-            overlay.style.left = '0';
-            overlay.style.width = '100vw';
-            overlay.style.height = '100vh';
-            overlay.style.background = 'rgba(0, 0, 0, 0.95)';
-            overlay.style.zIndex = '999999';
-            overlay.style.display = 'flex';
-            overlay.style.flexDirection = 'column';
-            overlay.style.alignItems = 'center';
-            overlay.style.justifyContent = 'center';
-            
-            overlay.classList.add('show');
-            
-            shareCard.style.transform = oldTransform;
-            shareCard.classList.remove('no-noise');
-            this.saveBtn.textContent = '保存图片';
-        }).catch(err => {
-            alert('截图生成失败，请重试或截屏保存。错误: ' + (err.message || err));
-            console.error('Screenshot failed:', err);
+                // Create WeChat compatible overlay
+                let overlay = document.getElementById('screenshot-overlay');
+                if (!overlay) {
+                    overlay = document.createElement('div');
+                    overlay.id = 'screenshot-overlay';
+                    document.body.appendChild(overlay);
+                    
+                    overlay.addEventListener('click', () => {
+                        overlay.classList.remove('show');
+                    });
+                }
+                
+                overlay.innerHTML = `
+                    <div class="overlay-hint" style="color:white; font-size:1.1rem; margin-bottom:20px; text-shadow:0 2px 4px rgba(0,0,0,0.8); font-weight:bold;">生成成功！请长按下方图片保存或发给朋友</div>
+                    <img src="${dataUrl}" class="generated-image" alt="历史命运签" style="max-width:90%; max-height:80vh; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.8); pointer-events:auto;"/>
+                    <div class="overlay-close" style="color:rgba(255,255,255,0.6); font-size:0.9rem; margin-top:20px;">点击任意处关闭</div>
+                `;
+                
+                // Force CSS inline styles just in case style.css is blocked or cached out
+                overlay.style.position = 'fixed';
+                overlay.style.top = '0';
+                overlay.style.left = '0';
+                overlay.style.width = '100vw';
+                overlay.style.height = '100vh';
+                overlay.style.background = 'rgba(0, 0, 0, 0.95)';
+                overlay.style.zIndex = '999999';
+                overlay.style.display = 'flex';
+                overlay.style.flexDirection = 'column';
+                overlay.style.alignItems = 'center';
+                overlay.style.justifyContent = 'center';
+                
+                overlay.classList.add('show');
+                
+                shareCard.style.transform = oldTransform;
+                shareCard.classList.remove('no-noise');
+                this.saveBtn.textContent = '保存图片';
+            }).catch(err => {
+                alert('截图生成失败，请重试或截屏保存。错误: ' + (err.message || err));
+                console.error('Screenshot failed:', err);
+                this.saveBtn.textContent = '保存失败';
+                shareCard.style.transform = oldTransform;
+                shareCard.classList.remove('no-noise');
+                setTimeout(() => this.saveBtn.textContent = '保存图片', 2000);
+            });
+        } catch (syncErr) {
+            alert('引擎启动失败: ' + (syncErr.message || syncErr));
+            console.error('html2canvas sync failed:', syncErr);
             this.saveBtn.textContent = '保存失败';
             shareCard.style.transform = oldTransform;
             shareCard.classList.remove('no-noise');
             setTimeout(() => this.saveBtn.textContent = '保存图片', 2000);
-        });
+        }
     }
     
     restartGame() {
