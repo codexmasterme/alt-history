@@ -6,7 +6,7 @@
     <meta name="referrer" content="no-referrer">
     <title>青史另说 - 汉朝历史分叉树</title>
     <!-- 使用原生系统宋体/明体，避免微信跨域字体下载导致截图引擎卡死 -->
-    <link rel="stylesheet" href="style.css?v=20260630_7">
+    <link rel="stylesheet" href="style.css?v=20260630_12">
 </head>
 <body>
     <div id="app">
@@ -109,6 +109,7 @@
             <!-- 外部操作区 (不被截图) -->
             <div class="action-buttons">
                 <button id="save-btn" class="glass-btn secondary">保存图片</button>
+                <button id="rewind-btn" class="glass-btn rewind-btn hidden">时空折跃</button>
                 <button id="restart-btn" class="glass-btn">重置时间线</button>
             </div>
         </div>
@@ -117,8 +118,8 @@
     <!-- 依次引入数据和主逻辑，不再使用外部 CDN，全部本地化以防止微信拦截 -->
     <script src="html2canvas.min.js?v=1"></script>
     <script src="qrcode.min.js?v=1"></script>
-    <script src="data.js?v=20260630_8"></script>
-    <script src="image_data.js?v=20260630_2"></script>
-    <script src="main.js?v=20260630_8"></script>
+    <script src="data.js?v=20260630_12"></script>
+    <script src="image_data.js?v=20260630_12"></script>
+    <script src="main.js?v=20260630_12"></script>
 </body>
 </html>

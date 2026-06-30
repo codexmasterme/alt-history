@@ -33,6 +33,10 @@ class GameApp {
         this.collectionProgressEl = document.getElementById('collection-progress');
         this.fadeElements = document.querySelectorAll('.fade-element');
         
+        document.getElementById('rewind-btn').addEventListener('click', () => {
+            this.rewindToLastBranch();
+        });
+
         this.restartBtn.addEventListener('click', () => this.restartGame());
         
         if (this.saveBtn) {
@@ -46,6 +50,11 @@ class GameApp {
         this.generateQRCode();
         
         this.updateCollectionUI();
+        
+        this.history = [];
+        this.lastDominantTraits = [];
+        this.comboCount = 0;
+        
         this.init();
     }
 
@@ -131,6 +140,35 @@ class GameApp {
     }
 
     /**
+     * E02 兜底分流函数
+     * 根据玩家属性偏好，将失败结局分配给不同的"坏结局"，稀释 E02 的权重
+     */
+    resolveCollapseExit() {
+        const s = this.scores;
+        // 找到最高的两项属性
+        const traits = [
+            { key: 'C', val: s.C }, { key: 'F', val: s.F },
+            { key: 'R', val: s.R }, { key: 'S', val: s.S },
+            { key: 'A', val: s.A }, { key: 'P', val: s.P }
+        ].sort((a, b) => b.val - a.val);
+
+        const primary = traits[0].key;
+        
+        // 分流逻辑：
+        if (primary === 'F') {
+            return 'E04'; // 列国并立
+        } else if (primary === 'C') {
+            return 'E03'; // 秦制重演
+        } else if (primary === 'A' || primary === 'P') {
+            return 'E12'; // 草原反噬
+        } else if (primary === 'S') {
+            return 'E08'; // 豪强共和
+        } else {
+            return 'E02'; // 基础兜底
+        }
+    }
+
+    /**
      * 枢纽出口路由：根据当前累计评分决定走 A / B / C 出口。
      * 方案甲：评分自动决定，玩家无感知。
      */
@@ -175,6 +213,34 @@ class GameApp {
             localStorage.setItem('collectedEndings', JSON.stringify(collected));
             this.updateCollectionUI();
         }
+    }
+    
+    rewindToLastBranch() {
+        if (!this.history || this.history.length === 0) return;
+        
+        let targetState = null;
+        for (let i = this.history.length - 1; i >= 0; i--) {
+            const state = this.history[i];
+            const node = window.storyNodes[state.currentNodeId];
+            if (node && node.isMain) {
+                targetState = state;
+                this.history = this.history.slice(0, i);
+                break;
+            }
+        }
+        
+        if (!targetState) {
+            targetState = this.history[0];
+            this.history = [];
+        }
+
+        this.scores = targetState.scores;
+        this.currentNodeId = targetState.currentNodeId;
+        this.actualSteps = targetState.actualSteps;
+        this.mainIndex = targetState.mainIndex;
+        
+        document.getElementById('ending-screen').classList.add('hidden');
+        this.renderNode(this.currentNodeId);
     }
     
     async renderNode(nodeId) {
@@ -236,9 +302,17 @@ class GameApp {
     }
     
     handleOptionClick(option) {
+        // 记录时空快照
+        this.history.push({
+            currentNodeId: this.currentNodeId,
+            scores: { ...this.scores },
+            actualSteps: this.actualSteps,
+            mainIndex: this.mainIndex
+        });
+
         this.actualSteps++;
 
-        // Accumulate scores
+        // 结算分数
         if (option.scores) {
             for (let k in option.scores) {
                 this.scores[k] += option.scores[k];
@@ -267,6 +341,32 @@ class GameApp {
             if (!nextId) {
                 console.error("Hub exit unresolved for", hubKey);
                 return;
+            }
+        }
+
+        // 1. 全局极值检测（打破时间锁）
+        // 只要分数极度偏科，随时随地暴雷 (限制：至少需要经过7步，避免暴毙过快)
+        if (this.actualSteps >= 7) {
+            if (this.scores.C + this.scores.R >= 10) {
+                nextId = this.scores.R > this.scores.C ? 'E09' : 'E03';
+            } else if (this.scores.F + this.scores.S >= 10) {
+                nextId = 'E08';
+            }
+        }
+
+        // 2. E02 兜底结局分流矩阵
+        // 如果下一步是 E02（西楚短世），不再无脑进入，而是根据当前属性倾向分摊
+        if (nextId === 'E02') {
+            nextId = this.resolveCollapseExit();
+        }
+
+        // 3. 历史惯性修正：强制存活最少 7 步
+        if (nextId && nextId.startsWith('E') && this.actualSteps < 7) {
+            this.mainIndex++;
+            if (this.mainIndex >= this.mainSequence.length) {
+                nextId = 'E01'; // 走完全程
+            } else {
+                nextId = this.mainSequence[this.mainIndex]; // 强制拉回下一段史实主线
             }
         }
 
@@ -355,7 +455,14 @@ class GameApp {
         const rarity = (4.5 + (hash % 11)).toFixed(1);
         this.statRarityEl.textContent = rarity;
         
-        this.endingScreen.classList.remove('hidden');
+        document.getElementById('ending-screen').classList.remove('hidden');
+        
+        const rewindBtn = document.getElementById('rewind-btn');
+        if (this.history && this.history.length > 0 && !['E01', 'E11', 'E13'].includes(endingId)) {
+            rewindBtn.classList.remove('hidden');
+        } else {
+            rewindBtn.classList.add('hidden');
+        }
         // 锁定 body 滚动，确保结局页一定在一屏内显示，不会出现下层游戏内容溢出导致的滚动条
         document.body.style.overflow = 'hidden';
         document.documentElement.style.overflow = 'hidden';
@@ -482,10 +589,12 @@ class GameApp {
     }
     
     restartGame() {
-        this.endingScreen.classList.remove('visible');
-        // 恢复 body 滚动
+        this.endingScreen.classList.add('hidden');
         document.body.style.overflow = '';
         document.documentElement.style.overflow = '';
+        
+        this.history = [];
+        this.scores = { C: 0, F: 0, R: 0, S: 0, A: 0, P: 0, I: 0, M: 0 };
         setTimeout(() => {
             this.endingScreen.classList.add('hidden');
             // 重新洗牌：每次重置都换一套主节点
