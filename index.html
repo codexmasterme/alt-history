@@ -6,7 +6,7 @@
     <meta name="referrer" content="no-referrer">
     <title>青史另说 - 汉朝历史分叉树</title>
     <!-- 使用原生系统宋体/明体，避免微信跨域字体下载导致截图引擎卡死 -->
-    <link rel="stylesheet" href="style.css?v=20260630_4">
+    <link rel="stylesheet" href="style.css?v=20260630_5">
 </head>
 <body>
     <div id="app">
@@ -14,6 +14,21 @@
         <div class="bg-gradient"></div>
         <div class="bg-noise"></div>
         <div class="bg-texture"></div>
+
+        <!-- 开场介绍弹窗 -->
+        <div id="intro-modal" class="intro-modal">
+            <div class="intro-card">
+                <div class="intro-title">青史另说</div>
+                <div class="intro-subtitle">一念千史</div>
+                <div class="intro-divider"></div>
+                <div class="intro-body">
+                    在历史的关键岔口，若当初选了另一条路，会怎样？<br><br>
+                    从楚汉相争到王朝更替，亲手推演每一个「如果」，解锁不一样的结局。<br><br>
+                    你的一个选择，可能改变整个王朝的命运。
+                </div>
+                <button id="intro-confirm-btn" class="intro-btn">开始推演</button>
+            </div>
+        </div>
 
         <!-- 主内容区 -->
         <div id="game-container">
@@ -102,8 +117,8 @@
     <!-- 依次引入数据和主逻辑，不再使用外部 CDN，全部本地化以防止微信拦截 -->
     <script src="html2canvas.min.js?v=1"></script>
     <script src="qrcode.min.js?v=1"></script>
-    <script src="data.js?v=20260630_2"></script>
+    <script src="data.js?v=20260630_3"></script>
     <script src="image_data.js?v=20260630_2"></script>
-    <script src="main.js?v=20260630_2"></script>
+    <script src="main.js?v=20260630_3"></script>
 </body>
 </html>

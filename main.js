@@ -251,49 +251,84 @@ class GameApp {
                 allowTaint: true,
                 scrollY: 0
             }).then(canvas => {
-                let dataUrl;
-                try {
-                    dataUrl = canvas.toDataURL('image/png');
-                } catch(e) {
-                    alert("图片导出失败: " + e.message);
-                    throw e;
+                const finishRender = (imgUrl, blob) => {
+                    let overlay = document.getElementById('screenshot-overlay');
+                    if (!overlay) {
+                        overlay = document.createElement('div');
+                        overlay.id = 'screenshot-overlay';
+                        document.body.appendChild(overlay);
+
+                        overlay.addEventListener('click', (e) => {
+                            // 点击图片或下载链接不关闭，其他空白处关闭
+                            if (e.target.tagName === 'IMG' || e.target.tagName === 'A') return;
+                            overlay.classList.remove('show');
+                        });
+                    }
+
+                    const fileName = '青史另说_历史命运签.png';
+
+                    overlay.innerHTML = `
+                        <div class="overlay-hint" style="color:white; font-size:1.05rem; margin-bottom:16px; text-shadow:0 2px 4px rgba(0,0,0,0.8); font-weight:bold; text-align:center;">生成成功！点击下方按钮下载，或长按图片保存</div>
+                        <img src="${imgUrl}" class="generated-image" alt="历史命运签" style="max-width:90%; max-height:70vh; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.8); pointer-events:auto;"/>
+                        <a href="${imgUrl}" download="${fileName}" class="download-link" id="download-link">⬇ 点击下载图片</a>
+                        <div class="overlay-close" style="color:rgba(255,255,255,0.6); font-size:0.85rem; margin-top:18px;">点击空白处关闭</div>
+                    `;
+
+                    // iOS Safari 不支持 <a download>，回退到新窗口打开让用户长按保存
+                    const dlLink = overlay.querySelector('#download-link');
+                    if (dlLink && /iPad|iPhone|iPod/.test(navigator.userAgent)) {
+                        dlLink.addEventListener('click', (ev) => {
+                            ev.preventDefault();
+                            window.open(imgUrl, '_blank');
+                        });
+                    }
+
+                    overlay.style.position = 'fixed';
+                    overlay.style.top = '0';
+                    overlay.style.left = '0';
+                    overlay.style.width = '100vw';
+                    overlay.style.height = '100vh';
+                    overlay.style.background = 'rgba(0, 0, 0, 0.95)';
+                    overlay.style.zIndex = '999999';
+                    overlay.style.display = 'flex';
+                    overlay.style.flexDirection = 'column';
+                    overlay.style.alignItems = 'center';
+                    overlay.style.justifyContent = 'center';
+                    overlay.style.padding = '20px';
+                    overlay.style.boxSizing = 'border-box';
+
+                    overlay.classList.add('show');
+
+                    shareCard.style.transform = oldTransform;
+                    shareCard.classList.remove('no-noise');
+                    this.saveBtn.textContent = '保存图片';
+                };
+
+                // 优先使用 Blob URL —— 移动端浏览器对 Blob URL 图片更容易给出
+                // 「保存图片」「下载」等长按菜单项；data URL 则常被限制。
+                if (canvas.toBlob) {
+                    canvas.toBlob(blob => {
+                        if (!blob) {
+                            try {
+                                finishRender(canvas.toDataURL('image/png'), null);
+                            } catch (e) {
+                                alert('图片导出失败: ' + e.message);
+                            }
+                            return;
+                        }
+                        const blobUrl = URL.createObjectURL(blob);
+                        finishRender(blobUrl, blob);
+                    }, 'image/png');
+                } else {
+                    let dataUrl;
+                    try {
+                        dataUrl = canvas.toDataURL('image/png');
+                    } catch (e) {
+                        alert('图片导出失败: ' + e.message);
+                        throw e;
+                    }
+                    finishRender(dataUrl, null);
                 }
-                
-                let overlay = document.getElementById('screenshot-overlay');
-                if (!overlay) {
-                    overlay = document.createElement('div');
-                    overlay.id = 'screenshot-overlay';
-                    document.body.appendChild(overlay);
-                    
-                    overlay.addEventListener('click', () => {
-                        overlay.classList.remove('show');
-                    });
-                }
-                
-                overlay.innerHTML = `
-                    <div class="overlay-hint" style="color:white; font-size:1.1rem; margin-bottom:20px; text-shadow:0 2px 4px rgba(0,0,0,0.8); font-weight:bold;">生成成功！请长按下方图片保存或发给朋友</div>
-                    <img src="${dataUrl}" class="generated-image" alt="历史命运签" style="max-width:90%; max-height:80vh; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.8); pointer-events:auto;"/>
-                    <div class="overlay-close" style="color:rgba(255,255,255,0.6); font-size:0.9rem; margin-top:20px;">点击任意处关闭</div>
-                `;
-                
-                overlay.style.position = 'fixed';
-                overlay.style.top = '0';
-                overlay.style.left = '0';
-                overlay.style.width = '100vw';
-                overlay.style.height = '100vh';
-                overlay.style.background = 'rgba(0, 0, 0, 0.95)';
-                overlay.style.zIndex = '999999';
-                overlay.style.display = 'flex';
-                overlay.style.flexDirection = 'column';
-                overlay.style.alignItems = 'center';
-                overlay.style.justifyContent = 'center';
-                
-                overlay.classList.add('show');
-                
-                shareCard.style.transform = oldTransform;
-                shareCard.classList.remove('no-noise');
-                this.saveBtn.textContent = '保存图片';
-                
             }).catch(err => {
                 alert('长图生成失败: ' + (err.message || err));
                 this.saveBtn.textContent = '保存失败';
@@ -354,7 +389,23 @@ function checkWeChat() {
     }
 }
 
-window.addEventListener('DOMContentLoaded', () => {
+function showIntroModal() {
+    return new Promise(resolve => {
+        const modal = document.getElementById('intro-modal');
+        const btn = document.getElementById('intro-confirm-btn');
+        if (!modal || !btn) { resolve(); return; }
+        btn.addEventListener('click', () => {
+            modal.classList.add('fade-out');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                resolve();
+            }, 500);
+        }, { once: true });
+    });
+}
+
+window.addEventListener('DOMContentLoaded', async () => {
     checkWeChat();
+    await showIntroModal();
     new GameApp();
 });

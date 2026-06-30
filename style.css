@@ -1038,4 +1038,123 @@ header.fade-element.visible { transition-delay: 0.1s; }
         justify-content: center;
     }
 }
+
+/* ========== 开场介绍弹窗 ========== */
+.intro-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(8, 8, 12, 0.92);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 9999998;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    box-sizing: border-box;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.intro-modal.fade-out {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.intro-modal.hidden {
+    display: none;
+}
+
+.intro-card {
+    max-width: 420px;
+    width: 100%;
+    background: linear-gradient(160deg, rgba(34, 28, 22, 0.95), rgba(20, 16, 14, 0.95));
+    border: 1px solid rgba(212, 175, 55, 0.35);
+    border-radius: 16px;
+    padding: 36px 28px 28px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7), inset 0 1px 0 rgba(212, 175, 55, 0.15);
+    text-align: center;
+    color: #e8d9b8;
+    font-family: "Songti SC", "STSong", "SimSun", serif;
+}
+
+.intro-title {
+    font-size: 2rem;
+    letter-spacing: 0.4em;
+    color: #d4af37;
+    text-shadow: 0 2px 12px rgba(212, 175, 55, 0.4);
+    margin-bottom: 6px;
+    font-weight: 600;
+    padding-left: 0.4em; /* compensate letter-spacing for visual centering */
+}
+
+.intro-subtitle {
+    font-size: 1rem;
+    letter-spacing: 0.3em;
+    color: rgba(232, 217, 184, 0.7);
+    margin-bottom: 18px;
+    padding-left: 0.3em;
+}
+
+.intro-divider {
+    width: 60%;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(212, 175, 55, 0.6), transparent);
+    margin: 0 auto 22px;
+}
+
+.intro-body {
+    font-size: 0.98rem;
+    line-height: 1.95;
+    color: rgba(232, 217, 184, 0.88);
+    text-align: left;
+    margin-bottom: 28px;
+    padding: 0 6px;
+}
+
+.intro-btn {
+    display: inline-block;
+    padding: 12px 42px;
+    font-size: 1rem;
+    letter-spacing: 0.25em;
+    color: #1a1612;
+    background: linear-gradient(135deg, #e8c860 0%, #d4af37 50%, #b8941f 100%);
+    border: none;
+    border-radius: 24px;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 600;
+    box-shadow: 0 6px 18px rgba(212, 175, 55, 0.35);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    padding-left: calc(42px + 0.25em);
+}
+
+.intro-btn:hover,
+.intro-btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 22px rgba(212, 175, 55, 0.5);
+}
+
+/* ========== 截图下载链接 ========== */
+.download-link {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 10px 28px;
+    font-size: 0.95rem;
+    letter-spacing: 0.15em;
+    color: #1a1612;
+    background: linear-gradient(135deg, #e8c860 0%, #d4af37 50%, #b8941f 100%);
+    border-radius: 22px;
+    text-decoration: none;
+    font-family: "Songti SC", "STSong", "SimSun", serif;
+    font-weight: 600;
+    box-shadow: 0 4px 14px rgba(212, 175, 55, 0.4);
+}
+
+.download-link:active {
+    transform: translateY(1px);
+}
 \n\n/* OVERRIDE TO FIX HTML2CANVAS BUG */\n.qr-placeholder { background: #fff !important; }\n
