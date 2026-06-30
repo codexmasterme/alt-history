@@ -1,8 +1,11 @@
 class GameApp {
     constructor() {
-        this.currentNodeId = 'M01';
+        this.MAIN_PICK = 20; // 从全部主节点中随机抽取的数量
+        this.mainSequence = this.pickMainSequence();
+        this.mainIndex = 0;
+        this.currentNodeId = this.mainSequence[0];
         this.scores = { C: 0, F: 0, R: 0, S: 0, A: 0, P: 0, I: 0, M: 0 };
-        this.maxSteps = 20; // total main steps roughly
+        this.maxSteps = this.mainSequence.length;
         this.actualSteps = 1;
         
         // Elements
@@ -57,6 +60,24 @@ class GameApp {
     init() {
         this.renderNode(this.currentNodeId);
     }
+
+    /**
+     * 从全部 isMain 主节点中随机抽取 MAIN_PICK 个，按 chrono 升序返回 ID 数组。
+     * 每局游戏开始 / 重置都会重新抽签。
+     */
+    pickMainSequence() {
+        const all = Object.values(window.storyNodes).filter(n => n.isMain);
+        // Fisher-Yates 洗牌
+        const arr = all.slice();
+        for (let i = arr.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [arr[i], arr[j]] = [arr[j], arr[i]];
+        }
+        const k = Math.min(this.MAIN_PICK, arr.length);
+        const picked = arr.slice(0, k);
+        picked.sort((a, b) => a.chrono - b.chrono);
+        return picked.map(n => n.id);
+    }
     
     updateCollectionUI() {
         try {
@@ -93,10 +114,16 @@ class GameApp {
             return;
         }
         
-        // Render Progress Bar
-        const stepNum = node.step || 1;
+        // Render Progress Bar —— 主节点按所在抽签序列的位置标号；支线节点显示累计步数
+        let stepNum;
+        if (node.isMain) {
+            const idx = this.mainSequence.indexOf(node.id);
+            stepNum = idx >= 0 ? idx + 1 : this.actualSteps;
+        } else {
+            stepNum = this.actualSteps;
+        }
         this.stepLabelEl.textContent = `第 ${stepNum} 步 · ${node.title.split(' ')[0]}`;
-        
+
         this.dotsContainer.innerHTML = '';
         for (let i = 1; i <= this.maxSteps; i++) {
             const dot = document.createElement('div');
@@ -137,20 +164,34 @@ class GameApp {
     
     handleOptionClick(option) {
         this.actualSteps++;
-        
+
         // Accumulate scores
         if (option.scores) {
             for (let k in option.scores) {
                 this.scores[k] += option.scores[k];
             }
         }
-        
-        const nextId = option.next;
-        if (!nextId) {
-            console.error("No next node!");
+
+        let nextId = option.next;
+
+        // 史实选项 + 当前是主节点 → 从随机序列中查找下一个主节点
+        const currentNode = window.storyNodes[this.currentNodeId];
+        if (currentNode && currentNode.isMain && option.isHistorical) {
+            this.mainIndex++;
+            if (this.mainIndex >= this.mainSequence.length) {
+                // 走完整条主线 → 炎汉正统
+                this.showEnding('E01');
+                return;
+            }
+            nextId = this.mainSequence[this.mainIndex];
+        }
+
+        if (!nextId || nextId === '__NEXT_MAIN__') {
+            console.error("No next node!", option);
             return;
         }
-        
+
+        this.currentNodeId = nextId;
         if (nextId.startsWith('E')) {
             this.showEnding(nextId);
         } else {
@@ -349,7 +390,11 @@ class GameApp {
         this.endingScreen.classList.remove('visible');
         setTimeout(() => {
             this.endingScreen.classList.add('hidden');
-            this.currentNodeId = 'M01';
+            // 重新洗牌：每次重置都换一套主节点
+            this.mainSequence = this.pickMainSequence();
+            this.mainIndex = 0;
+            this.currentNodeId = this.mainSequence[0];
+            this.maxSteps = this.mainSequence.length;
             this.actualSteps = 1;
             this.scores = { C: 0, F: 0, R: 0, S: 0, A: 0, P: 0, I: 0, M: 0 };
             this.renderNode(this.currentNodeId);
