@@ -16,13 +16,18 @@
     font-family: "Noto Serif CJK SC", "Noto Serif SC", "Source Han Serif SC", "Source Han Serif CN", "Songti SC", "SimSun", "STSong", "AR PL New Sung", serif;
 }
 
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100dvh;
+    overflow: hidden;
+}
+
 body {
     background-color: var(--bg-color-deep);
     color: var(--text-primary);
     line-height: 1.6;
-    overflow-x: hidden;
-    overflow-y: scroll;
-    min-height: 100vh;
 }
 
 /* 渐变装饰背景 */
@@ -50,11 +55,14 @@ body {
 }
 
 #app {
+    width: 100vw;
+    height: 100dvh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
     padding: 2rem;
+    overflow-y: auto; /* allow scrolling inside app if needed */
 }
 
 #game-container {
@@ -1035,8 +1043,8 @@ header.fade-element.visible { transition-delay: 0.1s; }
     
     /* Ensure the app container itself tries to fit */
     #app {
-        height: 100vh !important;
-        min-height: 100vh !important;
+        height: 100dvh !important;
+        width: 100vw !important;
         padding: 10px 15px !important;
         display: flex;
         flex-direction: column;
