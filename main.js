@@ -40,21 +40,71 @@ class GameApp {
         }
         
         // Dynamically generate QR Code pointing to the current URL
-        const qrContainer = document.querySelector('.qr-code');
-        if (qrContainer && typeof QRCode !== 'undefined') {
-            qrContainer.innerHTML = ''; // clear placeholder
-            new QRCode(qrContainer, {
-                text: window.location.href.split('?')[0].split('#')[0], // Base URL without hash/query
-                width: 60,
-                height: 60,
-                colorDark : "#000000",
-                colorLight : "#ffffff",
-                correctLevel : QRCode.CorrectLevel.L
-            });
-        }
+        // 用同步方式生成 QR：先在 canvas 上画，再立即转成 data URL 写入 <img>，
+        // 这样 html2canvas 截图时永远只看到一个完整的 <img>，不会因为 canvas 异步
+        // 转 img 的时序问题导致二维码区域空白。
+        this.generateQRCode();
         
         this.updateCollectionUI();
         this.init();
+    }
+
+    /**
+     * 同步生成二维码：生成 canvas → 立刻 toDataURL → 替换为 <img>。
+     * 这样无论用户多快点击 "保存图片"，二维码都已经在 DOM 里以 <img> 形式存在。
+     */
+    generateQRCode() {
+        const qrContainer = document.querySelector('.qr-code');
+        if (!qrContainer) return;
+        if (typeof QRCode === 'undefined') {
+            console.warn('QRCode library not loaded');
+            return;
+        }
+        try {
+            // 清空旧内容（包括 placeholder）
+            qrContainer.innerHTML = '';
+            // 创建一个临时容器给 QRCode 用
+            const tmp = document.createElement('div');
+            tmp.style.cssText = 'position:absolute;left:-9999px;top:-9999px;width:60px;height:60px;';
+            document.body.appendChild(tmp);
+            const qr = new QRCode(tmp, {
+                text: window.location.href.split('?')[0].split('#')[0],
+                width: 60,
+                height: 60,
+                colorDark: "#000000",
+                colorLight: "#ffffff",
+                correctLevel: QRCode.CorrectLevel.L
+            });
+            // 同步提取 canvas → data URL
+            const canvas = tmp.querySelector('canvas');
+            const oldImg = tmp.querySelector('img');
+            let dataUrl = '';
+            if (canvas) {
+                try { dataUrl = canvas.toDataURL('image/png'); } catch (e) { dataUrl = ''; }
+            } else if (oldImg && oldImg.src) {
+                dataUrl = oldImg.src;
+            }
+            // 清理临时容器
+            if (qr && typeof qr.clear === 'function') {
+                try { qr.clear(); } catch (e) {}
+            }
+            tmp.remove();
+            // 把最终 <img> 放进 .qr-code
+            qrContainer.innerHTML = '';
+            if (dataUrl) {
+                const img = document.createElement('img');
+                img.src = dataUrl;
+                img.width = 60;
+                img.height = 60;
+                img.style.cssText = 'display:block;width:100%;height:100%;border:0;';
+                qrContainer.appendChild(img);
+            } else {
+                // 兜底：仍然放一个可见的占位
+                qrContainer.innerHTML = '<div style="width:100%;height:100%;background:#fff;"></div>';
+            }
+        } catch (e) {
+            console.error('QR code generation failed:', e);
+        }
     }
     
     init() {
@@ -235,8 +285,13 @@ class GameApp {
         // Compute and Show Personality
         const { bestMatch } = this.calculatePersonality();
         this.pTitleEl.textContent = bestMatch.name;
-        this.pTagsEl.textContent = bestMatch.tags.join(' · ');
+        // 不再显示英文标签 (C · A · I 等)
+        if (this.pTagsEl) this.pTagsEl.textContent = '';
+        if (this.pTagsEl && this.pTagsEl.parentNode) this.pTagsEl.parentNode.removeChild(this.pTagsEl);
         this.pDescEl.textContent = bestMatch.desc;
+        
+        // 每次显示结局时重新生成二维码，确保 html2canvas 截图前一定有一个完整的 <img>
+        this.generateQRCode();
         
         // Set Character Image
         const imgMap = {
@@ -267,6 +322,9 @@ class GameApp {
         this.statRarityEl.textContent = rarity;
         
         this.endingScreen.classList.remove('hidden');
+        // 锁定 body 滚动，确保结局页一定在一屏内显示，不会出现下层游戏内容溢出导致的滚动条
+        document.body.style.overflow = 'hidden';
+        document.documentElement.style.overflow = 'hidden';
         setTimeout(() => {
             this.endingScreen.classList.add('visible');
         }, 50);
@@ -281,6 +339,9 @@ class GameApp {
         
         shareCard.style.transform = 'none';
         shareCard.classList.add('no-noise');
+        
+        // 截图前再次确认二维码已经以 <img> 形式存在
+        this.generateQRCode();
         
         this.saveBtn.textContent = '生成中...';
         
@@ -388,6 +449,9 @@ class GameApp {
     
     restartGame() {
         this.endingScreen.classList.remove('visible');
+        // 恢复 body 滚动
+        document.body.style.overflow = '';
+        document.documentElement.style.overflow = '';
         setTimeout(() => {
             this.endingScreen.classList.add('hidden');
             // 重新洗牌：每次重置都换一套主节点

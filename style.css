@@ -565,7 +565,7 @@ header.fade-element.visible { transition-delay: 0.1s; }
     border-radius: 12px;
     width: 100%;
     max-width: 400px;
-    padding: 30px;
+    padding: 18px 20px;
     position: relative;
     overflow: hidden;
     /* This makes sure html2canvas captures it nicely */
@@ -583,15 +583,15 @@ header.fade-element.visible { transition-delay: 0.1s; }
 /* Card Header */
 .card-header {
     text-align: center;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
 }
 
 .stamp-bg {
     position: absolute;
-    top: 10px;
-    right: 20px;
-    width: 60px;
-    height: 60px;
+    top: 6px;
+    right: 12px;
+    width: 44px;
+    height: 44px;
     border: 2px solid rgba(212, 175, 55, 0.2);
     border-radius: 5px;
     transform: rotate(15deg);
@@ -600,82 +600,76 @@ header.fade-element.visible { transition-delay: 0.1s; }
 }
 
 .personality-title {
-    font-size: 2.8rem;
+    font-size: 2rem;
     font-weight: bold;
     color: var(--primary-color);
     text-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
     letter-spacing: 4px;
-    margin-bottom: 10px;
+    margin-bottom: 6px;
     font-family: 'Noto Serif SC', serif;
 }
 
+/* 英文标签不再显示 */
 .personality-tags {
-    font-size: 0.9rem;
-    color: var(--primary-color-dim);
-    letter-spacing: 2px;
-    margin-bottom: 15px;
-    display: inline-block;
-    padding: 4px 12px;
-    border: 1px solid rgba(212, 175, 55, 0.3);
-    border-radius: 20px;
-    background: rgba(212, 175, 55, 0.05);
+    display: none !important;
 }
 
 .personality-desc {
-    font-size: 0.95rem;
+    font-size: 0.85rem;
     color: #bbb;
-    line-height: 1.6;
+    line-height: 1.5;
+    margin-top: 4px;
 }
 
 .card-divider {
     height: 1px;
     background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.3), transparent);
-    margin: 20px 0;
+    margin: 10px 0;
 }
 
 /* Card Body */
 .card-body {
     text-align: center;
-    margin-bottom: 25px;
+    margin-bottom: 12px;
 }
 
 .history-relation {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     color: #888;
-    margin-bottom: 8px;
+    margin-bottom: 4px;
     letter-spacing: 1px;
 }
 
 .ending-title {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     color: #fff;
     letter-spacing: 3px;
-    margin-bottom: 10px;
+    margin-bottom: 6px;
     font-weight: 600;
 }
 
 .ending-desc {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     color: #aaa;
-    line-height: 1.5;
+    line-height: 1.4;
 }
 
 /* Card Stats */
 .card-stats {
     background: rgba(0, 0, 0, 0.3);
     border-radius: 6px;
-    padding: 12px;
+    padding: 8px 10px;
     text-align: center;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     color: #999;
-    margin-bottom: 25px;
+    margin-bottom: 10px;
     border: 1px solid rgba(255,255,255,0.05);
 }
 
 .card-stats .highlight {
     color: var(--primary-color);
     font-weight: bold;
-    font-size: 1rem;
+    font-size: 0.95rem;
 }
 
 /* Card Footer (Hook) */
@@ -684,35 +678,43 @@ header.fade-element.visible { transition-delay: 0.1s; }
     justify-content: space-between;
     align-items: center;
     border-top: 1px dashed rgba(212, 175, 55, 0.2);
-    padding-top: 20px;
+    padding-top: 10px;
 }
 
 .hook-text {
     flex: 1;
-    padding-right: 15px;
+    padding-right: 10px;
 }
 
 .hook-main {
-    font-size: 0.9rem;
+    font-size: 0.82rem;
     color: #ddd;
-    margin-bottom: 5px;
-    line-height: 1.4;
+    margin-bottom: 3px;
+    line-height: 1.3;
 }
 
 .hook-sub {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     color: var(--primary-color-dim);
 }
 
 .qr-code {
-    width: 60px;
-    height: 60px;
+    width: 52px;
+    height: 52px;
     background: #fff;
-    padding: 4px;
+    padding: 3px;
     border-radius: 4px;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;
+}
+
+.qr-code img {
+    display: block;
+    width: 100% !important;
+    height: 100% !important;
+    border: 0;
 }
 
 .qr-placeholder {
@@ -741,17 +743,17 @@ header.fade-element.visible { transition-delay: 0.1s; }
 /* Action Buttons Outside Card */
 .action-buttons {
     display: flex;
-    gap: 15px;
-    margin-top: 30px;
+    gap: 12px;
+    margin-top: 14px;
 }
 
 .glass-btn {
-    padding: 12px 24px;
+    padding: 8px 18px;
     background: rgba(212, 175, 55, 0.1);
     border: 1px solid var(--primary-color);
     color: var(--primary-color);
-    border-radius: 25px;
-    font-size: 1rem;
+    border-radius: 22px;
+    font-size: 0.9rem;
     cursor: pointer;
     transition: all 0.3s ease;
     backdrop-filter: blur(5px);
@@ -781,9 +783,9 @@ header.fade-element.visible { transition-delay: 0.1s; }
 .card-body {
     position: relative;
     text-align: center;
-    margin: 15px 0 25px 0;
+    margin: 8px 0 10px 0;
     width: 100%;
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 16 / 9;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -805,7 +807,7 @@ header.fade-element.visible { transition-delay: 0.1s; }
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
     /* This gradient ensures text is legible by darkening the top and bottom */
-    background: linear-gradient(to bottom, rgba(13,13,15,0.95) 0%, rgba(13,13,15,0) 30%, rgba(13,13,15,0) 60%, rgba(13,13,15,0.95) 100%);
+    background: linear-gradient(to bottom, rgba(13,13,15,0.85) 0%, rgba(13,13,15,0) 35%, rgba(13,13,15,0) 65%, rgba(13,13,15,0.95) 100%);
 }
 
 /* Fallback overlay in case image is too bright overall */
@@ -819,7 +821,7 @@ header.fade-element.visible { transition-delay: 0.1s; }
 .card-body-content {
     position: relative;
     z-index: 1;
-    padding: 20px;
+    padding: 10px 14px;
     width: 100%;
     height: 100%;
     display: flex;
@@ -828,7 +830,7 @@ header.fade-element.visible { transition-delay: 0.1s; }
 }
 
 .history-relation {
-    margin-top: 10px;
+    margin-top: 2px;
     text-shadow: 0 2px 4px rgba(0,0,0,0.8);
 }
 
@@ -838,7 +840,7 @@ header.fade-element.visible { transition-delay: 0.1s; }
 }
 
 .ending-desc {
-    margin-bottom: 10px;
+    margin-bottom: 4px;
     text-shadow: 0 1px 4px rgba(0,0,0,0.8);
 }
 
@@ -851,26 +853,28 @@ header.fade-element.visible { transition-delay: 0.1s; }
 @media (max-width: 600px) {
     /* 1. Fix Ending Screen Cut-off */
     #ending-screen {
-        height: auto !important;
+        height: 100vh !important;
         min-height: 100vh !important;
-        position: absolute !important; /* Allow it to scroll with the page if needed */
-        justify-content: flex-start !important;
-        padding: 40px 15px !important;
-        overflow-y: auto !important;
+        position: fixed !important;
+        top: 0; left: 0; right: 0; bottom: 0;
+        justify-content: center !important;
+        padding: 10px 12px !important;
+        overflow: hidden !important;
     }
     
     /* 2. Fix Share Card taking too much vertical space on mobile */
     .share-card {
-        padding: 25px 15px !important;
-        margin-top: 10px !important;
+        padding: 14px 16px !important;
+        margin-top: 0 !important;
+        max-width: 100% !important;
     }
     
     .card-body {
-        margin: 10px 0 15px 0 !important;
+        margin: 6px 0 8px 0 !important;
     }
     
     .ending-title {
-        font-size: 1.8rem !important;
+        font-size: 1.4rem !important;
     }
     
     /* 3. Fix Gameplay options being pushed down */
