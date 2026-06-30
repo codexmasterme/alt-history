@@ -112,21 +112,44 @@ class GameApp {
     }
 
     /**
-     * 从全部 isMain 主节点中随机抽取 MAIN_PICK 个，按 chrono 升序返回 ID 数组。
-     * 每局游戏开始 / 重置都会重新抽签。
+     * 抽取主节点序列：
+     * - 第 1 步固定 = M01 鸿门宴
+     * - 其余 MAIN_PICK-1 个从 M02..M33 随机抽取，按 chrono 升序
      */
     pickMainSequence() {
-        const all = Object.values(window.storyNodes).filter(n => n.isMain);
-        // Fisher-Yates 洗牌
-        const arr = all.slice();
+        const others = Object.values(window.storyNodes)
+            .filter(n => n.isMain && n.id !== 'M01');
+        const arr = others.slice();
         for (let i = arr.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
             [arr[i], arr[j]] = [arr[j], arr[i]];
         }
-        const k = Math.min(this.MAIN_PICK, arr.length);
+        const k = Math.min(this.MAIN_PICK - 1, arr.length);
         const picked = arr.slice(0, k);
         picked.sort((a, b) => a.chrono - b.chrono);
-        return picked.map(n => n.id);
+        return ['M01'].concat(picked.map(n => n.id));
+    }
+
+    /**
+     * 枢纽出口路由：根据当前累计评分决定走 A / B / C 出口。
+     * 方案甲：评分自动决定，玩家无感知。
+     */
+    resolveHubExit(hubKey) {
+        const s = this.scores;
+        const profiles = {
+            chu:   { A: s.R + s.A + s.M, B: s.S + s.P + s.I, C: s.F + s.I },
+            san:   { A: s.F + s.S + s.I, B: s.P + s.M,       C: s.R + s.A },
+            jiang: { A: s.F + s.S,       B: s.C + s.R,       C: s.F + s.A + s.M },
+            xin:   { A: s.R + s.I,       B: s.A + s.M,       C: s.F + s.M },
+            yuan:  { A: s.C + s.S,       B: s.F + s.A,       C: s.R + s.M },
+            men:   { A: s.F + s.I,       B: s.S + s.M,       C: s.C + s.R },
+        };
+        const p = profiles[hubKey];
+        if (!p) { console.error('Unknown hub:', hubKey); return null; }
+        // 找最高分的出口；并列时优先级 A > B > C
+        const entries = [['A', p.A], ['B', p.B], ['C', p.C]];
+        entries.sort((x, y) => y[1] - x[1]);
+        return `HUB_${hubKey}_${entries[0][0]}_1`;
     }
     
     updateCollectionUI() {
@@ -135,9 +158,9 @@ class GameApp {
             if (this.collectionProgressEl) {
                 if (collected.length > 0) {
                     const titles = collected.map(id => window.endings[id] ? window.endings[id].title : id).join('、');
-                    this.collectionProgressEl.textContent = `大结局图鉴收集进度：${collected.length} / 12 （已解锁：${titles}）`;
+                    this.collectionProgressEl.textContent = `大结局图鉴收集进度：${collected.length} / 16 （已解锁：${titles}）`;
                 } else {
-                    this.collectionProgressEl.textContent = `大结局图鉴收集进度：0 / 12`;
+                    this.collectionProgressEl.textContent = `大结局图鉴收集进度：0 / 16`;
                 }
             }
         } catch(e) {
@@ -234,6 +257,17 @@ class GameApp {
                 return;
             }
             nextId = this.mainSequence[this.mainIndex];
+        }
+
+        // 枢纽出口哨兵 __HUB_XXX_EXIT__ → 根据评分路由到具体出口
+        const hubExitMatch = nextId && /^__HUB_([a-z]+)_EXIT__$/.exec(nextId);
+        if (hubExitMatch) {
+            const hubKey = hubExitMatch[1];
+            nextId = this.resolveHubExit(hubKey);
+            if (!nextId) {
+                console.error("Hub exit unresolved for", hubKey);
+                return;
+            }
         }
 
         if (!nextId || nextId === '__NEXT_MAIN__') {

@@ -26,7 +26,7 @@ window.storyNodes = {
       },
       {
         "text": "当场杀刘邦",
-        "next": "M01_2",
+        "next": "M01_INTRO_1",
         "isHistorical": false,
         "subtext": "刀光一闪，刘邦死于席间……",
         "scores": {
@@ -317,7 +317,7 @@ window.storyNodes = {
       },
       {
         "text": "另择良将、不破格用人",
-        "next": "M02_3",
+        "next": "M02_INTRO_1",
         "isHistorical": false,
         "subtext": "刘邦认为三军性命非同儿戏，理当交给久经考验的宿将，韩信终究没有留下……",
         "scores": {
@@ -567,7 +567,7 @@ window.storyNodes = {
       },
       {
         "text": "纳蒯通之计、自立三分",
-        "next": "M03_4",
+        "next": "M03_INTRO_1",
         "isHistorical": false,
         "subtext": "韩信据齐自立……",
         "scores": {
@@ -817,7 +817,7 @@ window.storyNodes = {
       },
       {
         "text": "渡江卷土重来",
-        "next": "M04_5",
+        "next": "M04_INTRO_1",
         "isHistorical": false,
         "subtext": "项羽渡过乌江，回到江东……",
         "scores": {
@@ -1489,7 +1489,7 @@ window.storyNodes = {
       },
       {
         "text": "延续黄老 / 思想多元",
-        "next": "M08_9",
+        "next": "M08_INTRO_1",
         "isHistorical": false,
         "subtext": "武帝不独尊儒术，听任诸子百家多元并存……",
         "scores": {
@@ -2161,7 +2161,7 @@ window.storyNodes = {
       },
       {
         "text": "篡汉被刘氏挫败",
-        "next": "M12_13",
+        "next": "M12_INTRO_1",
         "isHistorical": false,
         "subtext": "王莽的篡夺被及时挫败——刘氏宗室与忠汉士大夫提前联手，或某次关键程序受阻……",
         "scores": {
@@ -2329,7 +2329,7 @@ window.storyNodes = {
       },
       {
         "text": "温和渐进改制",
-        "next": "M13_14",
+        "next": "M13_INTRO_1",
         "isHistorical": false,
         "subtext": "王莽采取更温和、渐进、务实的改革策略——不搞激进的土地国有和频繁币改，而是循序渐进地抑制兼并、安抚各阶层……",
         "scores": {
@@ -3001,7 +3001,7 @@ window.storyNodes = {
       },
       {
         "text": "扶持清流、矫正朝纲",
-        "next": "M17_18",
+        "next": "M17_INTRO_1",
         "isHistorical": false,
         "subtext": "党锢之祸未发，士大夫清流集团反而压制了宦官、主导朝政……",
         "scores": {
@@ -3663,7 +3663,7 @@ window.storyNodes = {
       },
       {
         "text": "刘邦死于彭城溃乱",
-        "next": "M21_2",
+        "next": "M21_INTRO_1",
         "isHistorical": false,
         "subtext": "在乱军之中，刘邦被流矢或楚骑追及。汉营失去唯一的政治整合者，反楚联盟瞬间土崩——",
         "scores": {"C":0,"F":0,"R":1,"S":0,"A":1,"P":0,"I":0,"M":1}
@@ -3755,7 +3755,7 @@ window.storyNodes = {
       },
       {
         "text": "收回兵权、集中正面决战",
-        "next": "M22_2",
+        "next": "M22_INTRO_1",
         "isHistorical": false,
         "subtext": "刘邦顾忌韩信坐大，把他调回荥阳正面战场。北方第二战场胎死腹中，楚汉只能在荥阳一线长期对峙——",
         "scores": {"C":0,"F":0,"R":1,"S":0,"A":1,"P":0,"I":0,"M":1}
@@ -4215,7 +4215,7 @@ window.storyNodes = {
       },
       {
         "text": "宣帝沉湎深宫、放任外戚",
-        "next": "M27_2",
+        "next": "M27_INTRO_1",
         "isHistorical": false,
         "subtext": "宣帝长于民间，登基后被霍氏与权贵裹挟，沉湎宫闱、疏于朝政。中兴的时机就此错过——一个本可挽回的王朝，开始无声地下滑——",
         "scores": {"C":0,"F":0,"R":1,"S":0,"A":1,"P":0,"I":0,"M":1}
@@ -4491,7 +4491,7 @@ window.storyNodes = {
       },
       {
         "text": "某位皇帝打破循环、扶持士大夫",
-        "next": "M30_2",
+        "next": "M30_INTRO_1",
         "isHistorical": false,
         "subtext": "某位幼帝长成之后，没有走『联合宦官诛外戚』的老路，而是借力士大夫清流集团，同时压制外戚与宦官——这是一个极小概率的逆转——",
         "scores": {"C":0,"F":0,"R":1,"S":0,"A":1,"P":0,"I":1,"M":0}
@@ -4583,7 +4583,7 @@ window.storyNodes = {
       },
       {
         "text": "袁绍抢先迎天子",
-        "next": "M31_2",
+        "next": "M31_INTRO_1",
         "isHistorical": false,
         "subtext": "袁绍麾下沮授力主迎天子，袁绍稍有犹豫，结果让谋士陈宫献策的吕布抢先抵达洛阳。汉献帝被另一路诸侯接走——『挟天子』的剧本主角，换人——",
         "scores": {"C":0,"F":0,"R":1,"S":0,"A":1,"P":0,"I":0,"M":1}
@@ -4675,7 +4675,7 @@ window.storyNodes = {
       },
       {
         "text": "袁绍以势压境、曹操败北",
-        "next": "M32_2",
+        "next": "M32_INTRO_1",
         "isHistorical": false,
         "subtext": "袁绍以兵力优势稳扎稳打，曹操久攻不下，粮草先尽。一场失败让曹操元气大伤，北方的主导权易主——",
         "scores": {"C":0,"F":0,"R":1,"S":0,"A":1,"P":0,"I":0,"M":1}
@@ -4842,6 +4842,1207 @@ window.storyNodes = {
       }
     ]
   }
+,
+"HUB_chu_1": {
+    "id": "HUB_chu_1",
+    "title": "楚朝定都",
+    "year": "前206年",
+    "setup": "项羽既得天下，要决定王朝根基立于何处。关中沃野千里、四塞之固，但残破；彭城腹心之地，是楚人故土。",
+    "options": [
+      {"text":"定都彭城，立足故土","next":"HUB_chu_2","isHistorical":false,"subtext":"衣锦还乡、坐镇腹心，合乎人情；但彭城无险可守，四面受敌。","scores":{"C":0,"F":1,"R":0,"S":0,"A":0,"P":1,"I":1,"M":0}},
+      {"text":"留镇关中，扼守形胜","next":"HUB_chu_2","isHistorical":false,"subtext":"着眼地利的稳健之选；但关中刚遭楚军杀伐，民心未附，地利虽得，人和待修。","scores":{"C":1,"F":0,"R":0,"S":1,"A":0,"P":0,"I":0,"M":1}}
+    ]
+  },
+  "HUB_chu_2": {
+    "id": "HUB_chu_2",
+    "title": "楚朝建制",
+    "year": "前206年",
+    "setup": "诸侯之乱被压住，项羽必须把『霸主』升格为『皇帝』。称号、礼制、官僚体系，要从头制定。",
+    "options": [
+      {"text":"仿秦旧制，立郡县","next":"HUB_chu_3","isHistorical":false,"subtext":"转向中央集权；统治力强，但与起家的封建诸侯彻底翻脸。","scores":{"C":1,"F":0,"R":1,"S":0,"A":1,"P":0,"I":0,"M":0}},
+      {"text":"保留诸侯，自任共主","next":"HUB_chu_3","isHistorical":false,"subtext":"满足于『霸王』模式，与诸侯共治；诸侯欢呼，但中央始终软弱。","scores":{"C":0,"F":1,"R":0,"S":1,"A":0,"P":0,"I":1,"M":0}}
+    ]
+  },
+  "HUB_chu_3": {
+    "id": "HUB_chu_3",
+    "title": "楚朝立法",
+    "year": "前205年",
+    "setup": "制度框架既定，需要一部统驭天下的『楚律』。谁来主笔楚朝大法？",
+    "options": [
+      {"text":"沿用秦律，保留严刑","next":"HUB_chu_4","isHistorical":false,"subtext":"直接接收秦律体系，效率立竿见影；但『楚承秦弊』舆论暗流涌动。","scores":{"C":1,"F":0,"R":0,"S":0,"A":0,"P":0,"I":0,"M":1}},
+      {"text":"重订楚律，宽简刑罚","next":"HUB_chu_4","isHistorical":false,"subtext":"楚地谋士主导，民心稍安；但执行力弱，地方豪强抬头。","scores":{"C":0,"F":1,"R":1,"S":0,"A":0,"P":0,"I":1,"M":0}}
+    ]
+  },
+  "HUB_chu_4": {
+    "id": "HUB_chu_4",
+    "title": "楚朝南扩与传承",
+    "year": "前204年",
+    "setup": "北方既定，项羽南顾百越；同时，继承人问题日益迫切。",
+    "options": [
+      {"text":"南征百越，立项氏宗亲为太子","next":"__HUB_chu_EXIT__","isHistorical":false,"subtext":"复秦皇之业并稳固传承；南方部分臣服，但深山瘴疠让数万楚卒长眠。","scores":{"C":0,"F":0,"R":1,"S":0,"A":1,"P":0,"I":1,"M":0}},
+      {"text":"修边自固，让贤功臣集团","next":"__HUB_chu_EXIT__","isHistorical":false,"subtext":"休养生息，把后事托付元勋；国力得以恢复，但项氏与功臣的暗斗酝酿。","scores":{"C":0,"F":0,"R":0,"S":1,"A":0,"P":1,"I":0,"M":1}}
+    ]
+  },
+  "HUB_chu_A_1": {
+    "id": "HUB_chu_A_1",
+    "title": "项羽暴卒",
+    "year": "前203年",
+    "setup": "在又一次平叛中，项羽死于流矢。失去这唯一的支柱，分封秩序开始动摇。",
+    "options": [
+      {"text":"太子年幼，外戚摄政","next":"HUB_chu_A_2","isHistorical":false,"subtext":"项氏家族紧急摄政，但缺乏项羽的个人威望。","scores":{"C":1,"F":0,"R":0,"S":0,"A":0,"P":0,"I":0,"M":1}},
+      {"text":"功臣集团接管军权","next":"HUB_chu_A_2","isHistorical":false,"subtext":"钟离眛、季布等元勋紧急接管，但权力分散难以集中。","scores":{"C":0,"F":1,"R":0,"S":0,"A":0,"P":0,"I":1,"M":0}}
+    ]
+  },
+  "HUB_chu_A_2": {
+    "id": "HUB_chu_A_2",
+    "title": "分封内爆",
+    "year": "前202年",
+    "setup": "诸侯王嗅到中央虚弱的血腥味，纷纷自重。",
+    "options": [
+      {"text":"强力镇压，调集主力平叛","next":"HUB_chu_A_3","isHistorical":false,"subtext":"中央军应接不暇，处处用兵处处吃紧。","scores":{"C":1,"F":0,"R":1,"S":0,"A":0,"P":0,"I":0,"M":0}},
+      {"text":"妥协退让，重新分封","next":"HUB_chu_A_3","isHistorical":false,"subtext":"让出更多权力换稳定，但等于自己解构自己。","scores":{"C":0,"F":1,"R":0,"S":1,"A":0,"P":0,"I":0,"M":0}}
+    ]
+  },
+  "HUB_chu_A_3": {
+    "id": "HUB_chu_A_3",
+    "title": "西楚解体",
+    "year": "前200年",
+    "setup": "在不可逆的内爆中，西楚走完它的命运。",
+    "options": [
+      {"text":"楚朝二十余年崩于内乱","next":"E02","isHistorical":false,"subtext":"放大版的西晋八王之乱，撑不过一代人的霸权。【终局·西楚短世】","scores":{"C":0,"F":1,"R":1,"S":0,"A":0,"P":0,"I":0,"M":1},"rawTarget":"结局 E02·西楚短世"},
+      {"text":"某强诸侯篡楚自立","next":"E02","isHistorical":false,"subtext":"能打天下，终究治不了天下。【终局·西楚短世】","scores":{"C":0,"F":1,"R":0,"S":0,"A":1,"P":0,"I":0,"M":1},"rawTarget":"结局 E02·西楚短世"}
+    ]
+  },
+  "HUB_chu_B_1": {
+    "id": "HUB_chu_B_1",
+    "title": "项氏稳定传承",
+    "year": "前200年",
+    "setup": "项羽生前的政治布局奏效，新帝平稳即位。",
+    "options": [
+      {"text":"太子能力出众，朝政清明","next":"HUB_chu_B_2","isHistorical":false,"subtext":"项氏出了第二代雄主，新朝廷气象一新。","scores":{"C":1,"F":0,"R":0,"S":1,"A":0,"P":0,"I":1,"M":0}},
+      {"text":"太子借重老臣，萧规曹随","next":"HUB_chu_B_2","isHistorical":false,"subtext":"沿用项羽时期的制度与人事，稳定压倒一切。","scores":{"C":0,"F":0,"R":0,"S":1,"A":0,"P":1,"I":1,"M":0}}
+    ]
+  },
+  "HUB_chu_B_2": {
+    "id": "HUB_chu_B_2",
+    "title": "镇压反对者",
+    "year": "前195年",
+    "setup": "忠于汉室或不服项氏的余孽仍在地方活动，必须清理。",
+    "options": [
+      {"text":"大规模清算反对派","next":"HUB_chu_B_3","isHistorical":false,"subtext":"短期内噤声，但怨气在地下汹涌。","scores":{"C":1,"F":0,"R":1,"S":0,"A":0,"P":0,"I":0,"M":1}},
+      {"text":"怀柔笼络旧汉势力","next":"HUB_chu_B_3","isHistorical":false,"subtext":"给降人封官许愿，化敌为友，但根基存疑。","scores":{"C":0,"F":1,"R":0,"S":1,"A":0,"P":0,"I":1,"M":0}}
+    ]
+  },
+  "HUB_chu_B_3": {
+    "id": "HUB_chu_B_3",
+    "title": "楚朝立稳",
+    "year": "前190年",
+    "setup": "项氏王朝度过最危险的开国期，开出一段稳定治世。",
+    "options": [
+      {"text":"楚朝制度成熟，开盛世","next":"E13","isHistorical":false,"subtext":"一个非刘氏的中华王朝，正式立于历史舞台。【终局·楚朝盛世】","scores":{"C":1,"F":0,"R":0,"S":1,"A":0,"P":0,"I":1,"M":0},"rawTarget":"结局 E13·楚朝盛世"},
+      {"text":"楚朝勉强延续，潜藏危机","next":"E07","isHistorical":false,"subtext":"立是立稳了，但结构性矛盾仍在等待爆发。【终局·外戚王朝】","scores":{"C":1,"F":0,"R":0,"S":1,"A":0,"P":0,"I":0,"M":1},"rawTarget":"结局 E07·外戚王朝"}
+    ]
+  },
+  "HUB_chu_C_1": {
+    "id": "HUB_chu_C_1",
+    "title": "江东宗族不服",
+    "year": "前200年",
+    "setup": "项羽定都北方，但江东本是项氏起家之地，宗族势力仍在那里盘根错节。",
+    "options": [
+      {"text":"安抚江东宗族，给予自治","next":"HUB_chu_C_2","isHistorical":false,"subtext":"政治默契换江东表面臣服；但自治权力越来越大。","scores":{"C":0,"F":1,"R":0,"S":1,"A":0,"P":0,"I":1,"M":0}},
+      {"text":"派楚军入驻江东","next":"HUB_chu_C_2","isHistorical":false,"subtext":"直接管辖江东，但激起本土反弹。","scores":{"C":1,"F":0,"R":1,"S":0,"A":0,"P":0,"I":0,"M":1}}
+    ]
+  },
+  "HUB_chu_C_2": {
+    "id": "HUB_chu_C_2",
+    "title": "项氏分裂",
+    "year": "前190年",
+    "setup": "项羽死后，江东与中央关系迅速恶化，项氏内部分成两派。",
+    "options": [
+      {"text":"江东项氏自立为南楚王","next":"HUB_chu_C_3","isHistorical":false,"subtext":"江东项氏宣布独立，建立南楚。","scores":{"C":0,"F":1,"R":0,"S":0,"A":1,"P":0,"I":1,"M":0}},
+      {"text":"中央派军南下平叛","next":"HUB_chu_C_3","isHistorical":false,"subtext":"强行武力统一，引发长期内战。","scores":{"C":1,"F":0,"R":1,"S":0,"A":0,"P":0,"I":0,"M":1}}
+    ]
+  },
+  "HUB_chu_C_3": {
+    "id": "HUB_chu_C_3",
+    "title": "江东自立",
+    "year": "前180年",
+    "setup": "长江以南事实上脱离中央，南北对峙格局成型。",
+    "options": [
+      {"text":"南北长期分治，江东独立成国","next":"E15","isHistorical":false,"subtext":"中国版图上第一次出现稳定的南方政权。【终局·江东南楚】","scores":{"C":0,"F":1,"R":0,"S":1,"A":0,"P":0,"I":1,"M":0},"rawTarget":"结局 E15·江东南楚"},
+      {"text":"北方平定江东，南北重新统一","next":"E07","isHistorical":false,"subtext":"经过数十年内战，北方政权完成统一，但代价巨大。【终局·外戚王朝】","scores":{"C":1,"F":0,"R":0,"S":0,"A":1,"P":0,"I":0,"M":1},"rawTarget":"结局 E07·外戚王朝"}
+    ]
+  },
+  "HUB_san_1": {
+    "id": "HUB_san_1",
+    "title": "鼎足初成",
+    "year": "前203年",
+    "setup": "经过数年混战，楚、汉、韩三方均势成型，谁也无法吞并谁。",
+    "options": [
+      {"text":"三方各立国号，互通使节","next":"HUB_san_2","isHistorical":false,"subtext":"楚、汉、齐正式承认彼此存在；进入『东亚版威斯特伐利亚体系』。","scores":{"C":0,"F":1,"R":0,"S":1,"A":0,"P":0,"I":1,"M":0}},
+      {"text":"某方率先发动统一战争","next":"HUB_san_2","isHistorical":false,"subtext":"均势被打破，跨年总体战开打；天下下一形态由这场战争决定。","scores":{"C":1,"F":0,"R":1,"S":0,"A":1,"P":0,"I":0,"M":0}}
+    ]
+  },
+  "HUB_san_2": {
+    "id": "HUB_san_2",
+    "title": "制度分化",
+    "year": "前195年",
+    "setup": "三方各自构建官僚体系。三十年下来，制度差异越来越大。",
+    "options": [
+      {"text":"三方独立发展官僚制","next":"HUB_san_3","isHistorical":false,"subtext":"楚保留分封、汉融合秦法、齐发扬稷下；三种治理模式并存。","scores":{"C":0,"F":1,"R":1,"S":0,"A":0,"P":0,"I":1,"M":0}},
+      {"text":"三方互相借鉴，制度趋同","next":"HUB_san_3","isHistorical":false,"subtext":"通过外交与商旅交流，三方制度互渗；文化分而政体合。","scores":{"C":0,"F":0,"R":0,"S":1,"A":0,"P":1,"I":0,"M":1}}
+    ]
+  },
+  "HUB_san_3": {
+    "id": "HUB_san_3",
+    "title": "文化分流",
+    "year": "前180年",
+    "setup": "政治分立时间越久，文化认同就越不同。统一的『汉字文化圈』是否还有可能？",
+    "options": [
+      {"text":"各国走向独立文化轨道","next":"HUB_san_4","isHistorical":false,"subtext":"楚辞、稷下、秦汉三种文学传统分别发扬。","scores":{"C":0,"F":1,"R":1,"S":0,"A":0,"P":0,"I":1,"M":0}},
+      {"text":"士人跨国流动，文化融合","next":"HUB_san_4","isHistorical":false,"subtext":"知识分子在三国间流动，形成『分而不裂』的多元文明圈。","scores":{"C":0,"F":0,"R":0,"S":1,"A":0,"P":0,"I":1,"M":1}}
+    ]
+  },
+  "HUB_san_4": {
+    "id": "HUB_san_4",
+    "title": "外患与内合",
+    "year": "前170年",
+    "setup": "北方匈奴见中原分立，蠢蠢欲动。三国能否放下成见、共御外侮？",
+    "options": [
+      {"text":"三国联军北击匈奴","next":"__HUB_san_EXIT__","isHistorical":false,"subtext":"共同威胁前暂时联手；这次合作会是统一起点，还是分立注脚？","scores":{"C":1,"F":0,"R":0,"S":0,"A":1,"P":0,"I":1,"M":0}},
+      {"text":"各国自顾不暇，匈奴坐大","next":"__HUB_san_EXIT__","isHistorical":false,"subtext":"三方互不信任，匈奴趁机南下；『内分外患』的双重压力袭来。","scores":{"C":0,"F":1,"R":0,"S":1,"A":0,"P":0,"I":0,"M":1}}
+    ]
+  },
+  "HUB_san_A_1": {
+    "id": "HUB_san_A_1",
+    "title": "三方签订长期盟约",
+    "year": "前160年",
+    "setup": "经过外患压境的洗礼，三国意识到合作比对抗更划算。",
+    "options": [
+      {"text":"仿春秋盟主制度，轮值主盟","next":"HUB_san_A_2","isHistorical":false,"subtext":"三国共主，每年轮流牵头，开创新的国际秩序。","scores":{"C":0,"F":1,"R":0,"S":0,"A":0,"P":0,"I":1,"M":0}},
+      {"text":"签订互不侵犯条约，划定势力范围","next":"HUB_san_A_2","isHistorical":false,"subtext":"各守一方，承认现有边界，避免大战。","scores":{"C":0,"F":0,"R":0,"S":1,"A":0,"P":0,"I":0,"M":1}}
+    ]
+  },
+  "HUB_san_A_2": {
+    "id": "HUB_san_A_2",
+    "title": "经济文化共同体形成",
+    "year": "前140年",
+    "setup": "长期和平促进商旅与学者跨国流动，经济文化深度融合。",
+    "options": [
+      {"text":"三国建立统一货币","next":"HUB_san_A_3","isHistorical":false,"subtext":"商业繁荣，三国成为利益共同体。","scores":{"C":0,"F":0,"R":0,"S":1,"A":0,"P":0,"I":1,"M":0}},
+      {"text":"三国互派质子、王室通婚","next":"HUB_san_A_3","isHistorical":false,"subtext":"政治联姻巩固关系，但血缘也带来继承之争。","scores":{"C":0,"F":1,"R":0,"S":0,"A":0,"P":0,"I":0,"M":1}}
+    ]
+  },
+  "HUB_san_A_3": {
+    "id": "HUB_san_A_3",
+    "title": "三分天下成定局",
+    "year": "前100年",
+    "setup": "三方鼎立成为东亚的稳定形态，影响数百年。",
+    "options": [
+      {"text":"三国体系延续数百年","next":"E14","isHistorical":false,"subtext":"一个非大一统但有秩序的中华文明圈定型。【终局·三方共和】","scores":{"C":0,"F":1,"R":0,"S":1,"A":0,"P":0,"I":1,"M":0},"rawTarget":"结局 E14·三方共和"},
+      {"text":"经长期分立后某方整合","next":"E05","isHistorical":false,"subtext":"三方鼎立数百年，最终由最具韧性者缓慢整合。【终局·三国提前】","scores":{"C":1,"F":0,"R":0,"S":0,"A":1,"P":0,"I":0,"M":1},"rawTarget":"结局 E05·三国提前"}
+    ]
+  },
+  "HUB_san_B_1": {
+    "id": "HUB_san_B_1",
+    "title": "匈奴利用三方矛盾",
+    "year": "前160年",
+    "setup": "匈奴单于看准中原内部不睦，逐个击破。",
+    "options": [
+      {"text":"匈奴先攻最弱的一方","next":"HUB_san_B_2","isHistorical":false,"subtext":"集中力量打击弱者，杀鸡儆猴。","scores":{"C":0,"F":0,"R":0,"S":0,"A":1,"P":0,"I":0,"M":1}},
+      {"text":"匈奴拉拢一方，孤立其他","next":"HUB_san_B_2","isHistorical":false,"subtext":"外交分化策略，扶植代理人。","scores":{"C":0,"F":1,"R":0,"S":0,"A":0,"P":0,"I":1,"M":0}}
+    ]
+  },
+  "HUB_san_B_2": {
+    "id": "HUB_san_B_2",
+    "title": "三方被迫向匈奴朝贡",
+    "year": "前140年",
+    "setup": "草原压力下，三方不得不向匈奴妥协。",
+    "options": [
+      {"text":"三方分别向匈奴和亲","next":"HUB_san_B_3","isHistorical":false,"subtext":"屈辱但有效，至少换来短期和平。","scores":{"C":0,"F":0,"R":0,"S":0,"A":0,"P":1,"I":0,"M":1}},
+      {"text":"三方联合抵抗，但屡战屡败","next":"HUB_san_B_3","isHistorical":false,"subtext":"联军内部不睦，多次惨败。","scores":{"C":0,"F":0,"R":0,"S":0,"A":1,"P":0,"I":1,"M":0}}
+    ]
+  },
+  "HUB_san_B_3": {
+    "id": "HUB_san_B_3",
+    "title": "中原称臣",
+    "year": "前120年",
+    "setup": "中原王朝彻底落入下风。",
+    "options": [
+      {"text":"长期称臣纳贡","next":"E12","isHistorical":false,"subtext":"中原与草原的力量对比彻底逆转。【终局·草原反噬】","scores":{"C":0,"F":0,"R":0,"S":0,"A":0,"P":1,"I":0,"M":1},"rawTarget":"结局 E12·草原反噬"},
+      {"text":"部分中原被匈奴征服","next":"E12","isHistorical":false,"subtext":"北方游牧南下，征服河西、河南等地。【终局·草原反噬】","scores":{"C":0,"F":0,"R":0,"S":0,"A":1,"P":0,"I":0,"M":1},"rawTarget":"结局 E12·草原反噬"}
+    ]
+  },
+  "HUB_san_C_1": {
+    "id": "HUB_san_C_1",
+    "title": "某国发动闪电战",
+    "year": "前160年",
+    "setup": "均势被某一方打破，统一战争开始。",
+    "options": [
+      {"text":"韩信发动军事突袭","next":"HUB_san_C_2","isHistorical":false,"subtext":"兵仙以闪电战连下数城，震慑诸方。","scores":{"C":0,"F":0,"R":1,"S":0,"A":1,"P":0,"I":0,"M":0}},
+      {"text":"刘邦发动外交+军事联合行动","next":"HUB_san_C_2","isHistorical":false,"subtext":"政治手腕+军事配合，逐步瓦解对手。","scores":{"C":1,"F":0,"R":0,"S":0,"A":0,"P":0,"I":0,"M":1}}
+    ]
+  },
+  "HUB_san_C_2": {
+    "id": "HUB_san_C_2",
+    "title": "击溃两方",
+    "year": "前140年",
+    "setup": "战争连下数年，被击败的两方先后投降或败亡。",
+    "options": [
+      {"text":"速战速决，对手主力被歼","next":"HUB_san_C_3","isHistorical":false,"subtext":"三个月内决定胜负，速度惊人。","scores":{"C":0,"F":0,"R":1,"S":0,"A":1,"P":0,"I":0,"M":0}},
+      {"text":"长期消耗，对手耗尽国力","next":"HUB_san_C_3","isHistorical":false,"subtext":"拖了数年，但最终胜出。","scores":{"C":0,"F":0,"R":0,"S":1,"A":0,"P":0,"I":0,"M":1}}
+    ]
+  },
+  "HUB_san_C_3": {
+    "id": "HUB_san_C_3",
+    "title": "独立新王朝建立",
+    "year": "前120年",
+    "setup": "胜出者开新王朝。",
+    "options": [
+      {"text":"韩信开新朝","next":"E07","isHistorical":false,"subtext":"兵仙凭军功建国，但治国班底不全。【终局·外戚王朝】","scores":{"C":0,"F":0,"R":1,"S":0,"A":1,"P":0,"I":0,"M":1},"rawTarget":"结局 E07·外戚王朝"},
+      {"text":"刘邦完成统一","next":"E01","isHistorical":false,"subtext":"经历曲折后，历史还是收敛到刘汉的轨道。【终局·炎汉正统】","scores":{"C":1,"F":0,"R":0,"S":1,"A":0,"P":0,"I":1,"M":0},"rawTarget":"结局 E01·炎汉正统"}
+    ]
+  },
+  "HUB_jiang_1": {
+    "id": "HUB_jiang_1",
+    "title": "江东建国",
+    "year": "前201年",
+    "setup": "项羽或其继承人在江东称王，长江天险让这片土地有了独立的资本。",
+    "options": [
+      {"text":"正式称王，定都吴中","next":"HUB_jiang_2","isHistorical":false,"subtext":"中国版图上第一次出现稳定的『南方政权』，比孙吴提前 400 年。","scores":{"C":0,"F":1,"R":0,"S":0,"A":1,"P":0,"I":1,"M":0}},
+      {"text":"联合南越，做南方共主","next":"HUB_jiang_2","isHistorical":false,"subtext":"联手赵佗，跨长江与岭南的联盟成型。","scores":{"C":0,"F":1,"R":0,"S":1,"A":0,"P":0,"I":1,"M":0}}
+    ]
+  },
+  "HUB_jiang_2": {
+    "id": "HUB_jiang_2",
+    "title": "南北对峙",
+    "year": "前190年",
+    "setup": "长江南北各据一方，对峙格局会持续多久？",
+    "options": [
+      {"text":"长期对峙，相安无事","next":"HUB_jiang_3","isHistorical":false,"subtext":"长江天险让汉军难下，江东又无北上之力；南北分治成新常态。","scores":{"C":0,"F":0,"R":0,"S":1,"A":0,"P":1,"I":1,"M":0}},
+      {"text":"汉军南征，决战长江","next":"HUB_jiang_3","isHistorical":false,"subtext":"北方不甘半壁江山，倾力南征；跨江大战决定天下归属。","scores":{"C":0,"F":0,"R":1,"S":0,"A":1,"P":0,"I":0,"M":1}}
+    ]
+  },
+  "HUB_jiang_3": {
+    "id": "HUB_jiang_3",
+    "title": "江东文明",
+    "year": "前180年",
+    "setup": "长期独立中，江东开始发展自己的文化制度。",
+    "options": [
+      {"text":"吴越文化复兴","next":"HUB_jiang_4","isHistorical":false,"subtext":"重新发掘吴越本土传统，融合楚文化形成『南方华夏』。","scores":{"C":0,"F":1,"R":1,"S":0,"A":0,"P":0,"I":1,"M":0}},
+      {"text":"引进中原士人，礼乐建国","next":"HUB_jiang_4","isHistorical":false,"subtext":"招揽北方士人南下，礼乐移植江东；江东成『中原复制品』。","scores":{"C":1,"F":0,"R":0,"S":1,"A":0,"P":0,"I":0,"M":1}}
+    ]
+  },
+  "HUB_jiang_4": {
+    "id": "HUB_jiang_4",
+    "title": "项氏传承",
+    "year": "前170年",
+    "setup": "项羽渐老，继承人之争浮现。江东政权能否平稳过渡？",
+    "options": [
+      {"text":"项氏宗亲继位，政局稳固","next":"__HUB_jiang_EXIT__","isHistorical":false,"subtext":"家族凝聚力强，传承顺利；进入项氏王朝的稳定期。","scores":{"C":0,"F":0,"R":0,"S":1,"A":0,"P":1,"I":1,"M":0}},
+      {"text":"功臣篡夺，改朝换姓","next":"__HUB_jiang_EXIT__","isHistorical":false,"subtext":"项羽死后某豪族篡位；项氏短命，但江东独立保留。","scores":{"C":0,"F":0,"R":1,"S":0,"A":1,"P":0,"I":0,"M":1}}
+    ]
+  },
+  "HUB_jiang_A_1": {
+    "id": "HUB_jiang_A_1",
+    "title": "北方陷入混乱",
+    "year": "前150年",
+    "setup": "北方王朝因内乱衰退，江东独立的合法性大大增强。",
+    "options": [
+      {"text":"江东不出兵北上，自固待变","next":"HUB_jiang_A_2","isHistorical":false,"subtext":"静观北方乱局，韬光养晦。","scores":{"C":0,"F":0,"R":0,"S":1,"A":0,"P":0,"I":0,"M":1}},
+      {"text":"江东出兵北上，扩张地盘","next":"HUB_jiang_A_2","isHistorical":false,"subtext":"趁北方虚弱，扩展势力范围。","scores":{"C":0,"F":0,"R":1,"S":0,"A":1,"P":0,"I":0,"M":0}}
+    ]
+  },
+  "HUB_jiang_A_2": {
+    "id": "HUB_jiang_A_2",
+    "title": "江东成南方共主",
+    "year": "前130年",
+    "setup": "江东政权成为长江以南的统一者。",
+    "options": [
+      {"text":"江东设郡管辖南方各地","next":"HUB_jiang_A_3","isHistorical":false,"subtext":"仿汉制设郡，建立南方版的中央集权。","scores":{"C":1,"F":0,"R":0,"S":0,"A":0,"P":0,"I":1,"M":0}},
+      {"text":"江东与南越、闽越等结盟","next":"HUB_jiang_A_3","isHistorical":false,"subtext":"松散邦联模式，保留地方自治。","scores":{"C":0,"F":1,"R":0,"S":1,"A":0,"P":0,"I":0,"M":0}}
+    ]
+  },
+  "HUB_jiang_A_3": {
+    "id": "HUB_jiang_A_3",
+    "title": "南北长期对峙",
+    "year": "前100年",
+    "setup": "南北两个政治体系长期共存，形成中国史上罕见的稳态分治。",
+    "options": [
+      {"text":"南北各自演化，文化分流","next":"E15","isHistorical":false,"subtext":"中国版图上长期出现『两个中华』。【终局·江东南楚】","scores":{"C":0,"F":1,"R":0,"S":0,"A":0,"P":0,"I":1,"M":0},"rawTarget":"结局 E15·江东南楚"},
+      {"text":"南北和而不同，互通有无","next":"E06","isHistorical":false,"subtext":"进入南北朝式的长期分裂。【终局·南北裂变】","scores":{"C":0,"F":0,"R":0,"S":1,"A":0,"P":0,"I":0,"M":1},"rawTarget":"结局 E06·南北裂变"}
+    ]
+  },
+  "HUB_jiang_B_1": {
+    "id": "HUB_jiang_B_1",
+    "title": "北方汉军南下",
+    "year": "前150年",
+    "setup": "北方政权倾力南征，准备一统。",
+    "options": [
+      {"text":"楼船水军，跨江突击","next":"HUB_jiang_B_2","isHistorical":false,"subtext":"借助新建水军强攻。","scores":{"C":0,"F":0,"R":1,"S":0,"A":1,"P":0,"I":0,"M":0}},
+      {"text":"西路迂回，先取巴蜀","next":"HUB_jiang_B_2","isHistorical":false,"subtext":"取巴蜀顺流而下，复秦灭楚之略。","scores":{"C":1,"F":0,"R":0,"S":0,"A":0,"P":0,"I":0,"M":1}}
+    ]
+  },
+  "HUB_jiang_B_2": {
+    "id": "HUB_jiang_B_2",
+    "title": "江东内乱",
+    "year": "前140年",
+    "setup": "在外敌压境时，江东内部宗族矛盾爆发。",
+    "options": [
+      {"text":"项氏内部分裂","next":"HUB_jiang_B_3","isHistorical":false,"subtext":"宗族之争让江东无力抵抗外侵。","scores":{"C":0,"F":1,"R":0,"S":0,"A":0,"P":0,"I":0,"M":1}},
+      {"text":"功臣集团反叛","next":"HUB_jiang_B_3","isHistorical":false,"subtext":"部分功臣投向北方，江东防线崩溃。","scores":{"C":0,"F":0,"R":0,"S":0,"A":1,"P":0,"I":0,"M":1}}
+    ]
+  },
+  "HUB_jiang_B_3": {
+    "id": "HUB_jiang_B_3",
+    "title": "汉室统一全境",
+    "year": "前130年",
+    "setup": "经过数十年，北方政权完成统一。",
+    "options": [
+      {"text":"汉军入吴中，南方归汉","next":"E01","isHistorical":false,"subtext":"历史绕了个大弯，又收敛回大一统。【终局·炎汉正统】","scores":{"C":1,"F":0,"R":0,"S":1,"A":0,"P":0,"I":1,"M":0},"rawTarget":"结局 E01·炎汉正统"},
+      {"text":"江东归降，南北合一","next":"E01","isHistorical":false,"subtext":"江东抵抗到最后，但仍归于中央。【终局·炎汉正统】","scores":{"C":1,"F":0,"R":0,"S":0,"A":0,"P":1,"I":1,"M":0},"rawTarget":"结局 E01·炎汉正统"}
+    ]
+  },
+  "HUB_jiang_C_1": {
+    "id": "HUB_jiang_C_1",
+    "title": "项氏宗族内斗",
+    "year": "前150年",
+    "setup": "项氏家族争夺王位，江东内部分裂。",
+    "options": [
+      {"text":"数位项氏宗亲并立","next":"HUB_jiang_C_2","isHistorical":false,"subtext":"江东出现多个项氏小王，互不相让。","scores":{"C":0,"F":1,"R":0,"S":0,"A":0,"P":0,"I":0,"M":1}},
+      {"text":"功臣集团趁机自立","next":"HUB_jiang_C_2","isHistorical":false,"subtext":"异姓功臣借项氏内斗自立。","scores":{"C":0,"F":0,"R":0,"S":0,"A":1,"P":0,"I":0,"M":1}}
+    ]
+  },
+  "HUB_jiang_C_2": {
+    "id": "HUB_jiang_C_2",
+    "title": "江东分裂为数个小国",
+    "year": "前140年",
+    "setup": "江东版图被切割为吴、越、楚、闽等数个小国。",
+    "options": [
+      {"text":"各国互相征伐","next":"HUB_jiang_C_3","isHistorical":false,"subtext":"小国混战，民生凋敝。","scores":{"C":0,"F":0,"R":1,"S":0,"A":1,"P":0,"I":0,"M":0}},
+      {"text":"各国维持脆弱平衡","next":"HUB_jiang_C_3","isHistorical":false,"subtext":"小国并立，但谁也吞不掉谁。","scores":{"C":0,"F":1,"R":0,"S":1,"A":0,"P":0,"I":0,"M":0}}
+    ]
+  },
+  "HUB_jiang_C_3": {
+    "id": "HUB_jiang_C_3",
+    "title": "列国并立",
+    "year": "前130年",
+    "setup": "南方进入长期分裂状态。",
+    "options": [
+      {"text":"江东长期分裂，类春秋战国","next":"E04","isHistorical":false,"subtext":"南方进入长期诸侯并立。【终局·列国并立】","scores":{"C":0,"F":1,"R":0,"S":0,"A":0,"P":0,"I":1,"M":0},"rawTarget":"结局 E04·列国并立"},
+      {"text":"北方乘乱南侵","next":"E04","isHistorical":false,"subtext":"江东分裂让北方有机可乘。【终局·列国并立】","scores":{"C":0,"F":0,"R":0,"S":0,"A":1,"P":0,"I":0,"M":1},"rawTarget":"结局 E04·列国并立"}
+    ]
+  },
+  "HUB_xin_1": {
+    "id": "HUB_xin_1",
+    "title": "改革推进",
+    "year": "公元9年",
+    "setup": "改革缓步推进，新朝廷正在尝试中国历史上第一次自上而下的温和制度变革。",
+    "options": [
+      {"text":"限田令缓步推行","next":"HUB_xin_2","isHistorical":false,"subtext":"限制而非剥夺豪强土地，阻力虽有但远小于激进国有化。","scores":{"C":0,"F":0,"R":1,"S":0,"A":0,"P":0,"I":1,"M":0}},
+      {"text":"币制改革分批进行","next":"HUB_xin_2","isHistorical":false,"subtext":"五年一改，市场逐步适应，避免崩溃。","scores":{"C":0,"F":0,"R":0,"S":1,"A":0,"P":0,"I":1,"M":0}}
+    ]
+  },
+  "HUB_xin_2": {
+    "id": "HUB_xin_2",
+    "title": "豪强博弈",
+    "year": "公元15年",
+    "setup": "无论多温和，触动土地利益都会遭遇豪强抵抗。新朝如何分化对手？",
+    "options": [
+      {"text":"拉拢部分豪强，分化阵营","next":"HUB_xin_3","isHistorical":false,"subtext":"与部分豪强结盟，孤立顽固派；改革在博弈中艰难推进。","scores":{"C":0,"F":1,"R":0,"S":0,"A":0,"P":0,"I":1,"M":0}},
+      {"text":"以皇权强压顽固派","next":"HUB_xin_3","isHistorical":false,"subtext":"动用皇权强压；短期有效，但埋下豪强怨恨。","scores":{"C":1,"F":0,"R":0,"S":0,"A":1,"P":0,"I":0,"M":0}}
+    ]
+  },
+  "HUB_xin_3": {
+    "id": "HUB_xin_3",
+    "title": "制度成型",
+    "year": "公元20年",
+    "setup": "改革进入深水区，新朝试图建立一套既不同于秦汉、也不同于周礼的全新制度。",
+    "options": [
+      {"text":"托古改制，模仿周礼","next":"HUB_xin_4","isHistorical":false,"subtext":"王莽的古典理想主义部分实现，礼制大变。","scores":{"C":0,"F":0,"R":1,"S":0,"A":0,"P":0,"I":1,"M":0}},
+      {"text":"务实改良，与汉制接续","next":"HUB_xin_4","isHistorical":false,"subtext":"在汉制基础上微调，『换皇帝不换制度』。","scores":{"C":0,"F":0,"R":0,"S":1,"A":0,"P":0,"I":0,"M":1}}
+    ]
+  },
+  "HUB_xin_4": {
+    "id": "HUB_xin_4",
+    "title": "新朝传承",
+    "year": "公元25年",
+    "setup": "王莽渐老，继承人选定。新朝能否平稳传位？",
+    "options": [
+      {"text":"立王氏宗族为太子","next":"__HUB_xin_EXIT__","isHistorical":false,"subtext":"王氏外戚集团稳定接班；但宗族能力参差。","scores":{"C":0,"F":1,"R":0,"S":0,"A":0,"P":0,"I":0,"M":1}},
+      {"text":"选贤禅让，不传王氏","next":"__HUB_xin_EXIT__","isHistorical":false,"subtext":"王莽实践他的理想——皇位让贤；但『贤』由谁认定？","scores":{"C":0,"F":0,"R":1,"S":0,"A":0,"P":0,"I":1,"M":0}}
+    ]
+  },
+  "HUB_xin_A_1": {
+    "id": "HUB_xin_A_1",
+    "title": "改革见效，民生回暖",
+    "year": "公元30年",
+    "setup": "经过十余年改革，土地兼并被有效抑制，自耕农数量回升。",
+    "options": [
+      {"text":"朝廷扩大改革范围","next":"HUB_xin_A_2","isHistorical":false,"subtext":"在已有基础上推进更深层改革。","scores":{"C":0,"F":0,"R":1,"S":0,"A":0,"P":0,"I":1,"M":0}},
+      {"text":"朝廷巩固已有成果","next":"HUB_xin_A_2","isHistorical":false,"subtext":"见好就收，稳定为主。","scores":{"C":0,"F":0,"R":0,"S":1,"A":0,"P":0,"I":0,"M":1}}
+    ]
+  },
+  "HUB_xin_A_2": {
+    "id": "HUB_xin_A_2",
+    "title": "新朝立稳，开新政统",
+    "year": "公元40年",
+    "setup": "新朝度过最危险的开国期，进入稳定治世。",
+    "options": [
+      {"text":"王莽被尊为『新太祖』","next":"HUB_xin_A_3","isHistorical":false,"subtext":"王莽完成从乱臣到圣君的政治洗白。","scores":{"C":0,"F":0,"R":1,"S":0,"A":0,"P":0,"I":1,"M":0}},
+      {"text":"王莽传位贤者，建立禅让制","next":"HUB_xin_A_3","isHistorical":false,"subtext":"王莽身后开创禅让制度，影响深远。","scores":{"C":0,"F":0,"R":0,"S":0,"A":0,"P":0,"I":1,"M":1}}
+    ]
+  },
+  "HUB_xin_A_3": {
+    "id": "HUB_xin_A_3",
+    "title": "提前进入稳定盛世",
+    "year": "公元60年",
+    "setup": "新朝进入持续的治理期。",
+    "options": [
+      {"text":"新朝制度成熟，开盛世","next":"E16","isHistorical":false,"subtext":"一个解决了部分痼疾的非汉王朝立国。【终局·新朝中兴】","scores":{"C":0,"F":0,"R":1,"S":0,"A":0,"P":0,"I":1,"M":0},"rawTarget":"结局 E16·新朝中兴"},
+      {"text":"新朝延续数代，影响深远","next":"E11","isHistorical":false,"subtext":"改革红利让王朝提前进入稳定盛世。【终局·提前盛世】","scores":{"C":0,"F":0,"R":0,"S":1,"A":0,"P":0,"I":1,"M":0},"rawTarget":"结局 E11·提前盛世"}
+    ]
+  },
+  "HUB_xin_B_1": {
+    "id": "HUB_xin_B_1",
+    "title": "改革红利耗尽",
+    "year": "公元35年",
+    "setup": "早期改革红利消失，新的矛盾开始积累。",
+    "options": [
+      {"text":"朝廷尝试新一轮改革","next":"HUB_xin_B_2","isHistorical":false,"subtext":"推第二波改革，但精力已不如初期。","scores":{"C":0,"F":0,"R":1,"S":0,"A":1,"P":0,"I":0,"M":0}},
+      {"text":"朝廷维持现状，等待回稳","next":"HUB_xin_B_2","isHistorical":false,"subtext":"保守应对，但矛盾累积。","scores":{"C":0,"F":0,"R":0,"S":1,"A":0,"P":0,"I":0,"M":1}}
+    ]
+  },
+  "HUB_xin_B_2": {
+    "id": "HUB_xin_B_2",
+    "title": "矛盾重新爆发",
+    "year": "公元45年",
+    "setup": "积累的社会矛盾在某次危机中总爆发。",
+    "options": [
+      {"text":"农民起义大规模爆发","next":"HUB_xin_B_3","isHistorical":false,"subtext":"类似绿林赤眉的起义席卷各地。","scores":{"C":0,"F":0,"R":0,"S":0,"A":1,"P":0,"I":0,"M":1}},
+      {"text":"豪强反扑，朝廷被架空","next":"HUB_xin_B_3","isHistorical":false,"subtext":"改革成果被豪强反推回原状。","scores":{"C":0,"F":1,"R":0,"S":0,"A":0,"P":0,"I":0,"M":1}}
+    ]
+  },
+  "HUB_xin_B_3": {
+    "id": "HUB_xin_B_3",
+    "title": "新朝突然崩塌",
+    "year": "公元55年",
+    "setup": "新朝在矛盾爆发中迅速瓦解。",
+    "options": [
+      {"text":"新朝瞬间瓦解","next":"E09","isHistorical":false,"subtext":"理想主义改革最终湮没在自己掀起的乱局中。【终局·改制崩溃】","scores":{"C":0,"F":0,"R":1,"S":0,"A":1,"P":0,"I":0,"M":1},"rawTarget":"结局 E09·改制崩溃"},
+      {"text":"新朝缓慢解体","next":"E09","isHistorical":false,"subtext":"改革红利耗尽后，新朝缓慢失去合法性。【终局·改制崩溃】","scores":{"C":0,"F":0,"R":0,"S":1,"A":0,"P":0,"I":0,"M":1},"rawTarget":"结局 E09·改制崩溃"}
+    ]
+  },
+  "HUB_xin_C_1": {
+    "id": "HUB_xin_C_1",
+    "title": "王氏内斗",
+    "year": "公元35年",
+    "setup": "王莽身后，王氏宗族内部为继承权激烈争斗。",
+    "options": [
+      {"text":"王氏分裂为数派","next":"HUB_xin_C_2","isHistorical":false,"subtext":"王氏分裂，新朝中央权威大降。","scores":{"C":0,"F":1,"R":0,"S":0,"A":0,"P":0,"I":0,"M":1}},
+      {"text":"王氏被某派系压倒","next":"HUB_xin_C_2","isHistorical":false,"subtext":"某王氏支派胜出，但其他支派不服。","scores":{"C":0,"F":0,"R":0,"S":0,"A":1,"P":0,"I":0,"M":1}}
+    ]
+  },
+  "HUB_xin_C_2": {
+    "id": "HUB_xin_C_2",
+    "title": "另一外戚崛起",
+    "year": "公元50年",
+    "setup": "王氏内斗给了其他外戚机会。",
+    "options": [
+      {"text":"某新外戚乘机篡位","next":"HUB_xin_C_3","isHistorical":false,"subtext":"又一个王莽出现，外戚干政循环延续。","scores":{"C":0,"F":0,"R":1,"S":0,"A":0,"P":0,"I":0,"M":1}},
+      {"text":"王氏与新外戚共治","next":"HUB_xin_C_3","isHistorical":false,"subtext":"两大外戚共治，但矛盾很深。","scores":{"C":0,"F":1,"R":0,"S":0,"A":0,"P":0,"I":1,"M":0}}
+    ]
+  },
+  "HUB_xin_C_3": {
+    "id": "HUB_xin_C_3",
+    "title": "新朝再次易主",
+    "year": "公元70年",
+    "setup": "新朝在外戚之间易手。",
+    "options": [
+      {"text":"又一个外戚王朝建立","next":"E07","isHistorical":false,"subtext":"病灶未除，朝代更替继续。【终局·外戚王朝】","scores":{"C":0,"F":0,"R":1,"S":0,"A":0,"P":0,"I":0,"M":1},"rawTarget":"结局 E07·外戚王朝"},
+      {"text":"双外戚共治走向分裂","next":"E07","isHistorical":false,"subtext":"共治体制最终解体，新王朝成立。【终局·外戚王朝】","scores":{"C":0,"F":1,"R":0,"S":0,"A":0,"P":0,"I":0,"M":1},"rawTarget":"结局 E07·外戚王朝"}
+    ]
+  },
+  "HUB_yuan_1": {
+    "id": "HUB_yuan_1",
+    "title": "河北整合",
+    "year": "公元200年",
+    "setup": "袁绍掌握天子或胜出官渡，下一步是巩固北方根据地。",
+    "options": [
+      {"text":"强化河北腹地，招纳谋士","next":"HUB_yuan_2","isHistorical":false,"subtext":"田丰、沮授、许攸各显其能，袁绍的智囊团真正成型。","scores":{"C":1,"F":0,"R":0,"S":1,"A":0,"P":0,"I":0,"M":0}},
+      {"text":"急于南下，压迫地方","next":"HUB_yuan_2","isHistorical":false,"subtext":"趁势南下，但根据地未稳；典型袁绍式急于求成。","scores":{"C":0,"F":0,"R":1,"S":0,"A":1,"P":0,"I":0,"M":0}}
+    ]
+  },
+  "HUB_yuan_2": {
+    "id": "HUB_yuan_2",
+    "title": "袁氏内斗",
+    "year": "公元205年",
+    "setup": "袁绍渐老，三子袁谭、袁熙、袁尚的继承之争浮现。这是袁氏集团的最大隐患。",
+    "options": [
+      {"text":"立嫡长子袁谭","next":"HUB_yuan_3","isHistorical":false,"subtext":"嫡长继承制稳定但袁谭能力一般，二袁不服。","scores":{"C":1,"F":0,"R":0,"S":1,"A":0,"P":0,"I":0,"M":0}},
+      {"text":"立爱子袁尚","next":"HUB_yuan_3","isHistorical":false,"subtext":"袁绍偏爱袁尚，但嫡长袁谭必反；内战种子已种下。","scores":{"C":0,"F":1,"R":0,"S":0,"A":0,"P":0,"I":0,"M":1}}
+    ]
+  },
+  "HUB_yuan_3": {
+    "id": "HUB_yuan_3",
+    "title": "南方应变",
+    "year": "公元210年",
+    "setup": "北方袁氏统合，南方刘表、孙策、刘备各有反应。",
+    "options": [
+      {"text":"孙策乘势北上扩张","next":"HUB_yuan_4","isHistorical":false,"subtext":"江东孙策见袁氏整合北方，趁机北上；三国博弈新阵容展开。","scores":{"C":0,"F":0,"R":1,"S":0,"A":1,"P":0,"I":0,"M":0}},
+      {"text":"刘表收容反袁势力，与孙策结盟","next":"HUB_yuan_4","isHistorical":false,"subtext":"荆州与江东联手抗袁，南方反抗联盟成型。","scores":{"C":0,"F":1,"R":0,"S":0,"A":0,"P":0,"I":1,"M":0}}
+    ]
+  },
+  "HUB_yuan_4": {
+    "id": "HUB_yuan_4",
+    "title": "朝代更替",
+    "year": "公元215年",
+    "setup": "袁氏要不要正式代汉？这是个法理、时机、合法性的复杂决断。",
+    "options": [
+      {"text":"袁氏受禅代汉","next":"__HUB_yuan_EXIT__","isHistorical":false,"subtext":"正式终结汉朝，袁氏开新王朝。","scores":{"C":0,"F":0,"R":1,"S":0,"A":1,"P":0,"I":0,"M":0}},
+      {"text":"维持挟天子之态","next":"__HUB_yuan_EXIT__","isHistorical":false,"subtext":"学曹操『周文王』模式，让下一代完成最后一步。","scores":{"C":0,"F":0,"R":0,"S":1,"A":0,"P":0,"I":0,"M":1}}
+    ]
+  },
+  "HUB_yuan_A_1": {
+    "id": "HUB_yuan_A_1",
+    "title": "袁氏正式称帝",
+    "year": "公元220年",
+    "setup": "袁绍或袁谭受禅称帝，开袁朝。",
+    "options": [
+      {"text":"立都邺城，定国号『袁』","next":"HUB_yuan_A_2","isHistorical":false,"subtext":"河北根据地正式升格为帝都。","scores":{"C":1,"F":0,"R":1,"S":0,"A":0,"P":0,"I":0,"M":0}},
+      {"text":"仍以洛阳为都，重建朝廷","next":"HUB_yuan_A_2","isHistorical":false,"subtext":"沿用汉室遗产，借旧瓶装新酒。","scores":{"C":0,"F":0,"R":0,"S":1,"A":0,"P":0,"I":0,"M":1}}
+    ]
+  },
+  "HUB_yuan_A_2": {
+    "id": "HUB_yuan_A_2",
+    "title": "反对者被压制",
+    "year": "公元225年",
+    "setup": "忠汉派、曹操旧部、独立军阀都需要清理。",
+    "options": [
+      {"text":"大规模清算反对派","next":"HUB_yuan_A_3","isHistorical":false,"subtext":"短期内噤声，但留下了仇恨种子。","scores":{"C":0,"F":0,"R":1,"S":0,"A":0,"P":0,"I":0,"M":1}},
+      {"text":"怀柔笼络，赦免反对派","next":"HUB_yuan_A_3","isHistorical":false,"subtext":"政治姿态柔软，但根基隐患仍在。","scores":{"C":0,"F":0,"R":0,"S":1,"A":0,"P":0,"I":1,"M":0}}
+    ]
+  },
+  "HUB_yuan_A_3": {
+    "id": "HUB_yuan_A_3",
+    "title": "袁朝立稳",
+    "year": "公元230年",
+    "setup": "袁朝度过开国期，但能撑多久？",
+    "options": [
+      {"text":"袁朝立稳，开新王朝","next":"E07","isHistorical":false,"subtext":"华夏政治以非曹魏的另一种形态延续。【终局·外戚王朝】","scores":{"C":1,"F":0,"R":0,"S":1,"A":0,"P":0,"I":0,"M":1},"rawTarget":"结局 E07·外戚王朝"},
+      {"text":"袁朝根基浅薄，短命而终","next":"E02","isHistorical":false,"subtext":"立国未稳，二三十年内崩塌。【终局·西楚短世】","scores":{"C":0,"F":0,"R":1,"S":0,"A":1,"P":0,"I":0,"M":1},"rawTarget":"结局 E02·西楚短世"}
+    ]
+  },
+  "HUB_yuan_B_1": {
+    "id": "HUB_yuan_B_1",
+    "title": "袁氏内部分裂",
+    "year": "公元220年",
+    "setup": "袁绍死后，袁谭、袁熙、袁尚三兄弟内战，袁氏集团一分为三。",
+    "options": [
+      {"text":"三兄弟分割河北","next":"HUB_yuan_B_2","isHistorical":false,"subtext":"河北分裂为三块，互相争斗。","scores":{"C":0,"F":1,"R":0,"S":0,"A":0,"P":0,"I":0,"M":1}},
+      {"text":"某一兄弟胜出，但元气大伤","next":"HUB_yuan_B_2","isHistorical":false,"subtext":"内战让袁氏失去南下的力量。","scores":{"C":0,"F":0,"R":0,"S":0,"A":1,"P":0,"I":0,"M":1}}
+    ]
+  },
+  "HUB_yuan_B_2": {
+    "id": "HUB_yuan_B_2",
+    "title": "南方三方鼎立",
+    "year": "公元225年",
+    "setup": "袁氏自顾不暇，刘备、孙权、刘表的格局得以稳定。",
+    "options": [
+      {"text":"刘表稳固荆州","next":"HUB_yuan_B_3","isHistorical":false,"subtext":"荆州成为南方军事重镇。","scores":{"C":0,"F":0,"R":0,"S":1,"A":0,"P":0,"I":1,"M":0}},
+      {"text":"孙权扩张江东","next":"HUB_yuan_B_3","isHistorical":false,"subtext":"江东势力北上，逼近中原。","scores":{"C":0,"F":0,"R":1,"S":0,"A":1,"P":0,"I":0,"M":0}}
+    ]
+  },
+  "HUB_yuan_B_3": {
+    "id": "HUB_yuan_B_3",
+    "title": "三国格局提前定型",
+    "year": "公元230年",
+    "setup": "袁、荆、吴或袁、蜀、吴的三国格局浮现。",
+    "options": [
+      {"text":"北袁、南荆、东吴三足鼎立","next":"E05","isHistorical":false,"subtext":"三分天下，只是角色换人。【终局·三国提前】","scores":{"C":0,"F":1,"R":0,"S":0,"A":1,"P":0,"I":1,"M":0},"rawTarget":"结局 E05·三国提前"},
+      {"text":"三方长期僵持","next":"E04","isHistorical":false,"subtext":"没人能整合，天下长期分裂。【终局·列国并立】","scores":{"C":0,"F":1,"R":0,"S":1,"A":0,"P":0,"I":0,"M":1},"rawTarget":"结局 E04·列国并立"}
+    ]
+  },
+  "HUB_yuan_C_1": {
+    "id": "HUB_yuan_C_1",
+    "title": "袁氏分崩离析",
+    "year": "公元220年",
+    "setup": "袁氏内斗加剧，集团全面瓦解。",
+    "options": [
+      {"text":"袁氏将领各自割据","next":"HUB_yuan_C_2","isHistorical":false,"subtext":"袁氏将领纷纷自立，河北分裂。","scores":{"C":0,"F":1,"R":0,"S":0,"A":0,"P":0,"I":0,"M":1}},
+      {"text":"袁氏被某将领篡夺","next":"HUB_yuan_C_2","isHistorical":false,"subtext":"某员大将取代袁氏。","scores":{"C":0,"F":0,"R":1,"S":0,"A":0,"P":0,"I":0,"M":1}}
+    ]
+  },
+  "HUB_yuan_C_2": {
+    "id": "HUB_yuan_C_2",
+    "title": "各地军阀重起",
+    "year": "公元225年",
+    "setup": "北方分裂后，各地军阀重新崛起。",
+    "options": [
+      {"text":"北方陷入军阀混战","next":"HUB_yuan_C_3","isHistorical":false,"subtext":"类似汉末诸侯混战的局面重演。","scores":{"C":0,"F":0,"R":1,"S":0,"A":1,"P":0,"I":0,"M":0}},
+      {"text":"某新军阀崛起，但未能统一","next":"HUB_yuan_C_3","isHistorical":false,"subtext":"出现新强者，但实力不足以一统。","scores":{"C":0,"F":0,"R":0,"S":0,"A":1,"P":0,"I":0,"M":1}}
+    ]
+  },
+  "HUB_yuan_C_3": {
+    "id": "HUB_yuan_C_3",
+    "title": "中原长期分裂",
+    "year": "公元230年",
+    "setup": "中原进入长期分裂状态。",
+    "options": [
+      {"text":"长期分裂，无人能定","next":"E04","isHistorical":false,"subtext":"大一统进程被推迟数百年。【终局·列国并立】","scores":{"C":0,"F":1,"R":0,"S":0,"A":0,"P":0,"I":0,"M":1},"rawTarget":"结局 E04·列国并立"},
+      {"text":"北方军阀加速被外族取代","next":"E06","isHistorical":false,"subtext":"内乱给了游牧南下的机会。【终局·南北裂变】","scores":{"C":0,"F":0,"R":0,"S":0,"A":1,"P":0,"I":0,"M":1},"rawTarget":"结局 E06·南北裂变"}
+    ]
+  },
+  "HUB_men_1": {
+    "id": "HUB_men_1",
+    "title": "世家坐大",
+    "year": "公元150年",
+    "setup": "无论起因如何，几大世家通过累世经学与举荐，垄断了仕途要职。",
+    "options": [
+      {"text":"世家通过经学垄断仕途","next":"HUB_men_2","isHistorical":false,"subtext":"弘农杨氏、汝南袁氏等『累世公卿』家族开始登场。","scores":{"C":0,"F":1,"R":0,"S":1,"A":0,"P":0,"I":0,"M":0}},
+      {"text":"世家借婚姻结成姻亲网络","next":"HUB_men_2","isHistorical":false,"subtext":"几大家族互相联姻，形成跨地域的政治同盟。","scores":{"C":0,"F":1,"R":0,"S":0,"A":0,"P":0,"I":0,"M":1}}
+    ]
+  },
+  "HUB_men_2": {
+    "id": "HUB_men_2",
+    "title": "寒门难进",
+    "year": "公元160年",
+    "setup": "寒门士子的上升通道越来越窄。",
+    "options": [
+      {"text":"朝廷尝试设科考，选寒门","next":"HUB_men_3","isHistorical":false,"subtext":"类似科举的萌芽出现，但被世家把持。","scores":{"C":1,"F":0,"R":0,"S":0,"A":0,"P":0,"I":1,"M":0}},
+      {"text":"寒门转向地方，做私塾门客","next":"HUB_men_3","isHistorical":false,"subtext":"寒门投入豪强门下，反而加速豪强的人才储备。","scores":{"C":0,"F":1,"R":0,"S":0,"A":0,"P":0,"I":0,"M":1}}
+    ]
+  },
+  "HUB_men_3": {
+    "id": "HUB_men_3",
+    "title": "皇权虚化",
+    "year": "公元170年",
+    "setup": "世家把持要职，皇帝越来越像礼制象征。皇权能否反扑？",
+    "options": [
+      {"text":"皇帝借宦官 / 外戚反扑","next":"HUB_men_4","isHistorical":false,"subtext":"类似东汉宦官集团的方式打击世家；短期有效，长期消耗。","scores":{"C":1,"F":0,"R":1,"S":0,"A":0,"P":0,"I":0,"M":0}},
+      {"text":"皇帝与世家共治，做共主","next":"HUB_men_4","isHistorical":false,"subtext":"皇帝接受门阀格局，做仪式性国家元首。","scores":{"C":0,"F":0,"R":0,"S":1,"A":0,"P":0,"I":1,"M":0}}
+    ]
+  },
+  "HUB_men_4": {
+    "id": "HUB_men_4",
+    "title": "制度滑变",
+    "year": "公元180年",
+    "setup": "门阀政治持续，是否会演化为新的稳定形态？",
+    "options": [
+      {"text":"形成贵族议政会","next":"__HUB_men_EXIT__","isHistorical":false,"subtext":"几大世家代表组成议事会，与皇帝共商国是；提前出现的『贵族议会』。","scores":{"C":0,"F":1,"R":0,"S":0,"A":0,"P":0,"I":1,"M":0}},
+      {"text":"滑向军阀割据","next":"__HUB_men_EXIT__","isHistorical":false,"subtext":"各家族依靠私兵自保，逐渐演化为类似魏晋的割据局面。","scores":{"C":0,"F":0,"R":0,"S":0,"A":1,"P":0,"I":0,"M":1}}
+    ]
+  },
+  "HUB_men_A_1": {
+    "id": "HUB_men_A_1",
+    "title": "门阀寡头成型",
+    "year": "公元190年",
+    "setup": "几大世家组成寡头联盟，主导朝政。",
+    "options": [
+      {"text":"世家联合制定家族公约","next":"HUB_men_A_2","isHistorical":false,"subtext":"各大家族确立『势力分配』协议。","scores":{"C":0,"F":1,"R":0,"S":0,"A":0,"P":0,"I":1,"M":0}},
+      {"text":"世家通过通婚锁定权力","next":"HUB_men_A_2","isHistorical":false,"subtext":"跨家族联姻网络越来越密。","scores":{"C":0,"F":1,"R":0,"S":0,"A":0,"P":0,"I":0,"M":1}}
+    ]
+  },
+  "HUB_men_A_2": {
+    "id": "HUB_men_A_2",
+    "title": "皇权彻底虚化",
+    "year": "公元200年",
+    "setup": "皇帝沦为礼制象征，无实权。",
+    "options": [
+      {"text":"皇帝主持仪式，世家治国","next":"HUB_men_A_3","isHistorical":false,"subtext":"仪式天子与实权门阀分立。","scores":{"C":0,"F":0,"R":0,"S":1,"A":0,"P":0,"I":1,"M":0}},
+      {"text":"皇族被边缘化，沦为虚君","next":"HUB_men_A_3","isHistorical":false,"subtext":"类似日本天皇的模式提前出现。","scores":{"C":0,"F":1,"R":0,"S":0,"A":0,"P":1,"I":0,"M":0}}
+    ]
+  },
+  "HUB_men_A_3": {
+    "id": "HUB_men_A_3",
+    "title": "贵族寡头主导天下",
+    "year": "公元220年",
+    "setup": "门阀政治成为稳定形态。",
+    "options": [
+      {"text":"门阀寡头长期主导","next":"E08","isHistorical":false,"subtext":"魏晋式的门阀社会持续数百年。【终局·豪强共和】","scores":{"C":0,"F":1,"R":0,"S":0,"A":0,"P":0,"I":1,"M":0},"rawTarget":"结局 E08·豪强共和"},
+      {"text":"门阀间内斗，逐渐分裂","next":"E08","isHistorical":false,"subtext":"门阀格局最终分裂，但仍保留贵族主导特色。【终局·豪强共和】","scores":{"C":0,"F":1,"R":0,"S":0,"A":0,"P":0,"I":0,"M":1},"rawTarget":"结局 E08·豪强共和"}
+    ]
+  },
+  "HUB_men_B_1": {
+    "id": "HUB_men_B_1",
+    "title": "某位强主清算门阀",
+    "year": "公元190年",
+    "setup": "罕见地出现一位有作为的皇帝或权臣，决心抑制门阀。",
+    "options": [
+      {"text":"皇帝亲政，打压顽固世家","next":"HUB_men_B_2","isHistorical":false,"subtext":"类似汉武帝式的强力清算。","scores":{"C":1,"F":0,"R":1,"S":0,"A":0,"P":0,"I":0,"M":0}},
+      {"text":"权臣借助寒门，孤立世家","next":"HUB_men_B_2","isHistorical":false,"subtext":"政治平衡术，借力打力。","scores":{"C":0,"F":0,"R":0,"S":0,"A":0,"P":0,"I":1,"M":1}}
+    ]
+  },
+  "HUB_men_B_2": {
+    "id": "HUB_men_B_2",
+    "title": "改革局部见效",
+    "year": "公元200年",
+    "setup": "抑制门阀的政策取得部分成果。",
+    "options": [
+      {"text":"寒门人才大量进入朝廷","next":"HUB_men_B_3","isHistorical":false,"subtext":"朝廷人才结构改善，但门阀仍有底蕴。","scores":{"C":0,"F":0,"R":0,"S":0,"A":0,"P":0,"I":1,"M":1}},
+      {"text":"土地兼并受到部分抑制","next":"HUB_men_B_3","isHistorical":false,"subtext":"自耕农回升，但门阀基础仍在。","scores":{"C":0,"F":0,"R":0,"S":1,"A":0,"P":0,"I":0,"M":1}}
+    ]
+  },
+  "HUB_men_B_3": {
+    "id": "HUB_men_B_3",
+    "title": "王朝得以续命",
+    "year": "公元220年",
+    "setup": "改革延长了王朝寿命。",
+    "options": [
+      {"text":"王朝延续数代","next":"E10","isHistorical":false,"subtext":"改革红利让王朝多撑数十年。【终局·续命中兴】","scores":{"C":0,"F":0,"R":0,"S":1,"A":0,"P":0,"I":1,"M":0},"rawTarget":"结局 E10·续命中兴"},
+      {"text":"改革后王朝转型，但更替不可避免","next":"E07","isHistorical":false,"subtext":"改革延缓但未阻止改朝换代。【终局·外戚王朝】","scores":{"C":0,"F":0,"R":0,"S":0,"A":1,"P":0,"I":0,"M":1},"rawTarget":"结局 E07·外戚王朝"}
+    ]
+  },
+  "HUB_men_C_1": {
+    "id": "HUB_men_C_1",
+    "title": "寒门集团反扑成功",
+    "year": "公元190年",
+    "setup": "在某次危机中，寒门集团联合皇权一举打破门阀垄断。",
+    "options": [
+      {"text":"寒门将领发动政变","next":"HUB_men_C_2","isHistorical":false,"subtext":"武力突破，但代价巨大。","scores":{"C":0,"F":0,"R":1,"S":0,"A":1,"P":0,"I":0,"M":0}},
+      {"text":"寒门与皇权制度合作","next":"HUB_men_C_2","isHistorical":false,"subtext":"通过设新科考、改察举等制度变革。","scores":{"C":1,"F":0,"R":0,"S":0,"A":0,"P":0,"I":1,"M":0}}
+    ]
+  },
+  "HUB_men_C_2": {
+    "id": "HUB_men_C_2",
+    "title": "新政推行",
+    "year": "公元200年",
+    "setup": "寒门主导朝政，推行抑制世家的新政。",
+    "options": [
+      {"text":"设科举制度，选拔人才","next":"HUB_men_C_3","isHistorical":false,"subtext":"科举制度提前数百年出现。","scores":{"C":1,"F":0,"R":0,"S":0,"A":0,"P":0,"I":1,"M":0}},
+      {"text":"土地国有化，限制兼并","next":"HUB_men_C_3","isHistorical":false,"subtext":"王莽式改制再来一次，但更务实。","scores":{"C":0,"F":0,"R":1,"S":0,"A":0,"P":0,"I":0,"M":1}}
+    ]
+  },
+  "HUB_men_C_3": {
+    "id": "HUB_men_C_3",
+    "title": "提前进入新盛世",
+    "year": "公元220年",
+    "setup": "新政推行后，王朝进入新一轮盛世。",
+    "options": [
+      {"text":"寒门精英治国，国力大增","next":"E11","isHistorical":false,"subtext":"王朝迎来史上罕见的『寒门盛世』。【终局·提前盛世】","scores":{"C":1,"F":0,"R":0,"S":0,"A":0,"P":0,"I":1,"M":0},"rawTarget":"结局 E11·提前盛世"},
+      {"text":"改革持续，影响数百年","next":"E11","isHistorical":false,"subtext":"制度创新让中华文明走向新阶段。【终局·提前盛世】","scores":{"C":0,"F":0,"R":0,"S":0,"A":0,"P":0,"I":1,"M":1},"rawTarget":"结局 E11·提前盛世"}
+    ]
+  },
+  "M01_INTRO_1": {
+    "id": "M01_INTRO_1",
+    "title": "项羽自封霸王",
+    "year": "前206年",
+    "setup": "刘邦已死，项羽自立西楚霸王，开始分封十八路诸侯。",
+    "options": [
+      {"text":"分封从严，按军功大小","next":"M01_INTRO_2","isHistorical":false,"subtext":"严格按军功分封，但触怒了一些功臣感情。","scores":{"C":1,"F":0,"R":1,"S":0,"A":0,"P":0,"I":0,"M":0}},
+      {"text":"分封从宽，照顾盟友情面","next":"M01_INTRO_2","isHistorical":false,"subtext":"人情分封，但埋下分封不均的隐患。","scores":{"C":0,"F":1,"R":0,"S":0,"A":0,"P":0,"I":1,"M":0}}
+    ]
+  },
+  "M01_INTRO_2": {
+    "id": "M01_INTRO_2",
+    "title": "范增定策",
+    "year": "前206年",
+    "setup": "范增极力主张乘势称帝，但项羽出于贵族体面犹豫不决。",
+    "options": [
+      {"text":"听范增之议，立即称帝","next":"M01_INTRO_3","isHistorical":false,"subtext":"趁热打铁，确立皇帝身份。","scores":{"C":0,"F":0,"R":1,"S":0,"A":1,"P":0,"I":0,"M":0}},
+      {"text":"暂保霸王名号，积累威望","next":"M01_INTRO_3","isHistorical":false,"subtext":"沿用霸王名号，给天下一个适应期。","scores":{"C":0,"F":0,"R":0,"S":1,"A":0,"P":0,"I":1,"M":0}}
+    ]
+  },
+  "M01_INTRO_3": {
+    "id": "M01_INTRO_3",
+    "title": "关中分封",
+    "year": "前206年",
+    "setup": "三秦地的安排，决定楚朝能否真正接管秦遗产。",
+    "options": [
+      {"text":"立秦降将守关中","next":"HUB_chu_1","isHistorical":false,"subtext":"借力秦人治秦地，但秦降将忠诚存疑。","scores":{"C":0,"F":1,"R":0,"S":0,"A":0,"P":0,"I":1,"M":0}},
+      {"text":"派楚将直接接管","next":"HUB_chu_1","isHistorical":false,"subtext":"楚人直接统治，但水土不服。","scores":{"C":1,"F":0,"R":0,"S":0,"A":0,"P":0,"I":0,"M":1}}
+    ]
+  },
+  "M02_INTRO_1": {
+    "id": "M02_INTRO_1",
+    "title": "困守汉中",
+    "year": "前206年",
+    "setup": "刘邦没有韩信，被三秦堵在西边。",
+    "options": [
+      {"text":"起兵东出，正面争锋","next":"M02_INTRO_2","isHistorical":false,"subtext":"不甘困守，主动求战。","scores":{"C":0,"F":0,"R":1,"S":0,"A":1,"P":0,"I":0,"M":0}},
+      {"text":"深耕巴蜀，养精蓄锐","next":"M02_INTRO_2","isHistorical":false,"subtext":"长远经营，等待天下生变。","scores":{"C":0,"F":0,"R":0,"S":1,"A":0,"P":0,"I":1,"M":0}}
+    ]
+  },
+  "M02_INTRO_2": {
+    "id": "M02_INTRO_2",
+    "title": "韩信流亡",
+    "year": "前205年",
+    "setup": "离开汉营的韩信去寻找新主。",
+    "options": [
+      {"text":"韩信投彭越联手","next":"M02_INTRO_3","isHistorical":false,"subtext":"兵仙与游击之王结合，威胁极大。","scores":{"C":0,"F":1,"R":0,"S":0,"A":1,"P":0,"I":0,"M":0}},
+      {"text":"韩信据地自立","next":"M02_INTRO_3","isHistorical":false,"subtext":"韩信成为独立的第三方势力。","scores":{"C":0,"F":1,"R":0,"S":0,"A":1,"P":0,"I":0,"M":0}}
+    ]
+  },
+  "M02_INTRO_3": {
+    "id": "M02_INTRO_3",
+    "title": "三方雏形",
+    "year": "前204年",
+    "setup": "天下隐隐成楚、汉、韩三足。",
+    "options": [
+      {"text":"三方互相牵制","next":"HUB_san_1","isHistorical":false,"subtext":"谁也无法吞并谁，进入长期对峙。","scores":{"C":0,"F":0,"R":0,"S":1,"A":0,"P":0,"I":1,"M":0}},
+      {"text":"韩信军事崛起，压制群雄","next":"HUB_san_1","isHistorical":false,"subtext":"兵仙连战连胜，威震天下。","scores":{"C":0,"F":0,"R":1,"S":0,"A":1,"P":0,"I":0,"M":0}}
+    ]
+  },
+  "M03_INTRO_1": {
+    "id": "M03_INTRO_1",
+    "title": "三分初成",
+    "year": "前203年",
+    "setup": "韩信据齐自立，与楚汉鼎足。",
+    "options": [
+      {"text":"联汉抗楚","next":"M03_INTRO_2","isHistorical":false,"subtext":"与刘邦平等结盟，共灭项羽。","scores":{"C":1,"F":0,"R":0,"S":0,"A":0,"P":0,"I":1,"M":0}},
+      {"text":"坐山观虎斗","next":"M03_INTRO_2","isHistorical":false,"subtext":"静观楚汉相争，收渔翁之利。","scores":{"C":0,"F":1,"R":0,"S":0,"A":0,"P":0,"I":0,"M":1}}
+    ]
+  },
+  "M03_INTRO_2": {
+    "id": "M03_INTRO_2",
+    "title": "灭楚之后",
+    "year": "前202年",
+    "setup": "项羽败亡，刘邦与韩信对峙。",
+    "options": [
+      {"text":"韩信与刘邦决裂开战","next":"M03_INTRO_3","isHistorical":false,"subtext":"天才个人对成熟系统的终极较量。","scores":{"C":0,"F":0,"R":1,"S":0,"A":1,"P":0,"I":0,"M":0}},
+      {"text":"划界而治，暂时共存","next":"M03_INTRO_3","isHistorical":false,"subtext":"维持均势，但谁先内部整合谁就胜。","scores":{"C":0,"F":0,"R":0,"S":1,"A":0,"P":0,"I":0,"M":1}}
+    ]
+  },
+  "M03_INTRO_3": {
+    "id": "M03_INTRO_3",
+    "title": "三方角力",
+    "year": "前201年",
+    "setup": "天下三分，谁能笑到最后。",
+    "options": [
+      {"text":"专注用兵，以战养势","next":"HUB_san_1","isHistorical":false,"subtext":"韩信扬长避短，靠胜利维系威势。","scores":{"C":0,"F":0,"R":1,"S":0,"A":1,"P":0,"I":0,"M":0}},
+      {"text":"广纳贤才，补齐短板","next":"HUB_san_1","isHistorical":false,"subtext":"韩信意识到治国短板，开始补课。","scores":{"C":0,"F":0,"R":0,"S":1,"A":0,"P":0,"I":1,"M":0}}
+    ]
+  },
+  "M04_INTRO_1": {
+    "id": "M04_INTRO_1",
+    "title": "重整旗鼓",
+    "year": "前202年",
+    "setup": "项羽回江东，重新募兵。",
+    "options": [
+      {"text":"广募江东子弟","next":"M04_INTRO_2","isHistorical":false,"subtext":"江东子弟应募，但锐气不如当年。","scores":{"C":0,"F":1,"R":0,"S":0,"A":0,"P":0,"I":1,"M":0}},
+      {"text":"号召旧部归附","next":"M04_INTRO_2","isHistorical":false,"subtext":"凭威望召集旧部，但天下人心思定。","scores":{"C":0,"F":0,"R":0,"S":1,"A":0,"P":0,"I":1,"M":0}}
+    ]
+  },
+  "M04_INTRO_2": {
+    "id": "M04_INTRO_2",
+    "title": "汉军追击",
+    "year": "前201年",
+    "setup": "刘邦不会给项羽喘息之机。",
+    "options": [
+      {"text":"凭长江天险死守","next":"M04_INTRO_3","isHistorical":false,"subtext":"战术上能赢，但战略上挽不回。","scores":{"C":0,"F":0,"R":0,"S":1,"A":0,"P":0,"I":0,"M":1}},
+      {"text":"主动出击寻求决战","next":"M04_INTRO_3","isHistorical":false,"subtext":"不甘困守，但正中刘邦下怀。","scores":{"C":0,"F":0,"R":1,"S":0,"A":1,"P":0,"I":0,"M":0}}
+    ]
+  },
+  "M04_INTRO_3": {
+    "id": "M04_INTRO_3",
+    "title": "江东建国前夜",
+    "year": "前200年",
+    "setup": "项羽决定以江东为基业，正式建国。",
+    "options": [
+      {"text":"自立为南楚王","next":"HUB_jiang_1","isHistorical":false,"subtext":"正式称王，开启江东独立纪元。","scores":{"C":0,"F":1,"R":0,"S":0,"A":1,"P":0,"I":0,"M":0}},
+      {"text":"联合南越自固","next":"HUB_jiang_1","isHistorical":false,"subtext":"联手赵佗，扩大南方势力。","scores":{"C":0,"F":1,"R":0,"S":0,"A":0,"P":0,"I":1,"M":0}}
+    ]
+  },
+  "M08_INTRO_1": {
+    "id": "M08_INTRO_1",
+    "title": "思想涣散",
+    "year": "前136年",
+    "setup": "百家并存，治理失去统一标准。",
+    "options": [
+      {"text":"官僚选拔缺乏统一标准","next":"M08_INTRO_2","isHistorical":false,"subtext":"朝政在不同学派中拉扯。","scores":{"C":0,"F":1,"R":0,"S":0,"A":0,"P":0,"I":0,"M":1}},
+      {"text":"地方思想自行其是","next":"M08_INTRO_2","isHistorical":false,"subtext":"各地依不同学派治理，文化认同分化。","scores":{"C":0,"F":1,"R":0,"S":0,"A":0,"P":0,"I":1,"M":0}}
+    ]
+  },
+  "M08_INTRO_2": {
+    "id": "M08_INTRO_2",
+    "title": "认同薄弱",
+    "year": "前120年",
+    "setup": "缺乏统一意识形态的帝国脆弱性显现。",
+    "options": [
+      {"text":"寻找替代的黏合机制","next":"M08_INTRO_3","isHistorical":false,"subtext":"用更强的法家变体替代儒术黏合。","scores":{"C":1,"F":0,"R":1,"S":0,"A":0,"P":0,"I":0,"M":0}},
+      {"text":"地方与中央渐行渐远","next":"M08_INTRO_3","isHistorical":false,"subtext":"利益摩擦中离心倾向滋长。","scores":{"C":0,"F":1,"R":0,"S":0,"A":0,"P":0,"I":0,"M":1}}
+    ]
+  },
+  "M08_INTRO_3": {
+    "id": "M08_INTRO_3",
+    "title": "学派竞争",
+    "year": "前100年",
+    "setup": "法家、道家、儒家、墨家轮番登场。",
+    "options": [
+      {"text":"法家重新主导","next":"HUB_men_1","isHistorical":false,"subtext":"高效集权，但秦的教训犹在。","scores":{"C":1,"F":0,"R":1,"S":0,"A":0,"P":0,"I":0,"M":0}},
+      {"text":"道家无为深入民间","next":"HUB_men_1","isHistorical":false,"subtext":"黄老之学渗透地方治理，社会自治增强。","scores":{"C":0,"F":1,"R":0,"S":1,"A":0,"P":0,"I":0,"M":0}}
+    ]
+  },
+  "M12_INTRO_1": {
+    "id": "M12_INTRO_1",
+    "title": "病灶犹存",
+    "year": "公元9年",
+    "setup": "王莽倒了，但西汉末年的社会矛盾未消除。",
+    "options": [
+      {"text":"借机推行深刻改革","next":"M12_INTRO_2","isHistorical":false,"subtext":"忠汉集团尝试改革，但既得利益难触。","scores":{"C":0,"F":0,"R":1,"S":0,"A":0,"P":0,"I":1,"M":0}},
+      {"text":"只清王莽不治本","next":"M12_INTRO_2","isHistorical":false,"subtext":"仅满足扳倒王莽，深层问题未解。","scores":{"C":0,"F":0,"R":0,"S":1,"A":0,"P":0,"I":0,"M":1}}
+    ]
+  },
+  "M12_INTRO_2": {
+    "id": "M12_INTRO_2",
+    "title": "下一外戚",
+    "year": "公元15年",
+    "setup": "王莽虽倒，但孕育王莽的结构仍在。",
+    "options": [
+      {"text":"朝廷重用某新外戚","next":"M12_INTRO_3","isHistorical":false,"subtext":"又一个外戚势力崛起。","scores":{"C":0,"F":1,"R":0,"S":0,"A":0,"P":0,"I":0,"M":1}},
+      {"text":"朝廷尝试限制外戚权力","next":"M12_INTRO_3","isHistorical":false,"subtext":"制度上抑制外戚，但执行困难。","scores":{"C":1,"F":0,"R":0,"S":0,"A":0,"P":0,"I":1,"M":0}}
+    ]
+  },
+  "M12_INTRO_3": {
+    "id": "M12_INTRO_3",
+    "title": "制度变法",
+    "year": "公元20年",
+    "setup": "终于有人提出温和但深入的改革方案。",
+    "options": [
+      {"text":"采纳改革方案","next":"HUB_xin_1","isHistorical":false,"subtext":"朝廷决心走改革之路。","scores":{"C":0,"F":0,"R":1,"S":0,"A":0,"P":0,"I":1,"M":0}},
+      {"text":"维持现状","next":"HUB_xin_1","isHistorical":false,"subtext":"保守应对，但矛盾持续累积。","scores":{"C":0,"F":0,"R":0,"S":1,"A":0,"P":0,"I":0,"M":1}}
+    ]
+  },
+  "M13_INTRO_1": {
+    "id": "M13_INTRO_1",
+    "title": "渐进之路",
+    "year": "公元9年",
+    "setup": "王莽放缓改革节奏，从土地兼并入手。",
+    "options": [
+      {"text":"温和限田，不强夺","next":"M13_INTRO_2","isHistorical":false,"subtext":"限制而非剥夺，阻力小但效果慢。","scores":{"C":0,"F":0,"R":1,"S":0,"A":0,"P":0,"I":1,"M":0}},
+      {"text":"先稳经济再图改革","next":"M13_INTRO_2","isHistorical":false,"subtext":"务实次序，先恢复民生。","scores":{"C":0,"F":0,"R":0,"S":1,"A":0,"P":0,"I":0,"M":1}}
+    ]
+  },
+  "M13_INTRO_2": {
+    "id": "M13_INTRO_2",
+    "title": "豪强博弈",
+    "year": "公元12年",
+    "setup": "温和也要触动利益，豪强抵抗仍在。",
+    "options": [
+      {"text":"拉拢部分豪强","next":"M13_INTRO_3","isHistorical":false,"subtext":"与部分豪强结盟，孤立顽固派。","scores":{"C":0,"F":1,"R":0,"S":0,"A":0,"P":0,"I":1,"M":0}},
+      {"text":"以皇权强压顽固派","next":"M13_INTRO_3","isHistorical":false,"subtext":"动用皇权强压，平衡难把握。","scores":{"C":1,"F":0,"R":0,"S":0,"A":1,"P":0,"I":0,"M":0}}
+    ]
+  },
+  "M13_INTRO_3": {
+    "id": "M13_INTRO_3",
+    "title": "改革深入",
+    "year": "公元15年",
+    "setup": "改革进入深水区。",
+    "options": [
+      {"text":"推进币制改革","next":"HUB_xin_1","isHistorical":false,"subtext":"分批改革货币，避免市场崩溃。","scores":{"C":0,"F":0,"R":1,"S":0,"A":0,"P":0,"I":1,"M":0}},
+      {"text":"暂缓币制以稳人心","next":"HUB_xin_1","isHistorical":false,"subtext":"先稳人心，币制留待时机。","scores":{"C":0,"F":0,"R":0,"S":1,"A":0,"P":0,"I":0,"M":1}}
+    ]
+  },
+  "M17_INTRO_1": {
+    "id": "M17_INTRO_1",
+    "title": "清流当国",
+    "year": "公元166年",
+    "setup": "正直士人执政。",
+    "options": [
+      {"text":"整顿吏治，缓和矛盾","next":"M17_INTRO_2","isHistorical":false,"subtext":"清流主政，吏治好转。","scores":{"C":0,"F":0,"R":0,"S":1,"A":0,"P":0,"I":1,"M":0}},
+      {"text":"士族借机扩张势力","next":"M17_INTRO_2","isHistorical":false,"subtext":"清流出身的士族开始结网。","scores":{"C":0,"F":1,"R":0,"S":0,"A":0,"P":0,"I":0,"M":1}}
+    ]
+  },
+  "M17_INTRO_2": {
+    "id": "M17_INTRO_2",
+    "title": "士族抬头",
+    "year": "公元170年",
+    "setup": "清流出身的士族开始结网。",
+    "options": [
+      {"text":"朝廷重用世家子弟","next":"M17_INTRO_3","isHistorical":false,"subtext":"进一步巩固世家在朝中的地位。","scores":{"C":0,"F":1,"R":0,"S":0,"A":0,"P":0,"I":0,"M":1}},
+      {"text":"朝廷提拔寒门以平衡","next":"M17_INTRO_3","isHistorical":false,"subtext":"试图制衡世家，但效果有限。","scores":{"C":1,"F":0,"R":0,"S":0,"A":0,"P":0,"I":1,"M":0}}
+    ]
+  },
+  "M17_INTRO_3": {
+    "id": "M17_INTRO_3",
+    "title": "门阀苗头",
+    "year": "公元180年",
+    "setup": "累世经学的家族开始成型。",
+    "options": [
+      {"text":"鼓励经学传家","next":"HUB_men_1","isHistorical":false,"subtext":"政策上鼓励世家培养子弟。","scores":{"C":0,"F":1,"R":0,"S":0,"A":0,"P":0,"I":1,"M":0}},
+      {"text":"限制家族世袭","next":"HUB_men_1","isHistorical":false,"subtext":"尝试限制家族传承，但难以执行。","scores":{"C":1,"F":0,"R":0,"S":0,"A":0,"P":0,"I":0,"M":1}}
+    ]
+  },
+  "M21_INTRO_1": {
+    "id": "M21_INTRO_1",
+    "title": "汉营群龙无首",
+    "year": "前205年",
+    "setup": "刘邦既死，留守萧何与前线残部相距千里。",
+    "options": [
+      {"text":"萧何拥立刘氏宗亲","next":"M21_INTRO_2","isHistorical":false,"subtext":"紧急拥立刘氏少年，但权威不足。","scores":{"C":0,"F":1,"R":0,"S":0,"A":0,"P":0,"I":1,"M":0}},
+      {"text":"韩信乘势接收汉军","next":"M21_INTRO_2","isHistorical":false,"subtext":"兵权落入韩信手中，但治国班底不足。","scores":{"C":0,"F":0,"R":1,"S":0,"A":1,"P":0,"I":0,"M":0}}
+    ]
+  },
+  "M21_INTRO_2": {
+    "id": "M21_INTRO_2",
+    "title": "项羽长驱",
+    "year": "前204年",
+    "setup": "失去刘邦的汉营节节败退。",
+    "options": [
+      {"text":"项羽长驱直入关中","next":"M21_INTRO_3","isHistorical":false,"subtext":"复刻秦末进关中的路线，重新分封三秦。","scores":{"C":0,"F":0,"R":1,"S":0,"A":1,"P":0,"I":0,"M":0}},
+      {"text":"项羽中途分兵围齐","next":"M21_INTRO_3","isHistorical":false,"subtext":"两线作战，楚军兵锋首次显出疲态。","scores":{"C":0,"F":1,"R":0,"S":0,"A":0,"P":0,"I":0,"M":1}}
+    ]
+  },
+  "M21_INTRO_3": {
+    "id": "M21_INTRO_3",
+    "title": "项羽自封",
+    "year": "前203年",
+    "setup": "天下既定，项羽考虑称帝。",
+    "options": [
+      {"text":"立即称帝，改朝换代","next":"HUB_chu_1","isHistorical":false,"subtext":"一鼓作气，确立皇帝身份。","scores":{"C":0,"F":0,"R":1,"S":0,"A":1,"P":0,"I":0,"M":0}},
+      {"text":"维持霸王名号一段时间","next":"HUB_chu_1","isHistorical":false,"subtext":"暂保霸王，给天下一个适应期。","scores":{"C":0,"F":0,"R":0,"S":1,"A":0,"P":0,"I":1,"M":0}}
+    ]
+  },
+  "M22_INTRO_1": {
+    "id": "M22_INTRO_1",
+    "title": "荥阳僵局",
+    "year": "前205年",
+    "setup": "没有北方迂回，刘邦只能死守荥阳。",
+    "options": [
+      {"text":"汉军凭关坚守","next":"M22_INTRO_2","isHistorical":false,"subtext":"苦守荥阳，等天下生变。","scores":{"C":0,"F":0,"R":0,"S":1,"A":0,"P":1,"I":0,"M":0}},
+      {"text":"彭越游击牵制楚军","next":"M22_INTRO_2","isHistorical":false,"subtext":"彭越骚扰楚军粮道，游击战首次发挥作用。","scores":{"C":0,"F":0,"R":1,"S":0,"A":1,"P":0,"I":0,"M":0}}
+    ]
+  },
+  "M22_INTRO_2": {
+    "id": "M22_INTRO_2",
+    "title": "楚汉久持",
+    "year": "前203年",
+    "setup": "缠斗超过五年，双方都被战争消耗殆尽。",
+    "options": [
+      {"text":"双方议和，划界而治","next":"M22_INTRO_3","isHistorical":false,"subtext":"以鸿沟为界，平分天下。","scores":{"C":0,"F":1,"R":0,"S":0,"A":0,"P":0,"I":0,"M":1}},
+      {"text":"项羽病重，楚营内乱","next":"M22_INTRO_3","isHistorical":false,"subtext":"项羽因征战劳累一病不起，楚营群龙无首。","scores":{"C":0,"F":0,"R":0,"S":0,"A":1,"P":0,"I":0,"M":1}}
+    ]
+  },
+  "M22_INTRO_3": {
+    "id": "M22_INTRO_3",
+    "title": "三方崛起",
+    "year": "前202年",
+    "setup": "长期对峙间，新势力开始崛起。",
+    "options": [
+      {"text":"韩信回归政治舞台","next":"HUB_san_1","isHistorical":false,"subtext":"韩信重新登场，成为天下第三极。","scores":{"C":0,"F":0,"R":1,"S":0,"A":1,"P":0,"I":0,"M":0}},
+      {"text":"第三势力做大","next":"HUB_san_1","isHistorical":false,"subtext":"田氏或彭越独立成为重要势力。","scores":{"C":0,"F":1,"R":0,"S":0,"A":0,"P":0,"I":1,"M":0}}
+    ]
+  },
+  "M27_INTRO_1": {
+    "id": "M27_INTRO_1",
+    "title": "中央松弛",
+    "year": "前74年",
+    "setup": "君主怠政、霍氏专权。",
+    "options": [
+      {"text":"霍氏长期专权","next":"M27_INTRO_2","isHistorical":false,"subtext":"霍光家族世代把持中枢。","scores":{"C":0,"F":1,"R":0,"S":0,"A":0,"P":0,"I":0,"M":1}},
+      {"text":"宣帝晚醒清算霍氏","next":"M27_INTRO_2","isHistorical":false,"subtext":"宣帝晚年觉醒，强力清算。","scores":{"C":1,"F":0,"R":1,"S":0,"A":0,"P":0,"I":0,"M":0}}
+    ]
+  },
+  "M27_INTRO_2": {
+    "id": "M27_INTRO_2",
+    "title": "外戚抬头",
+    "year": "前60年",
+    "setup": "缺了宣帝的整顿，外戚势力扩张。",
+    "options": [
+      {"text":"外戚+宦官联盟","next":"M27_INTRO_3","isHistorical":false,"subtext":"两大势力结盟，进一步压制士族。","scores":{"C":1,"F":0,"R":0,"S":0,"A":0,"P":0,"I":0,"M":1}},
+      {"text":"士族借机崛起","next":"M27_INTRO_3","isHistorical":false,"subtext":"士族趁外戚内斗扩张势力。","scores":{"C":0,"F":1,"R":0,"S":0,"A":0,"P":0,"I":1,"M":0}}
+    ]
+  },
+  "M27_INTRO_3": {
+    "id": "M27_INTRO_3",
+    "title": "衰朽加速",
+    "year": "前50年",
+    "setup": "朝廷整体治理效率下降。",
+    "options": [
+      {"text":"加征赋税以维持","next":"HUB_men_1","isHistorical":false,"subtext":"财政紧张，剥削加重，民间怨气累积。","scores":{"C":1,"F":0,"R":0,"S":0,"A":0,"P":0,"I":0,"M":1}},
+      {"text":"削减开支让地方自治","next":"HUB_men_1","isHistorical":false,"subtext":"朝廷退缩，地方豪强乘势抬头。","scores":{"C":0,"F":1,"R":0,"S":1,"A":0,"P":0,"I":0,"M":0}}
+    ]
+  },
+  "M30_INTRO_1": {
+    "id": "M30_INTRO_1",
+    "title": "士大夫当朝",
+    "year": "公元100年",
+    "setup": "某位皇帝借力清流，同时压制外戚与宦官。",
+    "options": [
+      {"text":"整顿吏治成效初显","next":"M30_INTRO_2","isHistorical":false,"subtext":"朝政清明，但深层问题未触。","scores":{"C":0,"F":0,"R":0,"S":1,"A":0,"P":0,"I":1,"M":0}},
+      {"text":"士族借机扩张家族势力","next":"M30_INTRO_2","isHistorical":false,"subtext":"清流的旗号下，是世家网络化。","scores":{"C":0,"F":1,"R":0,"S":0,"A":0,"P":0,"I":0,"M":1}}
+    ]
+  },
+  "M30_INTRO_2": {
+    "id": "M30_INTRO_2",
+    "title": "改革窗口",
+    "year": "公元120年",
+    "setup": "罕见的改革窗口出现。",
+    "options": [
+      {"text":"推行抑制兼并","next":"M30_INTRO_3","isHistorical":false,"subtext":"限田、清丈土地，但效果有限。","scores":{"C":0,"F":0,"R":1,"S":0,"A":0,"P":0,"I":1,"M":0}},
+      {"text":"维持现状以稳定","next":"M30_INTRO_3","isHistorical":false,"subtext":"求稳为主，错失改革良机。","scores":{"C":0,"F":0,"R":0,"S":1,"A":0,"P":0,"I":0,"M":1}}
+    ]
+  },
+  "M30_INTRO_3": {
+    "id": "M30_INTRO_3",
+    "title": "士族当政",
+    "year": "公元140年",
+    "setup": "士大夫主导朝政成为常态。",
+    "options": [
+      {"text":"鼓励世族传家","next":"HUB_men_1","isHistorical":false,"subtext":"政策上强化世家地位。","scores":{"C":0,"F":1,"R":0,"S":0,"A":0,"P":0,"I":1,"M":0}},
+      {"text":"提拔寒门平衡","next":"HUB_men_1","isHistorical":false,"subtext":"试图制衡，但寒门难成气候。","scores":{"C":1,"F":0,"R":0,"S":0,"A":0,"P":0,"I":0,"M":1}}
+    ]
+  },
+  "M31_INTRO_1": {
+    "id": "M31_INTRO_1",
+    "title": "袁绍迎天子",
+    "year": "公元196年",
+    "setup": "袁绍抢先抵达洛阳，迎汉献帝。",
+    "options": [
+      {"text":"袁绍立即称大将军","next":"M31_INTRO_2","isHistorical":false,"subtext":"借天子之名，自封最高军职。","scores":{"C":1,"F":0,"R":1,"S":0,"A":0,"P":0,"I":0,"M":0}},
+      {"text":"袁绍维持现有官职","next":"M31_INTRO_2","isHistorical":false,"subtext":"低调处理，避免树敌过早。","scores":{"C":0,"F":0,"R":0,"S":1,"A":0,"P":0,"I":0,"M":1}}
+    ]
+  },
+  "M31_INTRO_2": {
+    "id": "M31_INTRO_2",
+    "title": "河北聚势",
+    "year": "公元198年",
+    "setup": "天子在手，袁绍开始整合河北势力。",
+    "options": [
+      {"text":"重用田丰、沮授","next":"M31_INTRO_3","isHistorical":false,"subtext":"听从智囊建议，稳扎稳打。","scores":{"C":0,"F":0,"R":0,"S":1,"A":0,"P":0,"I":1,"M":0}},
+      {"text":"重用许攸、郭图","next":"M31_INTRO_3","isHistorical":false,"subtext":"急进派受重用，求速胜。","scores":{"C":0,"F":0,"R":1,"S":0,"A":1,"P":0,"I":0,"M":0}}
+    ]
+  },
+  "M31_INTRO_3": {
+    "id": "M31_INTRO_3",
+    "title": "南方应对",
+    "year": "公元199年",
+    "setup": "曹操、刘表、孙策都要重新站位。",
+    "options": [
+      {"text":"曹操联合刘表抗袁","next":"HUB_yuan_1","isHistorical":false,"subtext":"南方反袁同盟成型。","scores":{"C":0,"F":1,"R":0,"S":0,"A":1,"P":0,"I":0,"M":0}},
+      {"text":"曹操向袁绍称臣","next":"HUB_yuan_1","isHistorical":false,"subtext":"曹操务实低头，但内心不甘。","scores":{"C":0,"F":0,"R":0,"S":0,"A":0,"P":1,"I":0,"M":1}}
+    ]
+  },
+  "M32_INTRO_1": {
+    "id": "M32_INTRO_1",
+    "title": "河北的胜利",
+    "year": "公元200年",
+    "setup": "袁绍带着官渡之胜的余威。",
+    "options": [
+      {"text":"乘胜南下许昌","next":"M32_INTRO_2","isHistorical":false,"subtext":"趁势南下，许昌震动。","scores":{"C":0,"F":0,"R":1,"S":0,"A":1,"P":0,"I":0,"M":0}},
+      {"text":"稳步消化地盘","next":"M32_INTRO_2","isHistorical":false,"subtext":"先消化新得之地，再图南下。","scores":{"C":0,"F":0,"R":0,"S":1,"A":0,"P":0,"I":1,"M":0}}
+    ]
+  },
+  "M32_INTRO_2": {
+    "id": "M32_INTRO_2",
+    "title": "南方应变",
+    "year": "公元202年",
+    "setup": "北方易主消息传到南方。",
+    "options": [
+      {"text":"刘表收容曹操残部","next":"M32_INTRO_3","isHistorical":false,"subtext":"念旧情收留，但荆州能否守住是另一回事。","scores":{"C":0,"F":0,"R":0,"S":1,"A":0,"P":0,"I":1,"M":0}},
+      {"text":"孙策趁机北上","next":"M32_INTRO_3","isHistorical":false,"subtext":"江东孙策见曹操败亡，趁机扩张。","scores":{"C":0,"F":0,"R":1,"S":0,"A":1,"P":0,"I":0,"M":0}}
+    ]
+  },
+  "M32_INTRO_3": {
+    "id": "M32_INTRO_3",
+    "title": "袁氏布局",
+    "year": "公元204年",
+    "setup": "袁绍开始布局全国。",
+    "options": [
+      {"text":"加紧整合北方","next":"HUB_yuan_1","isHistorical":false,"subtext":"先稳后图南，老成持重。","scores":{"C":0,"F":0,"R":0,"S":1,"A":0,"P":0,"I":0,"M":1}},
+      {"text":"向南扩张","next":"HUB_yuan_1","isHistorical":false,"subtext":"急于一统，但根基未稳。","scores":{"C":0,"F":0,"R":1,"S":0,"A":1,"P":0,"I":0,"M":0}}
+    ]
+  }
 
 };
 
@@ -4917,6 +6118,30 @@ window.endings = {
     "title": "草原反噬",
     "tone": "外患",
     "desc": "对外战略失误致游牧反超，中原长期称臣纳贡或被部分征服。"
+  },
+  "E13": {
+    "id": "E13",
+    "title": "楚朝盛世",
+    "tone": "强化",
+    "desc": "项羽建立的虚构楚朝走过创业期，立稳并开出延续型新王朝。一个非刘氏的中华王朝，正式立于历史舞台。"
+  },
+  "E14": {
+    "id": "E14",
+    "title": "三方共和",
+    "tone": "分立",
+    "desc": "楚汉韩三方长期均势，演化为有制度、有外交的稳态多国体系。一个非大一统但有秩序的中华文明圈定型。"
+  },
+  "E15": {
+    "id": "E15",
+    "title": "江东南楚",
+    "tone": "分立",
+    "desc": "长江南北分治，南方政权独立发展，类似南北朝雏形提前出现。中国版图上长期出现『两个中华』。"
+  },
+  "E16": {
+    "id": "E16",
+    "title": "新朝中兴",
+    "tone": "强化",
+    "desc": "王莽改制温和走稳，新朝立国并进入持续治理期。一个解决了部分痼疾的非汉王朝立国。"
   }
 };
 
