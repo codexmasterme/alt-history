@@ -74,15 +74,17 @@ class GameApp {
             qrContainer.innerHTML = '';
             // 创建一个临时容器给 QRCode 用
             const tmp = document.createElement('div');
-            tmp.style.cssText = 'position:absolute;left:-9999px;top:-9999px;width:60px;height:60px;';
+            tmp.style.cssText = 'position:absolute;left:-9999px;top:-9999px;width:240px;height:240px;';
             document.body.appendChild(tmp);
+            // 以更高分辨率生成（240px），缩小显示时依然清晰可扫；
+            // 纠错等级提升到 M，提高扫描成功率。
             const qr = new QRCode(tmp, {
                 text: window.location.href.split('?')[0].split('#')[0],
-                width: 60,
-                height: 60,
+                width: 240,
+                height: 240,
                 colorDark: "#000000",
                 colorLight: "#ffffff",
-                correctLevel: QRCode.CorrectLevel.L
+                correctLevel: QRCode.CorrectLevel.M
             });
             // 同步提取 canvas → data URL
             const canvas = tmp.querySelector('canvas');
@@ -103,8 +105,8 @@ class GameApp {
             if (dataUrl) {
                 const img = document.createElement('img');
                 img.src = dataUrl;
-                img.width = 60;
-                img.height = 60;
+                img.width = 240;
+                img.height = 240;
                 img.style.cssText = 'display:block;width:100%;height:100%;border:0;';
                 qrContainer.appendChild(img);
             } else {

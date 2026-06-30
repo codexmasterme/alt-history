@@ -851,8 +851,9 @@ header.fade-element.visible { transition-delay: 0.1s; }
 @media (max-width: 600px) {
     /* 1. 顶对齐，不再垂直居中，避免上方出现大段空白 */
     #ending-screen {
-        height: 100vh !important;
-        min-height: 100vh !important;
+        height: 100dvh !important;
+        min-height: 100dvh !important;
+        max-height: 100dvh !important;
         position: fixed !important;
         top: 0; left: 0; right: 0; bottom: 0;
         justify-content: flex-start !important;
@@ -1408,14 +1409,15 @@ main {
 }
 
 .qr-code {
-    width: 60px;
-    height: 60px;
+    width: 120px;
+    height: 120px;
     background: #fff;
-    padding: 4px;
+    padding: 6px;
     border: 1px solid var(--card-border);
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-shrink: 0;
 }
 .qr-code img {
     width: 100%;
@@ -1423,57 +1425,86 @@ main {
 }
 
 /* ========================================================= */
-/* BRUTAL 海报 — 移动端适配，防止文字/印章溢出与底部裁切          */
+/* BRUTAL 海报 — 移动端适配，整张卡片压缩到一屏内完整显示          */
 /* ========================================================= */
 @media (max-width: 600px) {
+    /* 结局页顶对齐 + 可滚动，卡片整体收紧 */
     .brutal-mode {
-        padding-top: 2vh !important;
-        padding-bottom: 24px !important;
+        padding-top: 12px !important;
+        padding-bottom: 16px !important;
     }
 
     .brutal-share-card {
-        padding: 20px 18px !important;
+        padding: 16px 16px !important;
         max-width: 100% !important;
     }
 
+    /* 金句：缩小并锁两行高度，避免被印章挤压换行过多 */
     .brutal-quote {
-        font-size: 1.9rem !important;
-        margin-bottom: 14px !important;
+        font-size: 1.5rem !important;
+        line-height: 1.15 !important;
+        margin-bottom: 10px !important;
     }
 
     .brutal-title-box {
-        margin-bottom: 18px !important;
+        margin-bottom: 12px !important;
+        padding-bottom: 6px !important;
     }
-    .brutal-title { font-size: 1.5rem !important; }
-    .brutal-desc { font-size: 0.85rem !important; }
+    .brutal-title { font-size: 1.3rem !important; }
+    .brutal-desc { font-size: 0.8rem !important; line-height: 1.4 !important; }
 
+    /* 数据条整体压缩 */
     .brutal-stats-container {
-        gap: 10px !important;
-        margin-bottom: 18px !important;
+        gap: 8px !important;
+        margin-bottom: 12px !important;
     }
-    .stat-labels { font-size: 1rem !important; }
-    .stat-bar-bg { height: 26px !important; }
-    .stat-bar-fill { font-size: 1rem !important; }
+    .brutal-stat-row { gap: 3px !important; }
+    .stat-labels { font-size: 0.9rem !important; }
+    .stat-bar-bg { height: 22px !important; }
+    .stat-bar-fill { font-size: 0.9rem !important; padding-right: 8px !important; }
 
-    .brutal-footer { font-size: 1rem !important; padding-top: 12px !important; }
-    .brutal-collection { font-size: 0.9rem !important; margin-top: 10px !important; }
-    .brutal-collection .collection-line { font-size: 0.9rem !important; }
-    .brutal-collection .collection-unlocked { font-size: 0.72rem !important; }
+    .brutal-footer { font-size: 0.9rem !important; padding-top: 10px !important; }
+    .brutal-collection {
+        font-size: 0.8rem !important;
+        margin-top: 8px !important;
+        padding: 6px 8px !important;
+    }
+    .brutal-collection .collection-line { font-size: 0.85rem !important; }
+    .brutal-collection .collection-unlocked { font-size: 0.7rem !important; line-height: 1.4 !important; }
 
+    /* 印章：缩小并上移，压在标题区右上角，不再盖住金句中部 */
     .brutal-stamp {
-        font-size: 1.6rem !important;
-        padding: 6px 10px !important;
+        font-size: 1.25rem !important;
+        padding: 4px 8px !important;
         border-width: 3px !important;
-        top: 8% !important;
-        right: 4% !important;
-        max-width: 80%;
+        top: 6% !important;
+        right: 3% !important;
+        max-width: 70%;
     }
 
-    .brutal-qrcode-section { margin-top: 16px !important; padding-top: 12px !important; }
+    /* 二维码区：缩小二维码，水印与码并排 */
+    .brutal-qrcode-section { margin-top: 12px !important; padding-top: 10px !important; }
+    .qr-code { width: 92px !important; height: 92px !important; padding: 5px !important; }
+    .brutal-qrcode-section .brutal-watermark { font-size: 0.8rem !important; }
 
     .actions {
         flex-wrap: wrap !important;
         justify-content: center !important;
-        margin-bottom: 16px !important;
+        margin-bottom: 12px !important;
     }
+    .brutal-btn { font-size: 1rem !important; padding: 8px 16px !important; }
+}
+
+/* 超矮屏（高度 < 720px）再进一步压缩，保证一屏放下 */
+@media (max-width: 600px) and (max-height: 720px) {
+    .brutal-quote { font-size: 1.3rem !important; margin-bottom: 8px !important; }
+    .brutal-title { font-size: 1.15rem !important; }
+    .brutal-desc { font-size: 0.72rem !important; }
+    .brutal-stats-container { gap: 6px !important; margin-bottom: 10px !important; }
+    .stat-bar-bg { height: 19px !important; }
+    .stat-labels { font-size: 0.82rem !important; }
+    .stat-bar-fill { font-size: 0.82rem !important; }
+    .brutal-footer { font-size: 0.82rem !important; padding-top: 8px !important; }
+    .brutal-collection .collection-unlocked { font-size: 0.66rem !important; }
+    .qr-code { width: 78px !important; height: 78px !important; }
 }
