@@ -2160,10 +2160,10 @@ window.storyNodes = {
         }
       },
       {
-        "text": "篡汉被刘氏挫败",
+        "text": "受禅建新朝，但行温和改制",
         "next": "M12_INTRO_1",
         "isHistorical": false,
-        "subtext": "王莽的篡夺被及时挫败——刘氏宗室与忠汉士大夫提前联手，或某次关键程序受阻……",
+        "subtext": "王莽同样受禅代汉、建立新朝，但他没有走史实中激进托古的老路，而是选择温和渐进的改制方向……",
         "scores": {
           "C": 0,
           "F": 0,
@@ -5775,31 +5775,31 @@ window.storyNodes = {
   },
   "M12_INTRO_1": {
     "id": "M12_INTRO_1",
-    "title": "病灶犹存",
+    "title": "新朝初立",
     "year": "公元9年",
-    "setup": "王莽倒了，但西汉末年的社会矛盾未消除。",
+    "setup": "新朝立国，但西汉末年遗留的土地兼并、流民四起等社会矛盾并未消除。王莽要决定，新政权究竟走多深的改革。",
     "options": [
-      {"text":"借机推行深刻改革","next":"M12_INTRO_2","isHistorical":false,"subtext":"忠汉集团尝试改革，但既得利益难触。","scores":{"C":0,"F":0,"R":1,"S":0,"A":0,"P":0,"I":1,"M":0}},
-      {"text":"只清王莽不治本","next":"M12_INTRO_2","isHistorical":false,"subtext":"仅满足扳倒王莽，深层问题未解。","scores":{"C":0,"F":0,"R":0,"S":1,"A":0,"P":0,"I":0,"M":1}}
+      {"text":"借立国之势推行深刻改革","next":"M12_INTRO_2","isHistorical":false,"subtext":"趁开国新气象推动变法，但既得利益盘根错节，难以轻动。","scores":{"C":0,"F":0,"R":1,"S":0,"A":0,"P":0,"I":1,"M":0}},
+      {"text":"只换国号不治根本","next":"M12_INTRO_2","isHistorical":false,"subtext":"满足于改朝换代，深层痼疾留待日后。","scores":{"C":0,"F":0,"R":0,"S":1,"A":0,"P":0,"I":0,"M":1}}
     ]
   },
   "M12_INTRO_2": {
     "id": "M12_INTRO_2",
-    "title": "下一外戚",
+    "title": "整顿外戚",
     "year": "公元15年",
-    "setup": "王莽虽倒，但孕育王莽的结构仍在。",
+    "setup": "王莽自己正是外戚专权的产物。新朝要长治久安，必须处理好催生了王莽的那套外戚结构。",
     "options": [
-      {"text":"朝廷重用某新外戚","next":"M12_INTRO_3","isHistorical":false,"subtext":"又一个外戚势力崛起。","scores":{"C":0,"F":1,"R":0,"S":0,"A":0,"P":0,"I":0,"M":1}},
-      {"text":"朝廷尝试限制外戚权力","next":"M12_INTRO_3","isHistorical":false,"subtext":"制度上抑制外戚，但执行困难。","scores":{"C":1,"F":0,"R":0,"S":0,"A":0,"P":0,"I":1,"M":0}}
+      {"text":"继续倚重王氏外戚","next":"M12_INTRO_3","isHistorical":false,"subtext":"依赖宗族外戚稳固皇权，却也埋下新的隐患。","scores":{"C":0,"F":1,"R":0,"S":0,"A":0,"P":0,"I":0,"M":1}},
+      {"text":"立制限制外戚权力","next":"M12_INTRO_3","isHistorical":false,"subtext":"从制度上抑制外戚坐大，整顿吏治，但执行艰难。","scores":{"C":1,"F":0,"R":0,"S":0,"A":0,"P":0,"I":1,"M":0}}
     ]
   },
   "M12_INTRO_3": {
     "id": "M12_INTRO_3",
     "title": "制度变法",
     "year": "公元20年",
-    "setup": "终于有人提出温和但深入的改革方案。",
+    "setup": "新朝群臣提出一套温和而深入的改制方案——既要解决土地与民生痼疾，又要避免重蹈激进变法的覆辙。",
     "options": [
-      {"text":"采纳改革方案","next":"HUB_xin_1","isHistorical":false,"subtext":"朝廷决心走改革之路。","scores":{"C":0,"F":0,"R":1,"S":0,"A":0,"P":0,"I":1,"M":0}},
+      {"text":"采纳温和改革方案","next":"HUB_xin_1","isHistorical":false,"subtext":"新朝决心走稳健的改革之路。","scores":{"C":0,"F":0,"R":1,"S":0,"A":0,"P":0,"I":1,"M":0}},
       {"text":"维持现状","next":"HUB_xin_1","isHistorical":false,"subtext":"保守应对，但矛盾持续累积。","scores":{"C":0,"F":0,"R":0,"S":1,"A":0,"P":0,"I":0,"M":1}}
     ]
   },
