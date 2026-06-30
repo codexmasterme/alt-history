@@ -30,7 +30,7 @@ class GameApp {
         
         this.restartBtn = document.getElementById('restart-btn');
         this.saveBtn = document.getElementById('save-btn');
-        this.collectionProgressEl = document.getElementById('collection-progress');
+        this.endingCollectionProgressEl = document.getElementById('ending-collection-progress');
         this.fadeElements = document.querySelectorAll('.fade-element');
         
         document.getElementById('rewind-btn').addEventListener('click', () => {
@@ -193,13 +193,16 @@ class GameApp {
     updateCollectionUI() {
         try {
             const collected = JSON.parse(localStorage.getItem('collectedEndings') || '[]');
-            if (this.collectionProgressEl) {
+            // 仅在结果页 / 海报显示收集进度，并列出已解锁的大结局名称
+            if (this.endingCollectionProgressEl) {
+                let html = `<div class="collection-line">大结局图鉴收集进度：${collected.length} / 16</div>`;
                 if (collected.length > 0) {
-                    const titles = collected.map(id => window.endings[id] ? window.endings[id].title : id).join('、');
-                    this.collectionProgressEl.textContent = `大结局图鉴收集进度：${collected.length} / 16 （已解锁：${titles}）`;
-                } else {
-                    this.collectionProgressEl.textContent = `大结局图鉴收集进度：0 / 16`;
+                    const titles = collected
+                        .map(id => (window.endings[id] ? window.endings[id].title : id))
+                        .join('、');
+                    html += `<div class="collection-unlocked">已解锁：${titles}</div>`;
                 }
+                this.endingCollectionProgressEl.innerHTML = html;
             }
         } catch(e) {
             console.error("Local storage error", e);
@@ -417,8 +420,10 @@ class GameApp {
         showEnding(endingId) {
         const ending = window.endings[endingId];
         if (!ending) return;
-        
+
         this.saveEnding(endingId);
+        // 确保结果页/海报上的收集进度始终为最新（即使是重复结局）
+        this.updateCollectionUI();
         
         // 1. 基本文本更新
         const titleEl = document.getElementById('ending-title');

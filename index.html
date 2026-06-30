@@ -6,7 +6,7 @@
     <meta name="referrer" content="no-referrer">
     <title>青史另说 - 汉朝历史分叉树</title>
     <!-- 使用原生系统宋体/明体，避免微信跨域字体下载导致截图引擎卡死 -->
-    <link rel="stylesheet" href="style.css?v=20260630_20">
+    <link rel="stylesheet" href="style.css?v=20260630_21">
 </head>
 <body>
     <div id="app">
@@ -56,11 +56,6 @@
             <footer id="options-container" class="fade-element">
                 <!-- 选项按钮将渲染在这里 -->
             </footer>
-            
-            <!-- 底部图鉴留白 -->
-            <div class="footer-section fade-element">
-                <span id="collection-progress">大结局图鉴收集进度：0 / 12</span>
-            </div>
         </div>
 
         <!-- 结局覆盖层 -->
@@ -102,7 +97,10 @@
                 <div class="brutal-footer">
                     共 <span id="stat-steps" class="highlight-yellow"></span> 步解锁 · 全网稀有度 <span id="stat-rarity" class="highlight-yellow"></span>%
                 </div>
-                
+
+                <!-- 大结局图鉴收集进度 -->
+                <div class="brutal-collection" id="ending-collection-progress">大结局图鉴收集进度：0 / 16</div>
+
                 <div class="brutal-qrcode-section">
                     <div class="brutal-watermark">扫码入局 测测你的历史人格</div>
                     <div class="qr-code" id="qrCodeContainer"></div>
@@ -121,8 +119,8 @@
     <!-- 依次引入数据和主逻辑，不再使用外部 CDN，全部本地化以防止微信拦截 -->
     <script src="html2canvas.min.js?v=1"></script>
     <script src="qrcode.min.js?v=1"></script>
-    <script src="data.js?v=20260630_12"></script>
-    <script src="image_data.js?v=20260630_12"></script>
-    <script src="main.js?v=20260630_13"></script>
+    <script src="data.js?v=20260630_21"></script>
+    <script src="image_data.js?v=20260630_21"></script>
+    <script src="main.js?v=20260630_21"></script>
 </body>
 </html>

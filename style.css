@@ -542,19 +542,6 @@ header.fade-element.visible { transition-delay: 0.1s; }
 }
 
 /* Footer Section */
-.footer-section {
-    text-align: center;
-    margin-top: 40px;
-    padding-top: 20px;
-    border-top: 1px solid rgba(255,255,255,0.05);
-}
-
-#collection-progress {
-    font-size: 0.85rem;
-    color: #555;
-    letter-spacing: 1px;
-}
-
 
 /* === Share Card Redesign === */
 
@@ -869,8 +856,11 @@ header.fade-element.visible { transition-delay: 0.1s; }
         position: fixed !important;
         top: 0; left: 0; right: 0; bottom: 0;
         justify-content: flex-start !important;
-        padding: 8px 12px !important;
-        overflow: hidden !important;
+        padding: 8px 12px 24px !important;
+        /* 允许竖向滚动，避免海报内容（数据条/页脚/二维码/按钮）在小屏被裁切 */
+        overflow-y: auto !important;
+        overflow-x: hidden !important;
+        -webkit-overflow-scrolling: touch !important;
     }
     
     /* 2. Fix Share Card taking too much vertical space on mobile */
@@ -1205,6 +1195,9 @@ main {
     align-items: center;
     justify-content: flex-start;
     padding-top: 5vh;
+    /* 允许内容超出视口时滚动，防止结果页底部（数据条/页脚/二维码/按钮）被裁切 */
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 .brutal-share-card {
@@ -1301,6 +1294,34 @@ main {
     padding-top: 15px;
 }
 
+.brutal-collection {
+    margin-top: 12px;
+    font-size: 1rem;
+    font-weight: 900;
+    text-align: center;
+    color: #2A2626;
+    background-color: #E9DFCF;
+    border: 1px dashed #C9B79C;
+    border-radius: 4px;
+    padding: 8px 10px;
+    letter-spacing: 0.02em;
+    word-break: break-word;
+}
+
+.brutal-collection .collection-line {
+    font-size: 1rem;
+    font-weight: 900;
+}
+
+.brutal-collection .collection-unlocked {
+    margin-top: 4px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    line-height: 1.5;
+    color: #6B5A45;
+    word-break: break-word;
+}
+
 .highlight-yellow {
     background-color: #c94a38;
     color: #ffffff;
@@ -1369,7 +1390,7 @@ main {
 .title-decorator.left { left: 0; }
 .title-decorator.left::before { content: "‹"; }
 .title-decorator.right { right: 0; }
-.title-decorator.right::before { content: "›"; }
+.title-decorator.right::before { content: "\203a"; }
 .highlight-name { color: var(--primary-color); font-weight: 900; }
 
 .brutal-qrcode-section {
@@ -1399,4 +1420,60 @@ main {
 .qr-code img {
     width: 100%;
     height: 100%;
+}
+
+/* ========================================================= */
+/* BRUTAL 海报 — 移动端适配，防止文字/印章溢出与底部裁切          */
+/* ========================================================= */
+@media (max-width: 600px) {
+    .brutal-mode {
+        padding-top: 2vh !important;
+        padding-bottom: 24px !important;
+    }
+
+    .brutal-share-card {
+        padding: 20px 18px !important;
+        max-width: 100% !important;
+    }
+
+    .brutal-quote {
+        font-size: 1.9rem !important;
+        margin-bottom: 14px !important;
+    }
+
+    .brutal-title-box {
+        margin-bottom: 18px !important;
+    }
+    .brutal-title { font-size: 1.5rem !important; }
+    .brutal-desc { font-size: 0.85rem !important; }
+
+    .brutal-stats-container {
+        gap: 10px !important;
+        margin-bottom: 18px !important;
+    }
+    .stat-labels { font-size: 1rem !important; }
+    .stat-bar-bg { height: 26px !important; }
+    .stat-bar-fill { font-size: 1rem !important; }
+
+    .brutal-footer { font-size: 1rem !important; padding-top: 12px !important; }
+    .brutal-collection { font-size: 0.9rem !important; margin-top: 10px !important; }
+    .brutal-collection .collection-line { font-size: 0.9rem !important; }
+    .brutal-collection .collection-unlocked { font-size: 0.72rem !important; }
+
+    .brutal-stamp {
+        font-size: 1.6rem !important;
+        padding: 6px 10px !important;
+        border-width: 3px !important;
+        top: 8% !important;
+        right: 4% !important;
+        max-width: 80%;
+    }
+
+    .brutal-qrcode-section { margin-top: 16px !important; padding-top: 12px !important; }
+
+    .actions {
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        margin-bottom: 16px !important;
+    }
 }
