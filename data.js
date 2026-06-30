@@ -48,10 +48,10 @@ window.storyNodes = {
     "setup": "刘邦既死，项羽要决定王朝的根基立于何处。谋士建议据关中四塞之固，但项羽思乡心切。",
     "options": [
       {
-        "text": "回都彭城",
+        "text": "定都彭城，立足故土",
         "next": "M01_3",
         "isHistorical": false,
-        "subtext": "「富贵不归故乡，如衣绣夜行……",
+        "subtext": "项羽选择回到楚人故地彭城，衣锦还乡，凭楚地的人望与根基号令诸侯……",
         "scores": {
           "C": 0,
           "F": 0,
@@ -64,10 +64,10 @@ window.storyNodes = {
         }
       },
       {
-        "text": "强留关中",
+        "text": "留镇关中，扼守形胜",
         "next": "M01_3",
         "isHistorical": false,
-        "subtext": "项羽勉强留镇关中，但他的心始终在江东……",
+        "subtext": "项羽采纳谋士之议，留镇关中四塞之固，着眼于地利的稳健之选……",
         "scores": {
           "C": 0,
           "F": 0,
@@ -89,10 +89,10 @@ window.storyNodes = {
     "setup": "分封不公，齐国田荣首先举兵反叛。这是历史上真实存在的、比刘邦更早的反项羽力量。项羽必须应对。",
     "options": [
       {
-        "text": "亲征齐地、屠城立威",
+        "text": "亲征齐地，雷霆立威",
         "next": "M01_4",
         "isHistorical": false,
-        "subtext": "项羽亲征，以屠城手段镇压……",
+        "subtext": "项羽决意亲征，以雷霆手段平定齐地、震慑诸侯，符合霸主逻辑的选择……",
         "scores": {
           "C": 0,
           "F": 0,
@@ -105,10 +105,10 @@ window.storyNodes = {
         }
       },
       {
-        "text": "派将领分兵镇压",
+        "text": "遣将分兵，分头弹压",
         "next": "M01_4",
         "isHistorical": false,
-        "subtext": "项羽分兵给部将……",
+        "subtext": "项羽分兵遣将，命部将分头平定，自己居中调度，老成持重之策……",
         "scores": {
           "C": 0,
           "F": 0,
@@ -130,10 +130,10 @@ window.storyNodes = {
     "setup": "一个被你忽略的变量正在长大——韩信。他本是项羽帐下执戟郎中，献策不被采纳。刘邦已死，他失去了投奔对象，此刻流落在外。",
     "options": [
       {
-        "text": "韩信投奔反楚的田氏",
+        "text": "韩信受田氏招揽",
         "next": "M01_5",
         "isHistorical": false,
-        "subtext": "韩信投奔齐地田氏，他的军事天才让齐地的反抗骤然变得致命……",
+        "subtext": "韩信受齐地田氏招揽，执掌兵权，一个被忽略的人让齐地的反抗骤然脱胎换骨……",
         "scores": {
           "C": 0,
           "F": 0,
@@ -171,10 +171,10 @@ window.storyNodes = {
     "setup": "齐地未平，彭越又在梁地游击骚扰楚军后方，陈余在赵地生变。项羽四面起火，疲于奔命。",
     "options": [
       {
-        "text": "集中兵力逐个击破",
+        "text": "集中主力，各个击破",
         "next": "M01_6",
         "isHistorical": false,
-        "subtext": "项羽试图集中兵力各个击破……",
+        "subtext": "项羽决定集中主力、逐一击破，发挥自己野战无敌的长处……",
         "scores": {
           "C": 0,
           "F": 0,
@@ -187,10 +187,10 @@ window.storyNodes = {
         }
       },
       {
-        "text": "再行分封安抚",
+        "text": "再行分封，怀柔安抚",
         "next": "M01_6",
         "isHistorical": false,
-        "subtext": "项羽试图用再分封来安抚诸侯，却只是把蛋糕切得更碎、矛盾铺得更广……",
+        "subtext": "项羽改用怀柔，重新分封以安抚不满的诸侯，息事宁人的务实之举……",
         "scores": {
           "C": 0,
           "F": 1,
@@ -212,10 +212,10 @@ window.storyNodes = {
     "setup": "连年征战，民心思定。曾经追随项羽的诸侯与将领，开始动摇。范增早已负气离去，项羽身边能用之人越来越少。",
     "options": [
       {
-        "text": "猜忌部将、众叛亲离",
+        "text": "亲信旧部，倚重故人",
         "next": "M01_7",
         "isHistorical": false,
-        "subtext": "项羽生性多疑，连年征战中愈发猜忌部将……",
+        "subtext": "项羽更加倚重钟离眛、季布等多年生死与共的旧部，把军权握在最信得过的人手里……",
         "scores": {
           "C": 0,
           "F": 0,
@@ -228,10 +228,10 @@ window.storyNodes = {
         }
       },
       {
-        "text": "强撑局面、独木难支",
+        "text": "事必躬亲，亲冒矢石",
         "next": "M01_7",
         "isHistorical": false,
-        "subtext": "项羽以一己之力强撑摇摇欲坠的霸业……",
+        "subtext": "项羽选择凡战必亲临，以一己之勇撑起摇摇欲坠的战局，所向披靡……",
         "scores": {
           "C": 0,
           "F": 0,
@@ -312,10 +312,10 @@ window.storyNodes = {
         }
       },
       {
-        "text": "不肯破格、韩信流失",
+        "text": "另择良将、不破格用人",
         "next": "M02_3",
         "isHistorical": false,
-        "subtext": "刘邦不肯让一个无名之辈统全军，或萧何没追回……",
+        "subtext": "刘邦认为三军性命非同儿戏，理当交给久经考验的宿将，韩信终究没有留下……",
         "scores": {
           "C": 0,
           "F": 0,
@@ -337,10 +337,10 @@ window.storyNodes = {
     "setup": "没有「还定三秦」的奇谋，刘邦被三秦降将像塞子一样堵在西边。出路何在？",
     "options": [
       {
-        "text": "强行东出、正面硬撼",
+        "text": "起兵东出，正面争锋",
         "next": "M02_4",
         "isHistorical": false,
-        "subtext": "刘邦缺了能开辟北方战场的引擎，只能正面硬撼项羽……",
+        "subtext": "刘邦决意起兵东出，与项羽正面争锋，不甘困守、主动求战的魄力之举……",
         "scores": {
           "C": 0,
           "F": 0,
@@ -353,10 +353,10 @@ window.storyNodes = {
         }
       },
       {
-        "text": "经营巴蜀、偏安一隅",
+        "text": "深耕巴蜀，养精蓄锐",
         "next": "M02_4",
         "isHistorical": false,
-        "subtext": "刘邦务实地选择经营巴蜀，做一个偏居西南的地方政权……",
+        "subtext": "刘邦沉住气，先经营巴蜀、积蓄实力，待天下有变再图东进，老练务实的长远之计……",
         "scores": {
           "C": 0,
           "F": 0,
@@ -378,10 +378,10 @@ window.storyNodes = {
     "setup": "流失的韩信要找一个能施展才华的舞台。他会去哪？",
     "options": [
       {
-        "text": "韩信投彭越、共谋大事",
+        "text": "韩信与彭越联手",
         "next": "M02_5",
         "isHistorical": false,
-        "subtext": "韩信与游击天才彭越联手，一个善正兵、一个善奇袭，组成了项羽之外最危险的军事组合……",
+        "subtext": "韩信与擅长游击的彭越联手，组成项羽之外最令人忌惮的军事搭档……",
         "scores": {
           "C": 0,
           "F": 0,
@@ -394,10 +394,10 @@ window.storyNodes = {
         }
       },
       {
-        "text": "韩信自立为王",
+        "text": "韩信据地自立",
         "next": "M02_5",
         "isHistorical": false,
-        "subtext": "韩信据地自立……",
+        "subtext": "韩信据地自立，凭一身用兵之能让诸侯不敢小觑……",
         "scores": {
           "C": 0,
           "F": 0,
@@ -419,10 +419,10 @@ window.storyNodes = {
     "setup": "项羽（楚）、刘邦（偏弱的汉）、韩信势力，天下隐隐成三足。谁也吃不掉谁。",
     "options": [
       {
-        "text": "三方陷入长期消耗",
+        "text": "三方相持，互不相让",
         "next": "M02_6",
         "isHistorical": false,
-        "subtext": "三方互相牵制，长期消耗，谁也无法迅速统一……",
+        "subtext": "三方彼此牵制、长期相持，谁也无法速胜，隐忍待机……",
         "scores": {
           "C": 0,
           "F": 0,
@@ -435,10 +435,10 @@ window.storyNodes = {
         }
       },
       {
-        "text": "韩信军事压制群雄",
+        "text": "韩信连胜，威震群雄",
         "next": "M02_6",
         "isHistorical": false,
-        "subtext": "韩信凭军事天才连战连胜，一度压制群雄……",
+        "subtext": "韩信凭用兵之能连战连捷，一时威震群雄……",
         "scores": {
           "C": 0,
           "F": 0,
@@ -460,10 +460,10 @@ window.storyNodes = {
     "setup": "韩信面临所有纯军事天才的终极考验：能打下天下，能否治理天下？",
     "options": [
       {
-        "text": "韩信称帝但根基不稳",
+        "text": "韩信称帝，自建基业",
         "next": "M02_7",
         "isHistorical": false,
-        "subtext": "韩信称帝，却发现治国远难于带兵……",
+        "subtext": "韩信顺势称帝，开创自己的基业……",
         "scores": {
           "C": 0,
           "F": 0,
@@ -476,10 +476,10 @@ window.storyNodes = {
         }
       },
       {
-        "text": "三方僵持、无人能统",
+        "text": "三方僵持，谁也难并",
         "next": "M02_7",
         "isHistorical": false,
-        "subtext": "三方谁也无法统合，天下长期碎裂为列国……",
+        "subtext": "三方势均力敌，谁也无法吞并谁，天下长期分立……",
         "scores": {
           "C": 0,
           "F": 0,
@@ -667,10 +667,10 @@ window.storyNodes = {
     "setup": "韩信的命运取决于一个根本问题：他能否把军事优势，转化为持久的政治秩序？",
     "options": [
       {
-        "text": "韩信善战不善治",
+        "text": "专注用兵、以战养势",
         "next": "M03_7",
         "isHistorical": false,
-        "subtext": "韩信在军事上无敌，治国上却处处受制……",
+        "subtext": "韩信扬长避短，把精力倾注于自己最擅长的用兵，以连续的胜利维系威势……",
         "scores": {
           "C": 0,
           "F": 0,
@@ -683,10 +683,10 @@ window.storyNodes = {
         }
       },
       {
-        "text": "韩信引入治国人才",
+        "text": "广纳贤才、补齐短板",
         "next": "M03_7",
         "isHistorical": false,
-        "subtext": "韩信意识到短板，开始招揽治国之才……",
+        "subtext": "韩信清醒地意识到自己的短板，开始延揽治国之才，难得的自知之明……",
         "scores": {
           "C": 0,
           "F": 0,
@@ -833,10 +833,10 @@ window.storyNodes = {
     "setup": "项羽回到江东，试图重新募兵。但江东子弟还愿意为他再赴死吗？",
     "options": [
       {
-        "text": "强征江东子弟",
+        "text": "广募江东子弟",
         "next": "M04_6",
         "isHistorical": false,
-        "subtext": "项羽强行征兵，勉强凑起一支新军……",
+        "subtext": "项羽下令在江东广募新兵，相信故乡仍会是他最坚实的后盾……",
         "scores": {
           "C": 0,
           "F": 0,
@@ -849,10 +849,10 @@ window.storyNodes = {
         }
       },
       {
-        "text": "凭威望号召旧部",
+        "text": "号召旧部归附",
         "next": "M04_6",
         "isHistorical": false,
-        "subtext": "项羽凭个人威望召集旧部，确实还有忠勇之士追随……",
+        "subtext": "项羽凭一身威望召集旧日部属，相信个人魅力足以重聚人心……",
         "scores": {
           "C": 0,
           "F": 0,
@@ -974,10 +974,10 @@ window.storyNodes = {
         }
       },
       {
-        "text": "强行突围决战",
+        "text": "突围决战，以战求生",
         "next": "M05_6",
         "isHistorical": false,
-        "subtext": "刘邦拒绝屈辱的密计，下令强行突围、与匈奴决战……",
+        "subtext": "刘邦不愿靠屈辱的密计求生，下令集中精锐突围、与匈奴正面一战，开国之君该有的血性……",
         "scores": {
           "C": 0,
           "F": 0,
@@ -1081,7 +1081,7 @@ window.storyNodes = {
     "setup": "内忧外患交织，汉朝命悬一线。能否有人力挽狂澜？",
     "options": [
       {
-        "text": "吕后与功臣勉强支撑",
+        "text": "吕后与功臣合力撑持",
         "next": "E10",
         "rawTarget": "结局 E10·续命中兴",
         "isHistorical": false,
@@ -1140,10 +1140,10 @@ window.storyNodes = {
         }
       },
       {
-        "text": "容忍异姓王、维持半分封",
+        "text": "优容功臣、共守天下",
         "next": "M06_7",
         "isHistorical": false,
-        "subtext": "刘邦出于念旧或忌惮成本，容忍异姓王长期存在……",
+        "subtext": "刘邦顾念异姓王都是随他出生入死、裂土封疆的功臣，决意优容他们、与之共守天下……",
         "scores": {
           "C": 0,
           "F": 1,
@@ -1306,10 +1306,10 @@ window.storyNodes = {
         }
       },
       {
-        "text": "中央战败 / 叛军获胜",
+        "text": "速派大军、正面决战",
         "next": "M07_8",
         "isHistorical": false,
-        "subtext": "周亚夫战败，或景帝在斩晁错后仍无力平叛，七国联军攻入关中……",
+        "subtext": "景帝采纳速战速决之策，命大军正面迎击，力求尽快荡平叛乱、稳定人心……",
         "scores": {
           "C": 1,
           "F": 0,
@@ -1638,10 +1638,10 @@ window.storyNodes = {
         }
       },
       {
-        "text": "穷兵黩武、毫无节制",
+        "text": "倾国之力，毕功一役",
         "next": "M09_10",
         "isHistorical": false,
-        "subtext": "武帝不仅主动出击，且毫无节制地连年远征，对匈奴、大宛反复用兵，根本停不下来……",
+        "subtext": "武帝决心趁国力鼎盛、卫霍善战，倾全国之力连续用兵，要一举荡平匈奴、远征大宛……",
         "scores": {
           "C": 0,
           "F": 0,
@@ -1663,10 +1663,10 @@ window.storyNodes = {
     "setup": "连年征战，文景积累耗尽，财政濒临崩溃。武帝如何筹措军费？",
     "options": [
       {
-        "text": "盐铁官营、算缗告缗",
+        "text": "盐铁官营、算缗筹饷",
         "next": "M09_11",
         "isHistorical": false,
-        "subtext": "武帝推行盐铁官营、向商人征重税并鼓励告发……",
+        "subtext": "武帝推行盐铁官营、向商人征税并鼓励申报核查，把财源牢牢收归国家……",
         "scores": {
           "C": 0,
           "F": 0,
@@ -1679,10 +1679,10 @@ window.storyNodes = {
         }
       },
       {
-        "text": "横征暴敛、加重赋税",
+        "text": "加征赋役、充实军需",
         "next": "M09_11",
         "isHistorical": false,
-        "subtext": "武帝直接加重农民赋税徭役……",
+        "subtext": "武帝下令增加赋税徭役，以充实军需，倾国大战下几乎是唯一能快速汲取资源的办法……",
         "scores": {
           "C": 0,
           "F": 0,
@@ -1704,10 +1704,10 @@ window.storyNodes = {
     "setup": "赋役压垮百姓，关东流民数百万，盗贼蜂起。帝国内部火药味渐浓。",
     "options": [
       {
-        "text": "残酷镇压民变",
+        "text": "严法弹压，稳定地方",
         "next": "M09_12",
         "isHistorical": false,
-        "subtext": "武帝以严刑峻法镇压各地民变，颁布『沈命法』……",
+        "subtext": "武帝以严刑峻法弹压各地骚动，颁布『沈命法』追究地方失职……",
         "scores": {
           "C": 0,
           "F": 0,
@@ -1720,10 +1720,10 @@ window.storyNodes = {
         }
       },
       {
-        "text": "继续对外远征转移矛盾",
+        "text": "再启远征，转移视线",
         "next": "M09_12",
         "isHistorical": false,
-        "subtext": "武帝试图用对外的『武功』转移内部矛盾，却让本已枯竭的国力雪上加霜……",
+        "subtext": "武帝试图以对外的新胜利来重振朝野信心、转移内部的焦虑……",
         "scores": {
           "C": 0,
           "F": 0,
@@ -1804,10 +1804,10 @@ window.storyNodes = {
         }
       },
       {
-        "text": "拒绝反省、继续扩张",
+        "text": "采桑弘羊议，屯田固边",
         "next": "M10_11",
         "isHistorical": false,
-        "subtext": "武帝采纳桑弘羊之议，继续屯田轮台、扩大西征，拒绝踩刹车……",
+        "subtext": "武帝采纳桑弘羊之议，继续屯田轮台、经营西域，把对外的进取坚持到底……",
         "scores": {
           "C": 0,
           "F": 0,
@@ -1829,10 +1829,10 @@ window.storyNodes = {
     "setup": "帝国的财政与民生彻底失控，但战争机器仍在轰鸣。",
     "options": [
       {
-        "text": "强行扩大西域屯田",
+        "text": "扩大屯田，以边养边",
         "next": "M10_12",
         "isHistorical": false,
-        "subtext": "武帝执意扩大屯田与远征，进一步抽干民间最后的元气……",
+        "subtext": "朝廷扩大西域屯田，盼着以边地的产出反哺边事、减轻中原负担，开源的长远打算……",
         "scores": {
           "C": 0,
           "F": 0,
@@ -1845,10 +1845,10 @@ window.storyNodes = {
         }
       },
       {
-        "text": "加码搜刮支撑战争",
+        "text": "增赋筹饷，支撑边务",
         "next": "M10_12",
         "isHistorical": false,
-        "subtext": "为支撑无尽的战争，朝廷加码搜刮……",
+        "subtext": "朝廷加征赋税以支撑边务，把战略坚持下去，咬牙撑过这一程便是海阔天空……",
         "scores": {
           "C": 0,
           "F": 0,
@@ -1870,10 +1870,10 @@ window.storyNodes = {
     "setup": "关东流民暴动、地方异动连成一片，重演秦末的总爆发。",
     "options": [
       {
-        "text": "流民起义席卷关东",
+        "text": "流民揭竿，关东沸腾",
         "next": "M10_13",
         "isHistorical": false,
-        "subtext": "数百万流民揭竿而起，起义烽火席卷关东……",
+        "subtext": "数百万流民走投无路，揭竿而起，关东烽烟四起……",
         "scores": {
           "C": 0,
           "F": 0,
@@ -1886,10 +1886,10 @@ window.storyNodes = {
         }
       },
       {
-        "text": "地方豪强趁势割据",
+        "text": "豪强拥兵，地方自重",
         "next": "M10_13",
         "isHistorical": false,
-        "subtext": "地方豪强趁中央失控而拥兵自重，割据一方……",
+        "subtext": "中央控制力随财政枯竭而衰退，地方豪强趁势拥兵自重、各保一方……",
         "scores": {
           "C": 0,
           "F": 0,
@@ -2493,10 +2493,10 @@ window.storyNodes = {
     "setup": "新朝虽仍会因改制失败而崩溃，但收拾残局的人选变得高度不确定。",
     "options": [
       {
-        "text": "更始政权勉强支撑",
+        "text": "更始政权出面收拾",
         "next": "M14_16",
         "isHistorical": false,
-        "subtext": "腐化无能的更始政权勉强占据名义正统，却既无能力平乱、也无威望服众……",
+        "subtext": "更始政权以汉室名义出面收拾残局，占据着名义上的正统……",
         "scores": {
           "C": 1,
           "F": 0,
@@ -2592,11 +2592,11 @@ window.storyNodes = {
         }
       },
       {
-        "text": "无正统军阀强行建国",
+        "text": "强者凭武力建新朝",
         "next": "E07",
         "rawTarget": "结局 E07·外戚王朝",
         "isHistorical": false,
-        "subtext": "某个缺乏汉室合法性的军阀最终勉强统一，开出一个非刘氏的新王朝……",
+        "subtext": "某个缺乏汉室号召力的军阀最终凭武力统一，开出一个非刘氏的新王朝……",
         "scores": {
           "C": 0,
           "F": 0,
@@ -2800,10 +2800,10 @@ window.storyNodes = {
         }
       },
       {
-        "text": "强力推行、彻底抑制豪强",
+        "text": "厉行度田、重整乾坤",
         "next": "M16_17",
         "isHistorical": false,
-        "subtext": "刘秀不惜代价，强力推行度田，彻底清丈土地、抑制豪强……",
+        "subtext": "刘秀决意不惜代价厉行度田，彻底清丈土地、抑制兼并，为东汉打下中央强势的根基……",
         "scores": {
           "C": 0,
           "F": 0,
@@ -2966,7 +2966,7 @@ window.storyNodes = {
         }
       },
       {
-        "text": "士人清流压制宦官",
+        "text": "扶持清流、矫正朝纲",
         "next": "M17_18",
         "isHistorical": false,
         "subtext": "党锢之祸未发，士大夫清流集团反而压制了宦官、主导朝政……",
@@ -3464,7 +3464,7 @@ window.storyNodes = {
         }
       },
       {
-        "text": "不代汉、维持汉室空壳",
+        "text": "效法先父、不取汉鼎",
         "next": "M20_21",
         "isHistorical": false,
         "subtext": "曹丕选择不正式代汉，而是像曹操那样继续做汉室的权臣，维持汉献帝这个空壳皇帝……",
