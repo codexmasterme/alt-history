@@ -6,7 +6,7 @@
     <meta name="referrer" content="no-referrer">
     <title>青史另说 - 汉朝历史分叉树</title>
     <!-- 使用原生系统宋体/明体，避免微信跨域字体下载导致截图引擎卡死 -->
-    <link rel="stylesheet" href="style.css?v=20260630_13">
+    <link rel="stylesheet" href="style.css?v=20260630_20">
 </head>
 <body>
     <div id="app">
@@ -64,53 +64,56 @@
         </div>
 
         <!-- 结局覆盖层 -->
-        <div id="ending-screen" class="hidden fade-element">
-            <!-- 分享卡本体 (将被截图) -->
-            <div id="share-card" class="share-card">
-                <!-- 顶部：身份标签 -->
-                <div class="card-header">
-                    <div class="stamp-bg"></div>
-                    <div class="personality-title" id="personality-title"></div>
-                    <div class="personality-tags" id="personality-tags"></div>
-                    <div class="personality-desc" id="personality-desc"></div>
+        <div id="ending-screen" class="hidden fade-element brutal-mode">
+            <div id="share-card" class="brutal-share-card">
+                <!-- 印章特效 -->
+                <div id="brutal-stamp" class="brutal-stamp hidden">【<span id="stamp-label"></span>】认证</div>
+                
+                <!-- 核心金句 -->
+                <div class="brutal-quote" id="brutal-quote">即使满盘皆输，老子也要站着死！</div>
+                
+                <!-- 结局名称与副标题 -->
+                <div class="brutal-title-box">
+                    <div class="brutal-title" id="ending-title">西楚短世</div>
+                    <div class="brutal-desc" id="ending-desc"></div>
                 </div>
                 
-                <div class="card-divider"></div>
-                
-                <!-- 中部：改写的历史结局 -->
-                <div class="card-body">
-                    <div class="character-bg" id="character-bg"></div>
-                    <div class="card-body-content">
-                        <div class="history-relation">你的选择，将汉朝带向了——</div>
-                        <div class="ending-title" id="ending-title"></div>
-                        <div class="ending-desc" id="ending-desc"></div>
+                <!-- 数据雷达条 -->
+                <div class="brutal-stats-container">
+                    <div class="brutal-stat-row">
+                        <div class="stat-labels"><span>集权</span><span>分封</span></div>
+                        <div class="stat-bar-bg"><div class="stat-bar-fill" id="bar-cf"></div></div>
+                    </div>
+                    <div class="brutal-stat-row">
+                        <div class="stat-labels"><span>激进</span><span>保守</span></div>
+                        <div class="stat-bar-bg"><div class="stat-bar-fill" id="bar-rs"></div></div>
+                    </div>
+                    <div class="brutal-stat-row">
+                        <div class="stat-labels"><span>强硬</span><span>妥协</span></div>
+                        <div class="stat-bar-bg"><div class="stat-bar-fill" id="bar-ap"></div></div>
+                    </div>
+                    <div class="brutal-stat-row">
+                        <div class="stat-labels"><span>权谋</span><span>军事</span></div>
+                        <div class="stat-bar-bg"><div class="stat-bar-fill" id="bar-im"></div></div>
                     </div>
                 </div>
                 
-                <!-- 数据感：稀有度 -->
-                <div class="card-stats">
-                    你走了 <span id="stat-steps" class="highlight"></span> 步，达成的【<span id="stat-ending-name" class="highlight"></span>】只有 <span id="stat-rarity" class="highlight"></span>% 的玩家解锁
+                <!-- 底部统计 -->
+                <div class="brutal-footer">
+                    共 <span id="stat-steps" class="highlight-yellow"></span> 步解锁 · 全网稀有度 <span id="stat-rarity" class="highlight-yellow"></span>%
                 </div>
                 
-                <!-- 底部：拉新钩子 -->
-                <div class="card-footer">
-                    <div class="hook-text">
-                        <p class="hook-main">换个选择，你能改写出更好的结局吗？</p>
-                        <p class="hook-sub">长按扫码，测算你的专属历史人格</p>
-                    </div>
-                    <div class="qr-code">
-                        <div class="qr-placeholder">
-                            <span class="qr-dot"></span>
-                        </div>
-                    </div>
+                <div class="brutal-qrcode-section">
+                    <div class="brutal-watermark">扫码入局 测测你的历史人格</div>
+                    <div class="qr-code" id="qrCodeContainer"></div>
                 </div>
             </div>
-            
-            <!-- 外部操作区 (不被截图) -->
-            <div class="action-buttons">
-                <button id="save-btn" class="glass-btn secondary">保存图片</button>
-                <button id="rewind-btn" class="glass-btn rewind-btn hidden">时空折跃</button>
-                <button id="restart-btn" class="glass-btn">重置时间线</button>
+
+            <!-- 操作按钮 -->
+            <div class="actions">
+                <button id="save-btn" class="action-btn brutal-btn">保存海报</button>
+                <button id="rewind-btn" class="action-btn rewind-btn brutal-btn hidden">时空折跃</button>
+                <button id="restart-btn" class="action-btn restart-btn brutal-btn">再来一局</button>
             </div>
         </div>
     </div>
@@ -120,6 +123,6 @@
     <script src="qrcode.min.js?v=1"></script>
     <script src="data.js?v=20260630_12"></script>
     <script src="image_data.js?v=20260630_12"></script>
-    <script src="main.js?v=20260630_12"></script>
+    <script src="main.js?v=20260630_13"></script>
 </body>
 </html>
