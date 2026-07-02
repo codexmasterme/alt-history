@@ -1,6 +1,6 @@
 class GameApp {
     constructor() {
-        this.MAIN_PICK = 20; // 从全部主节点中随机抽取的数量
+        this.MAIN_PICK = 30; // 每局从 50 个主节点中随机抽取的数量（M01 固定为第 1 步）
         this.mainSequence = this.pickMainSequence();
         this.mainIndex = 0;
         this.currentNodeId = this.mainSequence[0];
@@ -176,20 +176,50 @@ class GameApp {
      */
     resolveHubExit(hubKey) {
         const s = this.scores;
+        // 以「单一维度」区分三条出口，保证在混合玩法下三条出口分布大致均衡，
+        // 不会因某几个维度整体偏高而全部funnel到同一出口。
         const profiles = {
-            chu:   { A: s.R + s.A + s.M, B: s.S + s.P + s.I, C: s.F + s.I },
-            san:   { A: s.F + s.S + s.I, B: s.P + s.M,       C: s.R + s.A },
-            jiang: { A: s.F + s.S,       B: s.C + s.R,       C: s.F + s.A + s.M },
-            xin:   { A: s.R + s.I,       B: s.A + s.M,       C: s.F + s.M },
-            yuan:  { A: s.C + s.S,       B: s.F + s.A,       C: s.R + s.M },
-            men:   { A: s.F + s.I,       B: s.S + s.M,       C: s.C + s.R },
+            chu:   { A: s.R, B: s.S, C: s.F },   // 速亡 / 续命 / 江东
+            san:   { A: s.I, B: s.M, C: s.A },   // 稳态 / 草原 / 独大
+            jiang: { A: s.S, B: s.C, C: s.F },   // 南北 / 统一 / 分裂
+            xin:   { A: s.I, B: s.M, C: s.F },   // 中兴 / 反噬 / 换姓
+            yuan:  { A: s.C, B: s.F, C: s.A },   // 袁朝 / 三国 / 群雄
+            men:   { A: s.F, B: s.S, C: s.R },   // 共和 / 续命 / 重振
         };
         const p = profiles[hubKey];
         if (!p) { console.error('Unknown hub:', hubKey); return null; }
-        // 找最高分的出口；并列时优先级 A > B > C
         const entries = [['A', p.A], ['B', p.B], ['C', p.C]];
         entries.sort((x, y) => y[1] - x[1]);
         return `HUB_${hubKey}_${entries[0][0]}_1`;
+    }
+
+    /**
+     * 交汇分流：两大交汇点根据玩家累计评分，把玩家导入某条虚构子线。
+     * 楚汉交汇(ch) → 楚朝(chu,集权称雄) / 三足(san,分权纵横) / 江东(jiang,保守划江)
+     * 汉末交汇(hm) → 新朝(xin,理想改制) / 袁氏(yuan,军阀实力) / 门阀(men,士族门第)
+     */
+    resolveConvergence(key) {
+        const s = this.scores;
+        let cand;
+        // 单一维度区分，保证三条子线在混合玩法下大致均衡
+        if (key === 'ch') {
+            cand = [
+                ['HUB_chu_1',   s.C],   // 楚朝：集权（一统称雄）
+                ['HUB_san_1',   s.F],   // 三足：分封（三分并立）
+                ['HUB_jiang_1', s.S],   // 江东：保守（划江偏安）
+            ];
+        } else if (key === 'hm') {
+            cand = [
+                ['HUB_xin_1',  s.R],    // 新朝：激进（理想改制）
+                ['HUB_yuan_1', s.A],    // 袁氏：强硬（军阀实力）
+                ['HUB_men_1',  s.F],    // 门阀：分封（士族门第）
+            ];
+        } else {
+            console.error('Unknown convergence:', key);
+            return null;
+        }
+        cand.sort((x, y) => y[1] - x[1]);
+        return cand[0][0];
     }
     
     updateCollectionUI() {
@@ -197,7 +227,7 @@ class GameApp {
             const collected = JSON.parse(localStorage.getItem('collectedEndings') || '[]');
             // 仅在结果页 / 海报显示收集进度，并列出已解锁的大结局名称
             if (this.endingCollectionProgressEl) {
-                let html = `<div class="collection-line">大结局图鉴收集进度：${collected.length} / 16</div>`;
+                let html = `<div class="collection-line">大结局图鉴收集进度：${collected.length} / 30</div>`;
                 if (collected.length > 0) {
                     const titles = collected
                         .map(id => (window.endings[id] ? window.endings[id].title : id))
@@ -346,7 +376,7 @@ class GameApp {
             nextId = this.mainSequence[this.mainIndex];
         }
 
-        // 枢纽出口哨兵 __HUB_XXX_EXIT__ → 根据评分路由到具体出口
+        // 枢纽出口哨兵 __HUB_XXX_EXIT__ → 根据评分路由到具体子线出口
         const hubExitMatch = nextId && /^__HUB_([a-z]+)_EXIT__$/.exec(nextId);
         if (hubExitMatch) {
             const hubKey = hubExitMatch[1];
@@ -357,36 +387,25 @@ class GameApp {
             }
         }
 
-        // 1. 全局极值检测（打破时间锁）—— 相对偏科阈值
-        // 旧版用绝对值 C+R>=10 / F+S>=10，但每个史实选项都 +1 S，导致「忠于历史」
-        // 的均衡玩法也会在第10步左右被动触发 F+S 暴雷 → 被迫进豪强共和。
-        // 新版改为「相对偏科」：只有当某条对抗轴的得分占总分的比例足够高（即玩家
-        // 确实在持续偏科），且达到绝对下限时，才触发对应崩溃结局。
-        // 双轴差异化：因数据中「集权激进(C/R)」选项整体权重高于「保守妥协(F/S)」，
-        // 故 CR 轴用 45% 比例阈值，FS 轴用 34% 比例阈值，使两类偏科玩家触发概率相当。
-        if (this.actualSteps >= 7) {
-            const s = this.scores;
-            const total = s.C + s.F + s.R + s.S + s.A + s.P + s.I + s.M;
-            if (total > 0) {
-                const CR = s.C + s.R;   // 集权 + 激进
-                const FS = s.F + s.S;   // 保守 + 妥协
-                if (CR >= 6 && CR / total >= 0.45) {
-                    // 极端集权激进 → 改制崩溃(R更高) / 秦制重演(C更高)
-                    nextId = s.R > s.C ? 'E09' : 'E03';
-                } else if (FS >= 7 && FS / total >= 0.34) {
-                    // 极端保守妥协 → 豪强共和
-                    nextId = 'E08';
-                }
+        // 交汇哨兵 __CONV_ch__ / __CONV_hm__ → 根据评分把玩家分流到某条子线
+        const convMatch = nextId && /^__CONV_([a-z]+)__$/.exec(nextId);
+        if (convMatch) {
+            nextId = this.resolveConvergence(convMatch[1]);
+            if (!nextId) { console.error("Convergence unresolved:", convMatch[1]); return; }
+        }
+
+        // 收敛回主线哨兵 __REJOIN__ —— 历史惯性：这条支线中途自我修正，回到主线，
+        // 让单局能继续采样后续事件（也让后期支线在反事实玩法中更容易被走到）。
+        if (nextId === '__REJOIN__') {
+            this.mainIndex++;
+            if (this.mainIndex >= this.mainSequence.length) {
+                this.showEnding('E01');
+                return;
             }
+            nextId = this.mainSequence[this.mainIndex];
         }
 
-        // 2. E02 兜底结局分流矩阵
-        // 如果下一步是 E02（西楚短世），不再无脑进入，而是根据当前属性倾向分摊
-        if (nextId === 'E02') {
-            nextId = this.resolveCollapseExit();
-        }
-
-        // 3. 历史惯性修正：强制存活最少 7 步
+        // 历史惯性修正：强制存活最少 7 步（避免过短的局）
         if (nextId && nextId.startsWith('E') && this.actualSteps < 7) {
             this.mainIndex++;
             if (this.mainIndex >= this.mainSequence.length) {
@@ -678,26 +697,41 @@ class GameApp {
 
 // ===== 各结局「全网稀有度」= 真实触发概率（%）=====
 // 数据来源：以「每个节点等概率随机选择」为模型，对完整推演流程
-// （含主线随机抽签、枢纽路由、极值暴雷、E02 分流、7 步存活下限等全部规则）
-// 进行 5,000,000 次蒙特卡洛模拟统计得到。各结局概率之和约为 100%。
-// E16（新朝中兴）路径极窄，专项模拟测得约 0.0003%，此处以 0.01% 作为可读下限展示。
+// （50抽30 主线随机抽签、M01 固定首步、两大交汇按评分分流、单维度子线路由、
+//  支线中途「回归正史」收敛、7 步存活下限等全部规则）进行 200,000 次蒙特卡洛统计。
+// 引入收敛机制后单局平均采样约 4 个事件，全部 30 个结局均可在随机推演中走到。
+// 中后期专属结局仍属稀有收藏，极稀有者以 0.01% 作为可读下限展示。
 GameApp.ENDING_RARITY = {
-    "E01": 1.05,   // 炎汉正统
-    "E02": 13.87,  // 西楚短世
-    "E03": 13.88,  // 秦制重演
-    "E04": 15.89,  // 列国并立
-    "E05": 8.17,   // 三国提前
-    "E06": 0.76,   // 南北裂变
-    "E07": 6.69,   // 外戚王朝
-    "E08": 22.40,  // 豪强共和
-    "E09": 3.23,   // 改制崩溃
-    "E10": 1.29,   // 续命中兴
-    "E11": 0.18,   // 提前盛世
-    "E12": 2.43,   // 草原反噬
-    "E13": 3.79,   // 楚朝盛世
-    "E14": 4.92,   // 三方共和
-    "E15": 1.44,   // 江东南楚
-    "E16": 0.02    // 新朝中兴（极稀有，最优策略下约 0.03%）
+    "E01": 1.94,   // 炎汉正统（走完全部史实主线）
+    "E02": 16.47,  // 西楚短世
+    "E03": 2.97,   // 秦制重演
+    "E04": 6.23,   // 列国并立
+    "E05": 10.75,  // 三国提前
+    "E06": 5.23,   // 南北裂变
+    "E07": 7.67,   // 外戚王朝
+    "E08": 0.18,   // 豪强共和
+    "E09": 0.19,   // 改制崩溃
+    "E10": 2.17,   // 续命中兴
+    "E11": 1.87,   // 提前盛世
+    "E12": 5.30,   // 草原反噬
+    "E13": 2.05,   // 楚朝盛世
+    "E14": 10.85,  // 三方共和
+    "E15": 4.75,   // 江东南楚
+    "E16": 0.92,   // 新朝中兴
+    "E17": 1.82,   // 吕氏女主
+    "E18": 0.26,   // 盐铁官国
+    "E19": 0.17,   // 宦竖乱政
+    "E20": 0.04,   // 佛国东渐
+    "E21": 0.15,   // 谶纬神国
+    "E22": 0.03,   // 竹简帝国
+    "E23": 0.26,   // 商殖之邦
+    "E24": 1.72,   // 西域一体
+    "E25": 0.24,   // 士人共治
+    "E26": 0.01,   // 州牧裂土
+    "E27": 0.69,   // 禅代循环
+    "E28": 0.01,   // 曹魏早立
+    "E29": 0.43,   // 直言盛世
+    "E30": 14.62   // 逐鹿无主
 };
 
 // WeChat detection logic
